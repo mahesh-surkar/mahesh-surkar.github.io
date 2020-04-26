@@ -1,0 +1,28 @@
+git configuration steps for Infotrophic:
+
+
+1. install git.
+2. copy private key for git repository under $HOME/.ssh directory mahesh (or create using keygen if created upload public key for aws user)
+3. create /home/ec2-user/.ssh/config file with entries like 
+
+Host git-codecommit.*.amazonaws.com
+  User APKAIRHAGNL7Y5XIW2NA  
+  PubKeyAuthentication yes
+  IdentityFile ~/.ssh/mahesh
+
+4. git clone ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/InfoTrophic 
+
+
+
+Production Deploy Steps
+1. Clone the git repository on Deployment machine.
+2. . /opt/python/run/venv/bin/activate
+3. python manage.py collectstatic
+4. python manage.py parseWebPages
+5. python manage.py rebuild_index
+6. Copy InfoTrophic folder to /opt/ directory. (sudo cp InfoTrophic /opt/ -r)
+7  cd /opt
+8. sudo chown -R wsgi:root InfoTrophic
+9. sudo cp /opt/InfoTrophic/Deployment/wsgi.conf /etc/httpd/conf.d/wsgi.conf
+ 
+

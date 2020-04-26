@@ -1,0 +1,3451 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', 'sails', '-g' ]
+2 info using npm@1.4.21
+3 info using node@v0.10.25
+4 verbose cache add [ 'sails', null ]
+5 verbose cache add name=undefined spec="sails" args=["sails",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'sails',
+6 verbose parsed url   path: 'sails',
+6 verbose parsed url   href: 'sails' }
+7 silly lockFile e20e6cdc-sails sails
+8 verbose lock sails /home/samanyu/.npm/e20e6cdc-sails.lock
+9 silly lockFile e20e6cdc-sails sails
+10 silly lockFile e20e6cdc-sails sails
+11 verbose addNamed [ 'sails', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 5291d548-sails sails@
+14 verbose lock sails@ /home/samanyu/.npm/5291d548-sails.lock
+15 silly addNameRange { name: 'sails', range: '*', hasData: false }
+16 verbose request where is /sails
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 73363b80457cceb6
+19 verbose url raw /sails
+20 verbose url resolving [ 'https://registry.npmjs.org/', './sails' ]
+21 verbose url resolved https://registry.npmjs.org/sails
+22 verbose request where is https://registry.npmjs.org/sails
+23 info trying registry request attempt 1 at 17:09:28
+24 verbose etag W/"59c987c1-77346"
+25 http GET https://registry.npmjs.org/sails
+26 http 304 https://registry.npmjs.org/sails
+27 silly registry.get cb [ 304,
+27 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:29 GMT',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'cache-control': 'max-age=300',
+27 silly registry.get     etag: 'W/"59c987c1-77346"',
+27 silly registry.get     age: '0',
+27 silly registry.get     connection: 'keep-alive',
+27 silly registry.get     'x-served-by': 'cache-sin18020-SIN',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '1',
+27 silly registry.get     'x-timer': 'S1506771569.492193,VS0,VE687',
+27 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+28 verbose etag https://registry.npmjs.org/sails from cache
+29 silly addNameRange number 2 { name: 'sails', range: '*', hasData: true }
+30 silly addNameRange versions [ 'sails',
+30 silly addNameRange   [ '0.0.0',
+30 silly addNameRange     '0.0.0-2',
+30 silly addNameRange     '0.7.0',
+30 silly addNameRange     '0.7.0-2',
+30 silly addNameRange     '0.7.0-3',
+30 silly addNameRange     '0.7.0-4',
+30 silly addNameRange     '0.7.0-5',
+30 silly addNameRange     '0.0.0-1',
+30 silly addNameRange     '0.7.0-6',
+30 silly addNameRange     '0.7.0-7',
+30 silly addNameRange     '0.7.0-8',
+30 silly addNameRange     '0.7.1',
+30 silly addNameRange     '0.7.2',
+30 silly addNameRange     '0.7.3',
+30 silly addNameRange     '0.7.4',
+30 silly addNameRange     '0.7.4-1',
+30 silly addNameRange     '0.7.5-0',
+30 silly addNameRange     '0.7.6-0',
+30 silly addNameRange     '0.7.7',
+30 silly addNameRange     '0.7.8',
+30 silly addNameRange     '0.7.9',
+30 silly addNameRange     '0.8.0',
+30 silly addNameRange     '0.8.1',
+30 silly addNameRange     '0.8.2',
+30 silly addNameRange     '0.8.3',
+30 silly addNameRange     '0.8.4',
+30 silly addNameRange     '0.8.5',
+30 silly addNameRange     '0.8.6',
+30 silly addNameRange     '0.8.7',
+30 silly addNameRange     '0.8.71',
+30 silly addNameRange     '0.8.72',
+30 silly addNameRange     '0.8.73',
+30 silly addNameRange     '0.8.74',
+30 silly addNameRange     '0.8.75',
+30 silly addNameRange     '0.8.76',
+30 silly addNameRange     '0.8.77',
+30 silly addNameRange     '0.8.78',
+30 silly addNameRange     '0.8.79',
+30 silly addNameRange     '0.8.80',
+30 silly addNameRange     '0.8.81',
+30 silly addNameRange     '0.8.82',
+30 silly addNameRange     '0.8.83',
+30 silly addNameRange     '0.8.84',
+30 silly addNameRange     '0.8.85',
+30 silly addNameRange     '0.8.86',
+30 silly addNameRange     '0.8.87',
+30 silly addNameRange     '0.8.88',
+30 silly addNameRange     '0.8.89',
+30 silly addNameRange     '0.8.89-1',
+30 silly addNameRange     '0.8.892',
+30 silly addNameRange     '0.8.894',
+30 silly addNameRange     '0.8.895',
+30 silly addNameRange     '0.8.9',
+30 silly addNameRange     '0.8.91',
+30 silly addNameRange     '0.8.92',
+30 silly addNameRange     '0.8.93',
+30 silly addNameRange     '0.8.94',
+30 silly addNameRange     '0.9.0',
+30 silly addNameRange     '0.9.1',
+30 silly addNameRange     '0.9.2',
+30 silly addNameRange     '0.9.3',
+30 silly addNameRange     '0.9.4',
+30 silly addNameRange     '0.9.5',
+30 silly addNameRange     '0.9.7',
+30 silly addNameRange     '0.9.8',
+30 silly addNameRange     '0.9.9',
+30 silly addNameRange     '0.10.0-rc1',
+30 silly addNameRange     '0.10.0-rc2',
+30 silly addNameRange     '0.10.0-rc3',
+30 silly addNameRange     '0.9.11',
+30 silly addNameRange     '0.10.0-rc4',
+30 silly addNameRange     '0.9.12',
+30 silly addNameRange     '0.9.13',
+30 silly addNameRange     '0.9.15',
+30 silly addNameRange     '0.9.16',
+30 silly addNameRange     '0.10.0-rc5',
+30 silly addNameRange     '0.10.0-rc6',
+30 silly addNameRange     '0.10.0-rc7',
+30 silly addNameRange     '0.10.0-rc8',
+30 silly addNameRange     '0.9.17',
+30 silly addNameRange     '0.10.0-rc9',
+30 silly addNameRange     '0.10.0-max',
+30 silly addNameRange     '0.10.0-rc10',
+30 silly addNameRange     '0.10.0-rc11',
+30 silly addNameRange     '0.10.1',
+30 silly addNameRange     '0.10.2',
+30 silly addNameRange     '0.10.3',
+30 silly addNameRange     '0.10.4',
+30 silly addNameRange     '0.10.5',
+30 silly addNameRange     '0.11.0-rc2',
+30 silly addNameRange     '0.11.0-rc3',
+30 silly addNameRange     '0.11.0-rc4',
+30 silly addNameRange     '0.11.0-rc5',
+30 silly addNameRange     '0.11.0-rc6',
+30 silly addNameRange     '0.11.0-rc7',
+30 silly addNameRange     '0.11.0-rc8',
+30 silly addNameRange     '0.11.0-rc9',
+30 silly addNameRange     '0.11.0-rc10',
+30 silly addNameRange     '0.11.0',
+30 silly addNameRange     '0.11.1',
+30 silly addNameRange     '0.11.1-rc1',
+30 silly addNameRange     '0.12.0-rc1',
+30 silly addNameRange     '0.12.0-rc2',
+30 silly addNameRange     '0.12.0-rc3',
+30 silly addNameRange     '0.11.2',
+30 silly addNameRange     '0.11.3',
+30 silly addNameRange     '0.12.0-rc4',
+30 silly addNameRange     '0.11.4',
+30 silly addNameRange     '0.12.0-rc5',
+30 silly addNameRange     '0.12.0-rc6',
+30 silly addNameRange     '0.12.0-rc7',
+30 silly addNameRange     '0.12.0-rc8',
+30 silly addNameRange     '0.12.0-rc9',
+30 silly addNameRange     '0.11.5',
+30 silly addNameRange     '0.12.0',
+30 silly addNameRange     '0.12.1-rc1',
+30 silly addNameRange     '0.12.1',
+30 silly addNameRange     '0.12.1-deprecatedDepExperiment',
+30 silly addNameRange     '0.12.2-0',
+30 silly addNameRange     '0.12.2',
+30 silly addNameRange     '0.12.3',
+30 silly addNameRange     '0.11.6-0',
+30 silly addNameRange     '0.11.6-1',
+30 silly addNameRange     '0.12.4-rc1',
+30 silly addNameRange     '0.12.4-rc2',
+30 silly addNameRange     '0.12.4-rc3',
+30 silly addNameRange     '0.12.4',
+30 silly addNameRange     '1.0.0-0',
+30 silly addNameRange     '1.0.0-1',
+30 silly addNameRange     '1.0.0-2',
+30 silly addNameRange     '1.0.0-3',
+30 silly addNameRange     '0.12.5',
+30 silly addNameRange     '0.12.6',
+30 silly addNameRange     '1.0.0-4',
+30 silly addNameRange     '1.0.0-5',
+30 silly addNameRange     '0.12.7',
+30 silly addNameRange     '0.12.8',
+30 silly addNameRange     '1.0.0-6',
+30 silly addNameRange     '1.0.0-7',
+30 silly addNameRange     '1.0.0-8',
+30 silly addNameRange     '0.12.9',
+30 silly addNameRange     '1.0.0-9',
+30 silly addNameRange     '1.0.0-10',
+30 silly addNameRange     '1.0.0-11',
+30 silly addNameRange     '0.12.10-0',
+30 silly addNameRange     '0.12.10-1',
+30 silly addNameRange     '1.0.0-12',
+30 silly addNameRange     '0.12.10',
+30 silly addNameRange     '1.0.0-13',
+30 silly addNameRange     '0.12.11-0',
+30 silly addNameRange     '1.0.0-14',
+30 silly addNameRange     '0.12.11-1',
+30 silly addNameRange     '0.12.11',
+30 silly addNameRange     '1.0.0-15',
+30 silly addNameRange     '1.0.0-16',
+30 silly addNameRange     '1.0.0-17',
+30 silly addNameRange     '1.0.0-18',
+30 silly addNameRange     '1.0.0-19',
+30 silly addNameRange     '1.0.0-20',
+30 silly addNameRange     '0.12.12-1',
+30 silly addNameRange     '1.0.0-21',
+30 silly addNameRange     '1.0.0-22',
+30 silly addNameRange     '1.0.0-23',
+30 silly addNameRange     '1.0.0-24',
+30 silly addNameRange     '1.0.0-25',
+30 silly addNameRange     '1.0.0-26',
+30 silly addNameRange     '1.0.0-27',
+30 silly addNameRange     '1.0.0-28',
+30 silly addNameRange     '0.12.12-2',
+30 silly addNameRange     '0.12.12-3',
+30 silly addNameRange     '0.12.12',
+30 silly addNameRange     '1.0.0-29',
+30 silly addNameRange     '1.0.0-30',
+30 silly addNameRange     '0.12.13',
+30 silly addNameRange     '1.0.0-31',
+30 silly addNameRange     '1.0.0-32',
+30 silly addNameRange     '1.0.0-33',
+30 silly addNameRange     '1.0.0-34',
+30 silly addNameRange     '1.0.0-35',
+30 silly addNameRange     '1.0.0-36',
+30 silly addNameRange     '1.0.0-37',
+30 silly addNameRange     '0.12.14' ] ]
+31 verbose addNamed [ 'sails', '0.12.14' ]
+32 verbose addNamed [ '0.12.14', '0.12.14' ]
+33 silly lockFile 2a6acca9-sails-0-12-14 sails@0.12.14
+34 verbose lock sails@0.12.14 /home/samanyu/.npm/2a6acca9-sails-0-12-14.lock
+35 silly lockFile 2a6acca9-sails-0-12-14 sails@0.12.14
+36 silly lockFile 2a6acca9-sails-0-12-14 sails@0.12.14
+37 silly lockFile 5291d548-sails sails@
+38 silly lockFile 5291d548-sails sails@
+39 silly resolved [ { name: 'sails',
+39 silly resolved     author: { name: 'Mike McNeil', email: '@mikermcneil' },
+39 silly resolved     version: '0.12.14',
+39 silly resolved     description: 'API-driven framework for building realtime apps, using MVC conventions (based on Express and Socket.io)',
+39 silly resolved     homepage: 'http://sailsjs.org',
+39 silly resolved     keywords:
+39 silly resolved      [ 'mvc',
+39 silly resolved        'web-framework',
+39 silly resolved        'express',
+39 silly resolved        'sailsjs',
+39 silly resolved        'sails.js',
+39 silly resolved        'REST',
+39 silly resolved        'API',
+39 silly resolved        'orm',
+39 silly resolved        'socket.io' ],
+39 silly resolved     main: './lib/index.js',
+39 silly resolved     bin: { sails: './bin/sails.js' },
+39 silly resolved     scripts: { test: 'mocha -b' },
+39 silly resolved     directories: { lib: 'lib' },
+39 silly resolved     dependencies:
+39 silly resolved      { anchor: '~0.10.5',
+39 silly resolved        async: '1.5.0',
+39 silly resolved        'captains-log': '1.0.0',
+39 silly resolved        chalk: '1.1.3',
+39 silly resolved        commander: '2.9.0',
+39 silly resolved        compression: '1.6.2',
+39 silly resolved        connect: '3.4.1',
+39 silly resolved        'connect-flash': '0.1.1',
+39 silly resolved        consolidate: '0.14.1',
+39 silly resolved        cookie: '0.1.2',
+39 silly resolved        'cookie-parser': '1.3.5',
+39 silly resolved        'cookie-signature': '1.0.6',
+39 silly resolved        csurf: '1.9.0',
+39 silly resolved        ejs: '2.3.4',
+39 silly resolved        'ejs-locals': '1.0.2',
+39 silly resolved        '@sailshq/express': '^3.21.3',
+39 silly resolved        'express-handlebars': '3.0.0',
+39 silly resolved        'express-session': '1.14.2',
+39 silly resolved        flaverr: '^1.0.0',
+39 silly resolved        glob: '5.0.15',
+39 silly resolved        grunt: '1.0.1',
+39 silly resolved        'grunt-cli': '1.2.0',
+39 silly resolved        'grunt-contrib-clean': '1.0.0',
+39 silly resolved        'grunt-contrib-coffee': '1.0.0',
+39 silly resolved        'grunt-contrib-concat': '1.0.1',
+39 silly resolved        'grunt-contrib-copy': '1.0.0',
+39 silly resolved        'grunt-contrib-cssmin': '1.0.1',
+39 silly resolved        'grunt-contrib-jst': '1.0.0',
+39 silly resolved        'grunt-contrib-less': '1.3.0',
+39 silly resolved        'grunt-contrib-uglify': '1.0.1',
+39 silly resolved        'grunt-contrib-watch': '1.0.0',
+39 silly resolved        'grunt-sails-linker': '~0.10.1',
+39 silly resolved        'grunt-sync': '0.5.2',
+39 silly resolved        i18n: '0.8.1',
+39 silly resolved        'include-all': '^1.0.0',
+39 silly resolved        '@sailshq/lodash': '^3.10.2',
+39 silly resolved        'merge-defaults': '~0.2.1',
+39 silly resolved        'method-override': '2.3.5',
+39 silly resolved        'mock-req': '0.2.0',
+39 silly resolved        'mock-res': '0.3.0',
+39 silly resolved        parseurl: '1.3.1',
+39 silly resolved        'path-to-regexp': '1.5.3',
+39 silly resolved        pluralize: '1.2.1',
+39 silly resolved        prompt: '0.2.14',
+39 silly resolved        rc: '1.0.1',
+39 silly resolved        reportback: '~0.1.9',
+39 silly resolved        rttc: '9.3.3',
+39 silly resolved        'sails-disk': '~0.10.9',
+39 silly resolved        'sails-generate': '~0.13.0',
+39 silly resolved        'sails-hook-orm': '~1.0.9',
+39 silly resolved        'sails-hook-sockets': '^0.13.9',
+39 silly resolved        'sails-stringfile': '~0.3.2',
+39 silly resolved        'sails-util': '~0.11.0',
+39 silly resolved        semver: '5.1.0',
+39 silly resolved        'serve-favicon': '2.3.0',
+39 silly resolved        'serve-static': '1.10.2',
+39 silly resolved        skipper: '~0.7.0',
+39 silly resolved        'uid-safe': '1.1.0',
+39 silly resolved        walk: '2.3.9' },
+39 silly resolved     devDependencies:
+39 silly resolved      { benchmark: '1.0.0',
+39 silly resolved        checksum: '0.1.1',
+39 silly resolved        'coffee-script': '1.9.1',
+39 silly resolved        'expect.js': '0.3.1',
+39 silly resolved        'fs-extra': '0.30.0',
+39 silly resolved        istanbul: '0.4.1',
+39 silly resolved        'machinepack-fs': '^8.0.2',
+39 silly resolved        'machinepack-process': '^2.0.2',
+39 silly resolved        mocha: '3.0.0',
+39 silly resolved        portfinder: '0.4.0',
+39 silly resolved        request: '2.68.0',
+39 silly resolved        'root-require': '0.3.1',
+39 silly resolved        should: '5.2.0',
+39 silly resolved        'socket.io-client': '1.4.6',
+39 silly resolved        supertest: '1.1.0',
+39 silly resolved        tmp: '0.0.30' },
+39 silly resolved     repository: { type: 'git', url: 'git://github.com/balderdashy/sails.git' },
+39 silly resolved     license: 'MIT',
+39 silly resolved     bugs: { url: 'http://github.com/balderdashy/sails/issues' },
+39 silly resolved     engines: { node: '>= 0.10.0', npm: '>= 1.4.0' },
+39 silly resolved     gitHead: '575f746bbed95902bd5b593fd24a0b20c9b256ab',
+39 silly resolved     _id: 'sails@0.12.14',
+39 silly resolved     _shasum: '4ad8be98cfcf456e7d1c85f6e7731f31af332397',
+39 silly resolved     _from: 'sails@',
+39 silly resolved     _npmVersion: '3.10.10',
+39 silly resolved     _nodeVersion: '6.11.0',
+39 silly resolved     _npmUser: { name: 'sgress454', email: 'sgress454@treeline.io' },
+39 silly resolved     dist:
+39 silly resolved      { shasum: '4ad8be98cfcf456e7d1c85f6e7731f31af332397',
+39 silly resolved        tarball: 'https://registry.npmjs.org/sails/-/sails-0.12.14.tgz' },
+39 silly resolved     maintainers: [ [Object], [Object], [Object], [Object] ],
+39 silly resolved     _npmOperationalInternal:
+39 silly resolved      { host: 's3://npm-registry-packages',
+39 silly resolved        tmp: 'tmp/sails-0.12.14.tgz_1506379712042_0.5432285552378744' },
+39 silly resolved     _resolved: 'https://registry.npmjs.org/sails/-/sails-0.12.14.tgz',
+39 silly resolved     readme: 'ERROR: No README data found!' } ]
+40 info install sails@0.12.14 into /usr/local/lib
+41 info installOne sails@0.12.14
+42 verbose lib/node_modules/sails unbuild
+43 verbose tar unpack /home/samanyu/.npm/sails/0.12.14/package.tgz
+44 silly lockFile 3abb73c9-usr-local-lib-node-modules-sails tar:///usr/local/lib/node_modules/sails
+45 verbose lock tar:///usr/local/lib/node_modules/sails /home/samanyu/.npm/3abb73c9-usr-local-lib-node-modules-sails.lock
+46 silly lockFile 8141390a-yu-npm-sails-0-12-14-package-tgz tar:///home/samanyu/.npm/sails/0.12.14/package.tgz
+47 verbose lock tar:///home/samanyu/.npm/sails/0.12.14/package.tgz /home/samanyu/.npm/8141390a-yu-npm-sails-0-12-14-package-tgz.lock
+48 silly gunzTarPerm modes [ '755', '644' ]
+49 silly gunzTarPerm extractEntry package.json
+50 silly gunzTarPerm extractEntry .npmignore
+51 silly gunzTarPerm extractEntry README.md
+52 silly gunzTarPerm extractEntry .travis.yml
+53 silly gunzTarPerm extractEntry CHANGELOG.md
+54 silly gunzTarPerm extractEntry LICENSE.md
+55 silly gunzTarPerm extractEntry .github/ISSUE_TEMPLATE
+56 silly gunzTarPerm extractEntry .github/PULL_REQUEST_TEMPLATE
+57 silly gunzTarPerm extractEntry REPOS.json
+58 silly gunzTarPerm extractEntry bin/_commander.js
+59 silly gunzTarPerm extractEntry bin/sails-console.js
+60 silly gunzTarPerm extractEntry bin/sails-debug.js
+61 silly gunzTarPerm extractEntry bin/sails-deploy.js
+62 silly gunzTarPerm extractEntry bin/sails-generate.js
+63 silly gunzTarPerm extractEntry bin/sails-lift.js
+64 silly gunzTarPerm extractEntry bin/sails-new.js
+65 silly gunzTarPerm extractEntry bin/sails-www.js
+66 silly gunzTarPerm extractEntry bin/sails.js
+67 silly gunzTarPerm extractEntry errors/README.md
+68 silly gunzTarPerm extractEntry errors/fatal.js
+69 silly gunzTarPerm extractEntry errors/index.js
+70 silly gunzTarPerm extractEntry errors/warn.js
+71 silly gunzTarPerm extractEntry lib/README.md
+72 silly gunzTarPerm extractEntry lib/index.js
+73 silly gunzTarPerm extractEntry lib/preinstall_npmcheck.js
+74 silly gunzTarPerm extractEntry lib/app/README.md
+75 silly gunzTarPerm extractEntry lib/app/lower.js
+76 silly gunzTarPerm extractEntry lib/app/get-route-for.js
+77 silly gunzTarPerm extractEntry lib/app/get-url-for.js
+78 silly gunzTarPerm extractEntry lib/app/getBaseurl.js
+79 silly gunzTarPerm extractEntry lib/app/Sails.js
+80 silly gunzTarPerm extractEntry lib/app/lift.js
+81 silly gunzTarPerm extractEntry lib/app/load.js
+82 silly gunzTarPerm extractEntry lib/app/request.js
+83 silly gunzTarPerm extractEntry lib/app/index.js
+84 silly gunzTarPerm extractEntry lib/app/configuration/default-hooks.js
+85 silly gunzTarPerm extractEntry lib/app/configuration/index.js
+86 silly gunzTarPerm extractEntry lib/app/configuration/load.js
+87 silly gunzTarPerm extractEntry lib/app/configuration/rc.js
+88 silly gunzTarPerm extractEntry lib/app/private/after.js
+89 silly gunzTarPerm extractEntry lib/app/private/exposeGlobals.js
+90 silly gunzTarPerm extractEntry lib/app/private/getHost.js
+91 silly gunzTarPerm extractEntry lib/app/private/initialize.js
+92 silly gunzTarPerm extractEntry lib/app/private/bootstrap.js
+93 silly gunzTarPerm extractEntry lib/app/private/isLocalSailsValid.js
+94 silly gunzTarPerm extractEntry lib/app/private/isSailsAppSync.js
+95 silly gunzTarPerm extractEntry lib/app/private/loadHooks.js
+96 silly gunzTarPerm extractEntry lib/app/private/toJSON.js
+97 silly gunzTarPerm extractEntry lib/app/private/toString.js
+98 silly gunzTarPerm extractEntry lib/app/private/inspect.js
+99 silly gunzTarPerm extractEntry lib/hooks/README.md
+100 silly gunzTarPerm extractEntry lib/hooks/index.js
+101 silly gunzTarPerm extractEntry lib/hooks/controllers/README.md
+102 silly gunzTarPerm extractEntry lib/hooks/controllers/index.js
+103 silly gunzTarPerm extractEntry lib/hooks/controllers/to-interpret-route-syntax.js
+104 silly gunzTarPerm extractEntry lib/hooks/controllers/to-load-and-register-controllers.js
+105 silly gunzTarPerm extractEntry lib/hooks/cors/README.md
+106 silly gunzTarPerm extractEntry lib/hooks/cors/clear-headers.js
+107 silly gunzTarPerm extractEntry lib/hooks/cors/index.js
+108 silly gunzTarPerm extractEntry lib/hooks/cors/to-prepare-send-headers.js
+109 silly gunzTarPerm extractEntry lib/hooks/csrf/index.js
+110 silly gunzTarPerm extractEntry lib/hooks/grunt/README.md
+111 silly gunzTarPerm extractEntry lib/hooks/grunt/grunt-wrapper.js
+112 silly gunzTarPerm extractEntry lib/hooks/grunt/index.js
+113 silly gunzTarPerm extractEntry lib/hooks/http/README.md
+114 silly gunzTarPerm extractEntry lib/hooks/http/get-configured-http-middleware-fns.js
+115 silly gunzTarPerm extractEntry lib/hooks/http/index.js
+116 silly gunzTarPerm extractEntry lib/hooks/http/initialize.js
+117 silly gunzTarPerm extractEntry lib/hooks/http/start.js
+118 silly gunzTarPerm extractEntry lib/hooks/http/view.js
+119 silly gunzTarPerm extractEntry lib/hooks/http/default-favicon.ico
+120 silly gunzTarPerm extractEntry lib/hooks/i18n/index.js
+121 silly gunzTarPerm extractEntry lib/hooks/views/add-shim-for-layout-and-partials.js
+122 silly gunzTarPerm extractEntry lib/hooks/views/configure.js
+123 silly gunzTarPerm extractEntry lib/hooks/views/defaults.js
+124 silly gunzTarPerm extractEntry lib/hooks/views/escape-html-entities-deep.js
+125 silly gunzTarPerm extractEntry lib/hooks/views/html-scriptify.js
+126 silly gunzTarPerm extractEntry lib/hooks/views/index.js
+127 silly gunzTarPerm extractEntry lib/hooks/views/onRoute.js
+128 silly gunzTarPerm extractEntry lib/hooks/views/render.js
+129 silly gunzTarPerm extractEntry lib/hooks/views/res.view.js
+130 silly gunzTarPerm extractEntry lib/hooks/views/stat-views.js
+131 silly gunzTarPerm extractEntry lib/hooks/logger/README.md
+132 silly gunzTarPerm extractEntry lib/hooks/logger/index.js
+133 silly gunzTarPerm extractEntry lib/hooks/logger/ship.js
+134 silly gunzTarPerm extractEntry lib/hooks/blueprints/README.md
+135 silly gunzTarPerm extractEntry lib/hooks/blueprints/actionUtil.js
+136 silly gunzTarPerm extractEntry lib/hooks/blueprints/coercePK.js
+137 silly gunzTarPerm extractEntry lib/hooks/blueprints/index.js
+138 silly gunzTarPerm extractEntry lib/hooks/blueprints/onRoute.js
+139 silly gunzTarPerm extractEntry lib/hooks/blueprints/actions/add.js
+140 silly gunzTarPerm extractEntry lib/hooks/blueprints/actions/create.js
+141 silly gunzTarPerm extractEntry lib/hooks/blueprints/actions/destroy.js
+142 silly gunzTarPerm extractEntry lib/hooks/blueprints/actions/find.js
+143 silly gunzTarPerm extractEntry lib/hooks/blueprints/actions/findOne.js
+144 silly gunzTarPerm extractEntry lib/hooks/blueprints/actions/populate.js
+145 silly gunzTarPerm extractEntry lib/hooks/blueprints/actions/remove.js
+146 silly gunzTarPerm extractEntry lib/hooks/blueprints/actions/update.js
+147 silly gunzTarPerm extractEntry lib/hooks/blueprints/criteria-validator/validate-where-clause-strict.js
+148 silly gunzTarPerm extractEntry lib/hooks/blueprints/criteria-validator/private/is-eq-filter.js
+149 silly gunzTarPerm extractEntry lib/hooks/policies/README.md
+150 silly gunzTarPerm extractEntry lib/hooks/policies/index.js
+151 silly gunzTarPerm extractEntry lib/hooks/pubsub/README.md
+152 silly gunzTarPerm extractEntry lib/hooks/pubsub/drink.js
+153 silly gunzTarPerm extractEntry lib/hooks/pubsub/index.js
+154 silly gunzTarPerm extractEntry lib/hooks/pubsub/spit.js
+155 silly gunzTarPerm extractEntry lib/hooks/pubsub/squirt.js
+156 silly gunzTarPerm extractEntry lib/hooks/request/README.md
+157 silly gunzTarPerm extractEntry lib/hooks/request/index.js
+158 silly gunzTarPerm extractEntry lib/hooks/request/locals.js
+159 silly gunzTarPerm extractEntry lib/hooks/request/metadata.js
+160 silly gunzTarPerm extractEntry lib/hooks/request/params.all.js
+161 silly gunzTarPerm extractEntry lib/hooks/request/qualifiers.js
+162 silly gunzTarPerm extractEntry lib/hooks/request/validate.js
+163 silly gunzTarPerm extractEntry lib/hooks/responses/README.md
+164 silly gunzTarPerm extractEntry lib/hooks/responses/index.js
+165 silly gunzTarPerm extractEntry lib/hooks/responses/onRoute.js
+166 silly gunzTarPerm extractEntry lib/hooks/responses/defaults/badRequest.js
+167 silly gunzTarPerm extractEntry lib/hooks/responses/defaults/created.js
+168 silly gunzTarPerm extractEntry lib/hooks/responses/defaults/forbidden.js
+169 silly gunzTarPerm extractEntry lib/hooks/responses/defaults/negotiate.js
+170 silly gunzTarPerm extractEntry lib/hooks/responses/defaults/notFound.js
+171 silly gunzTarPerm extractEntry lib/hooks/responses/defaults/ok.js
+172 silly gunzTarPerm extractEntry lib/hooks/responses/defaults/serverError.js
+173 silly gunzTarPerm extractEntry lib/hooks/responses/helpers/build-outlet-function.js
+174 silly gunzTarPerm extractEntry lib/hooks/services/index.js
+175 silly gunzTarPerm extractEntry lib/hooks/session/README.md
+176 silly gunzTarPerm extractEntry lib/hooks/session/generateSecret.js
+177 silly gunzTarPerm extractEntry lib/hooks/session/index.js
+178 silly gunzTarPerm extractEntry lib/hooks/userconfig/README.md
+179 silly gunzTarPerm extractEntry lib/hooks/userconfig/index.js
+180 silly gunzTarPerm extractEntry lib/hooks/userhooks/README.md
+181 silly gunzTarPerm extractEntry lib/hooks/userhooks/index.js
+182 silly gunzTarPerm extractEntry lib/hooks/moduleloader/README.md
+183 silly gunzTarPerm extractEntry lib/hooks/moduleloader/index.js
+184 silly gunzTarPerm extractEntry lib/router/README.md
+185 silly gunzTarPerm extractEntry lib/router/bind.js
+186 silly gunzTarPerm extractEntry lib/router/bindDefaultHandlers.js
+187 silly gunzTarPerm extractEntry lib/router/index.js
+188 silly gunzTarPerm extractEntry lib/router/req.js
+189 silly gunzTarPerm extractEntry lib/router/res.js
+190 silly lockFile 3abb73c9-usr-local-lib-node-modules-sails tar:///usr/local/lib/node_modules/sails
+191 silly lockFile 3abb73c9-usr-local-lib-node-modules-sails tar:///usr/local/lib/node_modules/sails
+192 silly lockFile 8141390a-yu-npm-sails-0-12-14-package-tgz tar:///home/samanyu/.npm/sails/0.12.14/package.tgz
+193 silly lockFile 8141390a-yu-npm-sails-0-12-14-package-tgz tar:///home/samanyu/.npm/sails/0.12.14/package.tgz
+194 info preinstall sails@0.12.14
+195 verbose readDependencies using package.json deps
+196 verbose readDependencies using package.json deps
+197 verbose cache add [ 'captains-log@1.0.0', null ]
+198 verbose cache add name=undefined spec="captains-log@1.0.0" args=["captains-log@1.0.0",null]
+199 verbose parsed url { protocol: null,
+199 verbose parsed url   slashes: null,
+199 verbose parsed url   auth: null,
+199 verbose parsed url   host: null,
+199 verbose parsed url   port: null,
+199 verbose parsed url   hostname: null,
+199 verbose parsed url   hash: null,
+199 verbose parsed url   search: null,
+199 verbose parsed url   query: null,
+199 verbose parsed url   pathname: 'captains-log@1.0.0',
+199 verbose parsed url   path: 'captains-log@1.0.0',
+199 verbose parsed url   href: 'captains-log@1.0.0' }
+200 verbose cache add name="captains-log" spec="1.0.0" args=["captains-log","1.0.0"]
+201 verbose parsed url { protocol: null,
+201 verbose parsed url   slashes: null,
+201 verbose parsed url   auth: null,
+201 verbose parsed url   host: null,
+201 verbose parsed url   port: null,
+201 verbose parsed url   hostname: null,
+201 verbose parsed url   hash: null,
+201 verbose parsed url   search: null,
+201 verbose parsed url   query: null,
+201 verbose parsed url   pathname: '1.0.0',
+201 verbose parsed url   path: '1.0.0',
+201 verbose parsed url   href: '1.0.0' }
+202 verbose addNamed [ 'captains-log', '1.0.0' ]
+203 verbose addNamed [ '1.0.0', '1.0.0' ]
+204 silly lockFile aee6dbaa-captains-log-1-0-0 captains-log@1.0.0
+205 verbose lock captains-log@1.0.0 /home/samanyu/.npm/aee6dbaa-captains-log-1-0-0.lock
+206 verbose cache add [ 'commander@2.9.0', null ]
+207 verbose cache add name=undefined spec="commander@2.9.0" args=["commander@2.9.0",null]
+208 verbose parsed url { protocol: null,
+208 verbose parsed url   slashes: null,
+208 verbose parsed url   auth: null,
+208 verbose parsed url   host: null,
+208 verbose parsed url   port: null,
+208 verbose parsed url   hostname: null,
+208 verbose parsed url   hash: null,
+208 verbose parsed url   search: null,
+208 verbose parsed url   query: null,
+208 verbose parsed url   pathname: 'commander@2.9.0',
+208 verbose parsed url   path: 'commander@2.9.0',
+208 verbose parsed url   href: 'commander@2.9.0' }
+209 verbose cache add [ 'chalk@1.1.3', null ]
+210 verbose cache add name=undefined spec="chalk@1.1.3" args=["chalk@1.1.3",null]
+211 verbose parsed url { protocol: null,
+211 verbose parsed url   slashes: null,
+211 verbose parsed url   auth: null,
+211 verbose parsed url   host: null,
+211 verbose parsed url   port: null,
+211 verbose parsed url   hostname: null,
+211 verbose parsed url   hash: null,
+211 verbose parsed url   search: null,
+211 verbose parsed url   query: null,
+211 verbose parsed url   pathname: 'chalk@1.1.3',
+211 verbose parsed url   path: 'chalk@1.1.3',
+211 verbose parsed url   href: 'chalk@1.1.3' }
+212 verbose cache add [ 'compression@1.6.2', null ]
+213 verbose cache add name=undefined spec="compression@1.6.2" args=["compression@1.6.2",null]
+214 verbose parsed url { protocol: null,
+214 verbose parsed url   slashes: null,
+214 verbose parsed url   auth: null,
+214 verbose parsed url   host: null,
+214 verbose parsed url   port: null,
+214 verbose parsed url   hostname: null,
+214 verbose parsed url   hash: null,
+214 verbose parsed url   search: null,
+214 verbose parsed url   query: null,
+214 verbose parsed url   pathname: 'compression@1.6.2',
+214 verbose parsed url   path: 'compression@1.6.2',
+214 verbose parsed url   href: 'compression@1.6.2' }
+215 verbose cache add [ 'connect@3.4.1', null ]
+216 verbose cache add name=undefined spec="connect@3.4.1" args=["connect@3.4.1",null]
+217 verbose parsed url { protocol: null,
+217 verbose parsed url   slashes: null,
+217 verbose parsed url   auth: null,
+217 verbose parsed url   host: null,
+217 verbose parsed url   port: null,
+217 verbose parsed url   hostname: null,
+217 verbose parsed url   hash: null,
+217 verbose parsed url   search: null,
+217 verbose parsed url   query: null,
+217 verbose parsed url   pathname: 'connect@3.4.1',
+217 verbose parsed url   path: 'connect@3.4.1',
+217 verbose parsed url   href: 'connect@3.4.1' }
+218 verbose cache add [ 'connect-flash@0.1.1', null ]
+219 verbose cache add name=undefined spec="connect-flash@0.1.1" args=["connect-flash@0.1.1",null]
+220 verbose parsed url { protocol: null,
+220 verbose parsed url   slashes: null,
+220 verbose parsed url   auth: null,
+220 verbose parsed url   host: null,
+220 verbose parsed url   port: null,
+220 verbose parsed url   hostname: null,
+220 verbose parsed url   hash: null,
+220 verbose parsed url   search: null,
+220 verbose parsed url   query: null,
+220 verbose parsed url   pathname: 'connect-flash@0.1.1',
+220 verbose parsed url   path: 'connect-flash@0.1.1',
+220 verbose parsed url   href: 'connect-flash@0.1.1' }
+221 verbose cache add name="commander" spec="2.9.0" args=["commander","2.9.0"]
+222 verbose parsed url { protocol: null,
+222 verbose parsed url   slashes: null,
+222 verbose parsed url   auth: null,
+222 verbose parsed url   host: null,
+222 verbose parsed url   port: null,
+222 verbose parsed url   hostname: null,
+222 verbose parsed url   hash: null,
+222 verbose parsed url   search: null,
+222 verbose parsed url   query: null,
+222 verbose parsed url   pathname: '2.9.0',
+222 verbose parsed url   path: '2.9.0',
+222 verbose parsed url   href: '2.9.0' }
+223 verbose addNamed [ 'commander', '2.9.0' ]
+224 verbose addNamed [ '2.9.0', '2.9.0' ]
+225 silly lockFile 07267fc6-commander-2-9-0 commander@2.9.0
+226 verbose lock commander@2.9.0 /home/samanyu/.npm/07267fc6-commander-2-9-0.lock
+227 verbose cache add name="chalk" spec="1.1.3" args=["chalk","1.1.3"]
+228 verbose parsed url { protocol: null,
+228 verbose parsed url   slashes: null,
+228 verbose parsed url   auth: null,
+228 verbose parsed url   host: null,
+228 verbose parsed url   port: null,
+228 verbose parsed url   hostname: null,
+228 verbose parsed url   hash: null,
+228 verbose parsed url   search: null,
+228 verbose parsed url   query: null,
+228 verbose parsed url   pathname: '1.1.3',
+228 verbose parsed url   path: '1.1.3',
+228 verbose parsed url   href: '1.1.3' }
+229 verbose addNamed [ 'chalk', '1.1.3' ]
+230 verbose addNamed [ '1.1.3', '1.1.3' ]
+231 silly lockFile bf7a37a7-chalk-1-1-3 chalk@1.1.3
+232 verbose lock chalk@1.1.3 /home/samanyu/.npm/bf7a37a7-chalk-1-1-3.lock
+233 verbose cache add name="compression" spec="1.6.2" args=["compression","1.6.2"]
+234 verbose parsed url { protocol: null,
+234 verbose parsed url   slashes: null,
+234 verbose parsed url   auth: null,
+234 verbose parsed url   host: null,
+234 verbose parsed url   port: null,
+234 verbose parsed url   hostname: null,
+234 verbose parsed url   hash: null,
+234 verbose parsed url   search: null,
+234 verbose parsed url   query: null,
+234 verbose parsed url   pathname: '1.6.2',
+234 verbose parsed url   path: '1.6.2',
+234 verbose parsed url   href: '1.6.2' }
+235 verbose addNamed [ 'compression', '1.6.2' ]
+236 verbose addNamed [ '1.6.2', '1.6.2' ]
+237 silly lockFile c8af993c-compression-1-6-2 compression@1.6.2
+238 verbose lock compression@1.6.2 /home/samanyu/.npm/c8af993c-compression-1-6-2.lock
+239 verbose cache add name="connect" spec="3.4.1" args=["connect","3.4.1"]
+240 verbose parsed url { protocol: null,
+240 verbose parsed url   slashes: null,
+240 verbose parsed url   auth: null,
+240 verbose parsed url   host: null,
+240 verbose parsed url   port: null,
+240 verbose parsed url   hostname: null,
+240 verbose parsed url   hash: null,
+240 verbose parsed url   search: null,
+240 verbose parsed url   query: null,
+240 verbose parsed url   pathname: '3.4.1',
+240 verbose parsed url   path: '3.4.1',
+240 verbose parsed url   href: '3.4.1' }
+241 verbose addNamed [ 'connect', '3.4.1' ]
+242 verbose addNamed [ '3.4.1', '3.4.1' ]
+243 silly lockFile defb4693-connect-3-4-1 connect@3.4.1
+244 verbose lock connect@3.4.1 /home/samanyu/.npm/defb4693-connect-3-4-1.lock
+245 verbose cache add name="connect-flash" spec="0.1.1" args=["connect-flash","0.1.1"]
+246 verbose parsed url { protocol: null,
+246 verbose parsed url   slashes: null,
+246 verbose parsed url   auth: null,
+246 verbose parsed url   host: null,
+246 verbose parsed url   port: null,
+246 verbose parsed url   hostname: null,
+246 verbose parsed url   hash: null,
+246 verbose parsed url   search: null,
+246 verbose parsed url   query: null,
+246 verbose parsed url   pathname: '0.1.1',
+246 verbose parsed url   path: '0.1.1',
+246 verbose parsed url   href: '0.1.1' }
+247 verbose addNamed [ 'connect-flash', '0.1.1' ]
+248 verbose addNamed [ '0.1.1', '0.1.1' ]
+249 silly lockFile 0cdf4f98-connect-flash-0-1-1 connect-flash@0.1.1
+250 verbose lock connect-flash@0.1.1 /home/samanyu/.npm/0cdf4f98-connect-flash-0-1-1.lock
+251 verbose cache add [ 'consolidate@0.14.1', null ]
+252 verbose cache add name=undefined spec="consolidate@0.14.1" args=["consolidate@0.14.1",null]
+253 verbose parsed url { protocol: null,
+253 verbose parsed url   slashes: null,
+253 verbose parsed url   auth: null,
+253 verbose parsed url   host: null,
+253 verbose parsed url   port: null,
+253 verbose parsed url   hostname: null,
+253 verbose parsed url   hash: null,
+253 verbose parsed url   search: null,
+253 verbose parsed url   query: null,
+253 verbose parsed url   pathname: 'consolidate@0.14.1',
+253 verbose parsed url   path: 'consolidate@0.14.1',
+253 verbose parsed url   href: 'consolidate@0.14.1' }
+254 verbose cache add [ 'cookie@0.1.2', null ]
+255 verbose cache add name=undefined spec="cookie@0.1.2" args=["cookie@0.1.2",null]
+256 verbose parsed url { protocol: null,
+256 verbose parsed url   slashes: null,
+256 verbose parsed url   auth: null,
+256 verbose parsed url   host: null,
+256 verbose parsed url   port: null,
+256 verbose parsed url   hostname: null,
+256 verbose parsed url   hash: null,
+256 verbose parsed url   search: null,
+256 verbose parsed url   query: null,
+256 verbose parsed url   pathname: 'cookie@0.1.2',
+256 verbose parsed url   path: 'cookie@0.1.2',
+256 verbose parsed url   href: 'cookie@0.1.2' }
+257 verbose cache add [ 'cookie-parser@1.3.5', null ]
+258 verbose cache add name=undefined spec="cookie-parser@1.3.5" args=["cookie-parser@1.3.5",null]
+259 verbose parsed url { protocol: null,
+259 verbose parsed url   slashes: null,
+259 verbose parsed url   auth: null,
+259 verbose parsed url   host: null,
+259 verbose parsed url   port: null,
+259 verbose parsed url   hostname: null,
+259 verbose parsed url   hash: null,
+259 verbose parsed url   search: null,
+259 verbose parsed url   query: null,
+259 verbose parsed url   pathname: 'cookie-parser@1.3.5',
+259 verbose parsed url   path: 'cookie-parser@1.3.5',
+259 verbose parsed url   href: 'cookie-parser@1.3.5' }
+260 verbose cache add [ 'cookie-signature@1.0.6', null ]
+261 verbose cache add name=undefined spec="cookie-signature@1.0.6" args=["cookie-signature@1.0.6",null]
+262 verbose parsed url { protocol: null,
+262 verbose parsed url   slashes: null,
+262 verbose parsed url   auth: null,
+262 verbose parsed url   host: null,
+262 verbose parsed url   port: null,
+262 verbose parsed url   hostname: null,
+262 verbose parsed url   hash: null,
+262 verbose parsed url   search: null,
+262 verbose parsed url   query: null,
+262 verbose parsed url   pathname: 'cookie-signature@1.0.6',
+262 verbose parsed url   path: 'cookie-signature@1.0.6',
+262 verbose parsed url   href: 'cookie-signature@1.0.6' }
+263 verbose cache add name="consolidate" spec="0.14.1" args=["consolidate","0.14.1"]
+264 verbose parsed url { protocol: null,
+264 verbose parsed url   slashes: null,
+264 verbose parsed url   auth: null,
+264 verbose parsed url   host: null,
+264 verbose parsed url   port: null,
+264 verbose parsed url   hostname: null,
+264 verbose parsed url   hash: null,
+264 verbose parsed url   search: null,
+264 verbose parsed url   query: null,
+264 verbose parsed url   pathname: '0.14.1',
+264 verbose parsed url   path: '0.14.1',
+264 verbose parsed url   href: '0.14.1' }
+265 verbose addNamed [ 'consolidate', '0.14.1' ]
+266 verbose addNamed [ '0.14.1', '0.14.1' ]
+267 silly lockFile dc0664e7-consolidate-0-14-1 consolidate@0.14.1
+268 verbose lock consolidate@0.14.1 /home/samanyu/.npm/dc0664e7-consolidate-0-14-1.lock
+269 verbose cache add name="cookie" spec="0.1.2" args=["cookie","0.1.2"]
+270 verbose parsed url { protocol: null,
+270 verbose parsed url   slashes: null,
+270 verbose parsed url   auth: null,
+270 verbose parsed url   host: null,
+270 verbose parsed url   port: null,
+270 verbose parsed url   hostname: null,
+270 verbose parsed url   hash: null,
+270 verbose parsed url   search: null,
+270 verbose parsed url   query: null,
+270 verbose parsed url   pathname: '0.1.2',
+270 verbose parsed url   path: '0.1.2',
+270 verbose parsed url   href: '0.1.2' }
+271 verbose addNamed [ 'cookie', '0.1.2' ]
+272 verbose addNamed [ '0.1.2', '0.1.2' ]
+273 silly lockFile ccf606cf-cookie-0-1-2 cookie@0.1.2
+274 verbose lock cookie@0.1.2 /home/samanyu/.npm/ccf606cf-cookie-0-1-2.lock
+275 verbose cache add name="cookie-parser" spec="1.3.5" args=["cookie-parser","1.3.5"]
+276 verbose parsed url { protocol: null,
+276 verbose parsed url   slashes: null,
+276 verbose parsed url   auth: null,
+276 verbose parsed url   host: null,
+276 verbose parsed url   port: null,
+276 verbose parsed url   hostname: null,
+276 verbose parsed url   hash: null,
+276 verbose parsed url   search: null,
+276 verbose parsed url   query: null,
+276 verbose parsed url   pathname: '1.3.5',
+276 verbose parsed url   path: '1.3.5',
+276 verbose parsed url   href: '1.3.5' }
+277 verbose addNamed [ 'cookie-parser', '1.3.5' ]
+278 verbose addNamed [ '1.3.5', '1.3.5' ]
+279 silly lockFile b6f1abc3-cookie-parser-1-3-5 cookie-parser@1.3.5
+280 verbose lock cookie-parser@1.3.5 /home/samanyu/.npm/b6f1abc3-cookie-parser-1-3-5.lock
+281 verbose cache add name="cookie-signature" spec="1.0.6" args=["cookie-signature","1.0.6"]
+282 verbose parsed url { protocol: null,
+282 verbose parsed url   slashes: null,
+282 verbose parsed url   auth: null,
+282 verbose parsed url   host: null,
+282 verbose parsed url   port: null,
+282 verbose parsed url   hostname: null,
+282 verbose parsed url   hash: null,
+282 verbose parsed url   search: null,
+282 verbose parsed url   query: null,
+282 verbose parsed url   pathname: '1.0.6',
+282 verbose parsed url   path: '1.0.6',
+282 verbose parsed url   href: '1.0.6' }
+283 verbose addNamed [ 'cookie-signature', '1.0.6' ]
+284 verbose addNamed [ '1.0.6', '1.0.6' ]
+285 silly lockFile 73d54cec-cookie-signature-1-0-6 cookie-signature@1.0.6
+286 verbose lock cookie-signature@1.0.6 /home/samanyu/.npm/73d54cec-cookie-signature-1-0-6.lock
+287 verbose cache add [ 'csurf@1.9.0', null ]
+288 verbose cache add name=undefined spec="csurf@1.9.0" args=["csurf@1.9.0",null]
+289 verbose parsed url { protocol: null,
+289 verbose parsed url   slashes: null,
+289 verbose parsed url   auth: null,
+289 verbose parsed url   host: null,
+289 verbose parsed url   port: null,
+289 verbose parsed url   hostname: null,
+289 verbose parsed url   hash: null,
+289 verbose parsed url   search: null,
+289 verbose parsed url   query: null,
+289 verbose parsed url   pathname: 'csurf@1.9.0',
+289 verbose parsed url   path: 'csurf@1.9.0',
+289 verbose parsed url   href: 'csurf@1.9.0' }
+290 verbose cache add [ 'ejs@2.3.4', null ]
+291 verbose cache add name=undefined spec="ejs@2.3.4" args=["ejs@2.3.4",null]
+292 verbose parsed url { protocol: null,
+292 verbose parsed url   slashes: null,
+292 verbose parsed url   auth: null,
+292 verbose parsed url   host: null,
+292 verbose parsed url   port: null,
+292 verbose parsed url   hostname: null,
+292 verbose parsed url   hash: null,
+292 verbose parsed url   search: null,
+292 verbose parsed url   query: null,
+292 verbose parsed url   pathname: 'ejs@2.3.4',
+292 verbose parsed url   path: 'ejs@2.3.4',
+292 verbose parsed url   href: 'ejs@2.3.4' }
+293 verbose cache add [ 'ejs-locals@1.0.2', null ]
+294 verbose cache add name=undefined spec="ejs-locals@1.0.2" args=["ejs-locals@1.0.2",null]
+295 verbose parsed url { protocol: null,
+295 verbose parsed url   slashes: null,
+295 verbose parsed url   auth: null,
+295 verbose parsed url   host: null,
+295 verbose parsed url   port: null,
+295 verbose parsed url   hostname: null,
+295 verbose parsed url   hash: null,
+295 verbose parsed url   search: null,
+295 verbose parsed url   query: null,
+295 verbose parsed url   pathname: 'ejs-locals@1.0.2',
+295 verbose parsed url   path: 'ejs-locals@1.0.2',
+295 verbose parsed url   href: 'ejs-locals@1.0.2' }
+296 verbose cache add [ '@sailshq/express@^3.21.3', null ]
+297 verbose cache add name=undefined spec="@sailshq/express@^3.21.3" args=["@sailshq/express@^3.21.3",null]
+298 verbose parsed url { protocol: null,
+298 verbose parsed url   slashes: null,
+298 verbose parsed url   auth: null,
+298 verbose parsed url   host: null,
+298 verbose parsed url   port: null,
+298 verbose parsed url   hostname: null,
+298 verbose parsed url   hash: null,
+298 verbose parsed url   search: null,
+298 verbose parsed url   query: null,
+298 verbose parsed url   pathname: '@sailshq/express@^3.21.3',
+298 verbose parsed url   path: '@sailshq/express@^3.21.3',
+298 verbose parsed url   href: '@sailshq/express@^3.21.3' }
+299 verbose cache add [ 'express-handlebars@3.0.0', null ]
+300 verbose cache add name=undefined spec="express-handlebars@3.0.0" args=["express-handlebars@3.0.0",null]
+301 verbose parsed url { protocol: null,
+301 verbose parsed url   slashes: null,
+301 verbose parsed url   auth: null,
+301 verbose parsed url   host: null,
+301 verbose parsed url   port: null,
+301 verbose parsed url   hostname: null,
+301 verbose parsed url   hash: null,
+301 verbose parsed url   search: null,
+301 verbose parsed url   query: null,
+301 verbose parsed url   pathname: 'express-handlebars@3.0.0',
+301 verbose parsed url   path: 'express-handlebars@3.0.0',
+301 verbose parsed url   href: 'express-handlebars@3.0.0' }
+302 verbose cache add [ 'express-session@1.14.2', null ]
+303 verbose cache add name=undefined spec="express-session@1.14.2" args=["express-session@1.14.2",null]
+304 verbose parsed url { protocol: null,
+304 verbose parsed url   slashes: null,
+304 verbose parsed url   auth: null,
+304 verbose parsed url   host: null,
+304 verbose parsed url   port: null,
+304 verbose parsed url   hostname: null,
+304 verbose parsed url   hash: null,
+304 verbose parsed url   search: null,
+304 verbose parsed url   query: null,
+304 verbose parsed url   pathname: 'express-session@1.14.2',
+304 verbose parsed url   path: 'express-session@1.14.2',
+304 verbose parsed url   href: 'express-session@1.14.2' }
+305 verbose cache add [ 'flaverr@^1.0.0', null ]
+306 verbose cache add name=undefined spec="flaverr@^1.0.0" args=["flaverr@^1.0.0",null]
+307 verbose parsed url { protocol: null,
+307 verbose parsed url   slashes: null,
+307 verbose parsed url   auth: null,
+307 verbose parsed url   host: null,
+307 verbose parsed url   port: null,
+307 verbose parsed url   hostname: null,
+307 verbose parsed url   hash: null,
+307 verbose parsed url   search: null,
+307 verbose parsed url   query: null,
+307 verbose parsed url   pathname: 'flaverr@^1.0.0',
+307 verbose parsed url   path: 'flaverr@^1.0.0',
+307 verbose parsed url   href: 'flaverr@^1.0.0' }
+308 verbose cache add name="csurf" spec="1.9.0" args=["csurf","1.9.0"]
+309 verbose parsed url { protocol: null,
+309 verbose parsed url   slashes: null,
+309 verbose parsed url   auth: null,
+309 verbose parsed url   host: null,
+309 verbose parsed url   port: null,
+309 verbose parsed url   hostname: null,
+309 verbose parsed url   hash: null,
+309 verbose parsed url   search: null,
+309 verbose parsed url   query: null,
+309 verbose parsed url   pathname: '1.9.0',
+309 verbose parsed url   path: '1.9.0',
+309 verbose parsed url   href: '1.9.0' }
+310 verbose addNamed [ 'csurf', '1.9.0' ]
+311 verbose addNamed [ '1.9.0', '1.9.0' ]
+312 silly lockFile cf2fbec6-csurf-1-9-0 csurf@1.9.0
+313 verbose lock csurf@1.9.0 /home/samanyu/.npm/cf2fbec6-csurf-1-9-0.lock
+314 verbose cache add name="ejs" spec="2.3.4" args=["ejs","2.3.4"]
+315 verbose parsed url { protocol: null,
+315 verbose parsed url   slashes: null,
+315 verbose parsed url   auth: null,
+315 verbose parsed url   host: null,
+315 verbose parsed url   port: null,
+315 verbose parsed url   hostname: null,
+315 verbose parsed url   hash: null,
+315 verbose parsed url   search: null,
+315 verbose parsed url   query: null,
+315 verbose parsed url   pathname: '2.3.4',
+315 verbose parsed url   path: '2.3.4',
+315 verbose parsed url   href: '2.3.4' }
+316 verbose addNamed [ 'ejs', '2.3.4' ]
+317 verbose addNamed [ '2.3.4', '2.3.4' ]
+318 silly lockFile 7d57aeaf-ejs-2-3-4 ejs@2.3.4
+319 verbose lock ejs@2.3.4 /home/samanyu/.npm/7d57aeaf-ejs-2-3-4.lock
+320 verbose cache add name="ejs-locals" spec="1.0.2" args=["ejs-locals","1.0.2"]
+321 verbose parsed url { protocol: null,
+321 verbose parsed url   slashes: null,
+321 verbose parsed url   auth: null,
+321 verbose parsed url   host: null,
+321 verbose parsed url   port: null,
+321 verbose parsed url   hostname: null,
+321 verbose parsed url   hash: null,
+321 verbose parsed url   search: null,
+321 verbose parsed url   query: null,
+321 verbose parsed url   pathname: '1.0.2',
+321 verbose parsed url   path: '1.0.2',
+321 verbose parsed url   href: '1.0.2' }
+322 verbose addNamed [ 'ejs-locals', '1.0.2' ]
+323 verbose addNamed [ '1.0.2', '1.0.2' ]
+324 silly lockFile 993d366b-ejs-locals-1-0-2 ejs-locals@1.0.2
+325 verbose lock ejs-locals@1.0.2 /home/samanyu/.npm/993d366b-ejs-locals-1-0-2.lock
+326 verbose cache add name="" spec="sailshq/express@^3.21.3" args=["","sailshq/express@^3.21.3"]
+327 verbose parsed url { protocol: null,
+327 verbose parsed url   slashes: null,
+327 verbose parsed url   auth: null,
+327 verbose parsed url   host: null,
+327 verbose parsed url   port: null,
+327 verbose parsed url   hostname: null,
+327 verbose parsed url   hash: null,
+327 verbose parsed url   search: null,
+327 verbose parsed url   query: null,
+327 verbose parsed url   pathname: 'sailshq/express@^3.21.3',
+327 verbose parsed url   path: 'sailshq/express@^3.21.3',
+327 verbose parsed url   href: 'sailshq/express@^3.21.3' }
+328 verbose cache add name="express-handlebars" spec="3.0.0" args=["express-handlebars","3.0.0"]
+329 verbose parsed url { protocol: null,
+329 verbose parsed url   slashes: null,
+329 verbose parsed url   auth: null,
+329 verbose parsed url   host: null,
+329 verbose parsed url   port: null,
+329 verbose parsed url   hostname: null,
+329 verbose parsed url   hash: null,
+329 verbose parsed url   search: null,
+329 verbose parsed url   query: null,
+329 verbose parsed url   pathname: '3.0.0',
+329 verbose parsed url   path: '3.0.0',
+329 verbose parsed url   href: '3.0.0' }
+330 verbose addNamed [ 'express-handlebars', '3.0.0' ]
+331 verbose addNamed [ '3.0.0', '3.0.0' ]
+332 silly lockFile a5448e6c-express-handlebars-3-0-0 express-handlebars@3.0.0
+333 verbose lock express-handlebars@3.0.0 /home/samanyu/.npm/a5448e6c-express-handlebars-3-0-0.lock
+334 verbose cache add name="express-session" spec="1.14.2" args=["express-session","1.14.2"]
+335 verbose parsed url { protocol: null,
+335 verbose parsed url   slashes: null,
+335 verbose parsed url   auth: null,
+335 verbose parsed url   host: null,
+335 verbose parsed url   port: null,
+335 verbose parsed url   hostname: null,
+335 verbose parsed url   hash: null,
+335 verbose parsed url   search: null,
+335 verbose parsed url   query: null,
+335 verbose parsed url   pathname: '1.14.2',
+335 verbose parsed url   path: '1.14.2',
+335 verbose parsed url   href: '1.14.2' }
+336 verbose addNamed [ 'express-session', '1.14.2' ]
+337 verbose addNamed [ '1.14.2', '1.14.2' ]
+338 silly lockFile fd16d1cb-express-session-1-14-2 express-session@1.14.2
+339 verbose lock express-session@1.14.2 /home/samanyu/.npm/fd16d1cb-express-session-1-14-2.lock
+340 verbose cache add name="flaverr" spec="^1.0.0" args=["flaverr","^1.0.0"]
+341 verbose parsed url { protocol: null,
+341 verbose parsed url   slashes: null,
+341 verbose parsed url   auth: null,
+341 verbose parsed url   host: null,
+341 verbose parsed url   port: null,
+341 verbose parsed url   hostname: null,
+341 verbose parsed url   hash: null,
+341 verbose parsed url   search: null,
+341 verbose parsed url   query: null,
+341 verbose parsed url   pathname: '^1.0.0',
+341 verbose parsed url   path: '^1.0.0',
+341 verbose parsed url   href: '^1.0.0' }
+342 verbose addNamed [ 'flaverr', '^1.0.0' ]
+343 verbose addNamed [ null, '>=1.0.0-0 <2.0.0-0' ]
+344 silly lockFile e2ed5ebf-flaverr-1-0-0 flaverr@^1.0.0
+345 verbose lock flaverr@^1.0.0 /home/samanyu/.npm/e2ed5ebf-flaverr-1-0-0.lock
+346 verbose cache add [ 'glob@5.0.15', null ]
+347 verbose cache add name=undefined spec="glob@5.0.15" args=["glob@5.0.15",null]
+348 verbose parsed url { protocol: null,
+348 verbose parsed url   slashes: null,
+348 verbose parsed url   auth: null,
+348 verbose parsed url   host: null,
+348 verbose parsed url   port: null,
+348 verbose parsed url   hostname: null,
+348 verbose parsed url   hash: null,
+348 verbose parsed url   search: null,
+348 verbose parsed url   query: null,
+348 verbose parsed url   pathname: 'glob@5.0.15',
+348 verbose parsed url   path: 'glob@5.0.15',
+348 verbose parsed url   href: 'glob@5.0.15' }
+349 verbose cache add [ 'grunt@1.0.1', null ]
+350 verbose cache add name=undefined spec="grunt@1.0.1" args=["grunt@1.0.1",null]
+351 verbose parsed url { protocol: null,
+351 verbose parsed url   slashes: null,
+351 verbose parsed url   auth: null,
+351 verbose parsed url   host: null,
+351 verbose parsed url   port: null,
+351 verbose parsed url   hostname: null,
+351 verbose parsed url   hash: null,
+351 verbose parsed url   search: null,
+351 verbose parsed url   query: null,
+351 verbose parsed url   pathname: 'grunt@1.0.1',
+351 verbose parsed url   path: 'grunt@1.0.1',
+351 verbose parsed url   href: 'grunt@1.0.1' }
+352 verbose cache add [ 'grunt-cli@1.2.0', null ]
+353 verbose cache add name=undefined spec="grunt-cli@1.2.0" args=["grunt-cli@1.2.0",null]
+354 verbose parsed url { protocol: null,
+354 verbose parsed url   slashes: null,
+354 verbose parsed url   auth: null,
+354 verbose parsed url   host: null,
+354 verbose parsed url   port: null,
+354 verbose parsed url   hostname: null,
+354 verbose parsed url   hash: null,
+354 verbose parsed url   search: null,
+354 verbose parsed url   query: null,
+354 verbose parsed url   pathname: 'grunt-cli@1.2.0',
+354 verbose parsed url   path: 'grunt-cli@1.2.0',
+354 verbose parsed url   href: 'grunt-cli@1.2.0' }
+355 verbose cache add [ 'grunt-contrib-clean@1.0.0', null ]
+356 verbose cache add name=undefined spec="grunt-contrib-clean@1.0.0" args=["grunt-contrib-clean@1.0.0",null]
+357 verbose parsed url { protocol: null,
+357 verbose parsed url   slashes: null,
+357 verbose parsed url   auth: null,
+357 verbose parsed url   host: null,
+357 verbose parsed url   port: null,
+357 verbose parsed url   hostname: null,
+357 verbose parsed url   hash: null,
+357 verbose parsed url   search: null,
+357 verbose parsed url   query: null,
+357 verbose parsed url   pathname: 'grunt-contrib-clean@1.0.0',
+357 verbose parsed url   path: 'grunt-contrib-clean@1.0.0',
+357 verbose parsed url   href: 'grunt-contrib-clean@1.0.0' }
+358 verbose cache add [ 'grunt-contrib-coffee@1.0.0', null ]
+359 verbose cache add name=undefined spec="grunt-contrib-coffee@1.0.0" args=["grunt-contrib-coffee@1.0.0",null]
+360 verbose parsed url { protocol: null,
+360 verbose parsed url   slashes: null,
+360 verbose parsed url   auth: null,
+360 verbose parsed url   host: null,
+360 verbose parsed url   port: null,
+360 verbose parsed url   hostname: null,
+360 verbose parsed url   hash: null,
+360 verbose parsed url   search: null,
+360 verbose parsed url   query: null,
+360 verbose parsed url   pathname: 'grunt-contrib-coffee@1.0.0',
+360 verbose parsed url   path: 'grunt-contrib-coffee@1.0.0',
+360 verbose parsed url   href: 'grunt-contrib-coffee@1.0.0' }
+361 verbose cache add [ 'grunt-contrib-concat@1.0.1', null ]
+362 verbose cache add name=undefined spec="grunt-contrib-concat@1.0.1" args=["grunt-contrib-concat@1.0.1",null]
+363 verbose parsed url { protocol: null,
+363 verbose parsed url   slashes: null,
+363 verbose parsed url   auth: null,
+363 verbose parsed url   host: null,
+363 verbose parsed url   port: null,
+363 verbose parsed url   hostname: null,
+363 verbose parsed url   hash: null,
+363 verbose parsed url   search: null,
+363 verbose parsed url   query: null,
+363 verbose parsed url   pathname: 'grunt-contrib-concat@1.0.1',
+363 verbose parsed url   path: 'grunt-contrib-concat@1.0.1',
+363 verbose parsed url   href: 'grunt-contrib-concat@1.0.1' }
+364 verbose cache add [ 'grunt-contrib-copy@1.0.0', null ]
+365 verbose cache add name=undefined spec="grunt-contrib-copy@1.0.0" args=["grunt-contrib-copy@1.0.0",null]
+366 verbose parsed url { protocol: null,
+366 verbose parsed url   slashes: null,
+366 verbose parsed url   auth: null,
+366 verbose parsed url   host: null,
+366 verbose parsed url   port: null,
+366 verbose parsed url   hostname: null,
+366 verbose parsed url   hash: null,
+366 verbose parsed url   search: null,
+366 verbose parsed url   query: null,
+366 verbose parsed url   pathname: 'grunt-contrib-copy@1.0.0',
+366 verbose parsed url   path: 'grunt-contrib-copy@1.0.0',
+366 verbose parsed url   href: 'grunt-contrib-copy@1.0.0' }
+367 verbose cache add [ 'grunt-contrib-cssmin@1.0.1', null ]
+368 verbose cache add name=undefined spec="grunt-contrib-cssmin@1.0.1" args=["grunt-contrib-cssmin@1.0.1",null]
+369 verbose parsed url { protocol: null,
+369 verbose parsed url   slashes: null,
+369 verbose parsed url   auth: null,
+369 verbose parsed url   host: null,
+369 verbose parsed url   port: null,
+369 verbose parsed url   hostname: null,
+369 verbose parsed url   hash: null,
+369 verbose parsed url   search: null,
+369 verbose parsed url   query: null,
+369 verbose parsed url   pathname: 'grunt-contrib-cssmin@1.0.1',
+369 verbose parsed url   path: 'grunt-contrib-cssmin@1.0.1',
+369 verbose parsed url   href: 'grunt-contrib-cssmin@1.0.1' }
+370 verbose cache add [ 'grunt-contrib-jst@1.0.0', null ]
+371 verbose cache add name=undefined spec="grunt-contrib-jst@1.0.0" args=["grunt-contrib-jst@1.0.0",null]
+372 verbose parsed url { protocol: null,
+372 verbose parsed url   slashes: null,
+372 verbose parsed url   auth: null,
+372 verbose parsed url   host: null,
+372 verbose parsed url   port: null,
+372 verbose parsed url   hostname: null,
+372 verbose parsed url   hash: null,
+372 verbose parsed url   search: null,
+372 verbose parsed url   query: null,
+372 verbose parsed url   pathname: 'grunt-contrib-jst@1.0.0',
+372 verbose parsed url   path: 'grunt-contrib-jst@1.0.0',
+372 verbose parsed url   href: 'grunt-contrib-jst@1.0.0' }
+373 verbose cache add [ 'grunt-contrib-less@1.3.0', null ]
+374 verbose cache add name=undefined spec="grunt-contrib-less@1.3.0" args=["grunt-contrib-less@1.3.0",null]
+375 verbose parsed url { protocol: null,
+375 verbose parsed url   slashes: null,
+375 verbose parsed url   auth: null,
+375 verbose parsed url   host: null,
+375 verbose parsed url   port: null,
+375 verbose parsed url   hostname: null,
+375 verbose parsed url   hash: null,
+375 verbose parsed url   search: null,
+375 verbose parsed url   query: null,
+375 verbose parsed url   pathname: 'grunt-contrib-less@1.3.0',
+375 verbose parsed url   path: 'grunt-contrib-less@1.3.0',
+375 verbose parsed url   href: 'grunt-contrib-less@1.3.0' }
+376 verbose cache add [ 'grunt-contrib-uglify@1.0.1', null ]
+377 verbose cache add name=undefined spec="grunt-contrib-uglify@1.0.1" args=["grunt-contrib-uglify@1.0.1",null]
+378 verbose parsed url { protocol: null,
+378 verbose parsed url   slashes: null,
+378 verbose parsed url   auth: null,
+378 verbose parsed url   host: null,
+378 verbose parsed url   port: null,
+378 verbose parsed url   hostname: null,
+378 verbose parsed url   hash: null,
+378 verbose parsed url   search: null,
+378 verbose parsed url   query: null,
+378 verbose parsed url   pathname: 'grunt-contrib-uglify@1.0.1',
+378 verbose parsed url   path: 'grunt-contrib-uglify@1.0.1',
+378 verbose parsed url   href: 'grunt-contrib-uglify@1.0.1' }
+379 verbose cache add name="sailshq/express" spec="^3.21.3" args=["sailshq/express","^3.21.3"]
+380 verbose parsed url { protocol: null,
+380 verbose parsed url   slashes: null,
+380 verbose parsed url   auth: null,
+380 verbose parsed url   host: null,
+380 verbose parsed url   port: null,
+380 verbose parsed url   hostname: null,
+380 verbose parsed url   hash: null,
+380 verbose parsed url   search: null,
+380 verbose parsed url   query: null,
+380 verbose parsed url   pathname: '^3.21.3',
+380 verbose parsed url   path: '^3.21.3',
+380 verbose parsed url   href: '^3.21.3' }
+381 verbose addNamed [ 'sailshq/express', '^3.21.3' ]
+382 verbose addNamed [ null, '>=3.21.3-0 <4.0.0-0' ]
+383 silly lockFile 65d717ab-sailshq-express-3-21-3 sailshq/express@^3.21.3
+384 verbose lock sailshq/express@^3.21.3 /home/samanyu/.npm/65d717ab-sailshq-express-3-21-3.lock
+385 verbose cache add name="glob" spec="5.0.15" args=["glob","5.0.15"]
+386 verbose parsed url { protocol: null,
+386 verbose parsed url   slashes: null,
+386 verbose parsed url   auth: null,
+386 verbose parsed url   host: null,
+386 verbose parsed url   port: null,
+386 verbose parsed url   hostname: null,
+386 verbose parsed url   hash: null,
+386 verbose parsed url   search: null,
+386 verbose parsed url   query: null,
+386 verbose parsed url   pathname: '5.0.15',
+386 verbose parsed url   path: '5.0.15',
+386 verbose parsed url   href: '5.0.15' }
+387 verbose addNamed [ 'glob', '5.0.15' ]
+388 verbose addNamed [ '5.0.15', '5.0.15' ]
+389 silly lockFile 03e27dc7-glob-5-0-15 glob@5.0.15
+390 verbose lock glob@5.0.15 /home/samanyu/.npm/03e27dc7-glob-5-0-15.lock
+391 verbose cache add name="grunt" spec="1.0.1" args=["grunt","1.0.1"]
+392 verbose parsed url { protocol: null,
+392 verbose parsed url   slashes: null,
+392 verbose parsed url   auth: null,
+392 verbose parsed url   host: null,
+392 verbose parsed url   port: null,
+392 verbose parsed url   hostname: null,
+392 verbose parsed url   hash: null,
+392 verbose parsed url   search: null,
+392 verbose parsed url   query: null,
+392 verbose parsed url   pathname: '1.0.1',
+392 verbose parsed url   path: '1.0.1',
+392 verbose parsed url   href: '1.0.1' }
+393 verbose addNamed [ 'grunt', '1.0.1' ]
+394 verbose addNamed [ '1.0.1', '1.0.1' ]
+395 silly lockFile 75468da5-grunt-1-0-1 grunt@1.0.1
+396 verbose lock grunt@1.0.1 /home/samanyu/.npm/75468da5-grunt-1-0-1.lock
+397 verbose cache add name="grunt-cli" spec="1.2.0" args=["grunt-cli","1.2.0"]
+398 verbose parsed url { protocol: null,
+398 verbose parsed url   slashes: null,
+398 verbose parsed url   auth: null,
+398 verbose parsed url   host: null,
+398 verbose parsed url   port: null,
+398 verbose parsed url   hostname: null,
+398 verbose parsed url   hash: null,
+398 verbose parsed url   search: null,
+398 verbose parsed url   query: null,
+398 verbose parsed url   pathname: '1.2.0',
+398 verbose parsed url   path: '1.2.0',
+398 verbose parsed url   href: '1.2.0' }
+399 verbose addNamed [ 'grunt-cli', '1.2.0' ]
+400 verbose addNamed [ '1.2.0', '1.2.0' ]
+401 silly lockFile 923e46ff-grunt-cli-1-2-0 grunt-cli@1.2.0
+402 verbose lock grunt-cli@1.2.0 /home/samanyu/.npm/923e46ff-grunt-cli-1-2-0.lock
+403 verbose cache add name="grunt-contrib-clean" spec="1.0.0" args=["grunt-contrib-clean","1.0.0"]
+404 verbose parsed url { protocol: null,
+404 verbose parsed url   slashes: null,
+404 verbose parsed url   auth: null,
+404 verbose parsed url   host: null,
+404 verbose parsed url   port: null,
+404 verbose parsed url   hostname: null,
+404 verbose parsed url   hash: null,
+404 verbose parsed url   search: null,
+404 verbose parsed url   query: null,
+404 verbose parsed url   pathname: '1.0.0',
+404 verbose parsed url   path: '1.0.0',
+404 verbose parsed url   href: '1.0.0' }
+405 verbose addNamed [ 'grunt-contrib-clean', '1.0.0' ]
+406 verbose addNamed [ '1.0.0', '1.0.0' ]
+407 silly lockFile c8126091-grunt-contrib-clean-1-0-0 grunt-contrib-clean@1.0.0
+408 verbose lock grunt-contrib-clean@1.0.0 /home/samanyu/.npm/c8126091-grunt-contrib-clean-1-0-0.lock
+409 verbose cache add name="grunt-contrib-coffee" spec="1.0.0" args=["grunt-contrib-coffee","1.0.0"]
+410 verbose parsed url { protocol: null,
+410 verbose parsed url   slashes: null,
+410 verbose parsed url   auth: null,
+410 verbose parsed url   host: null,
+410 verbose parsed url   port: null,
+410 verbose parsed url   hostname: null,
+410 verbose parsed url   hash: null,
+410 verbose parsed url   search: null,
+410 verbose parsed url   query: null,
+410 verbose parsed url   pathname: '1.0.0',
+410 verbose parsed url   path: '1.0.0',
+410 verbose parsed url   href: '1.0.0' }
+411 verbose addNamed [ 'grunt-contrib-coffee', '1.0.0' ]
+412 verbose addNamed [ '1.0.0', '1.0.0' ]
+413 silly lockFile c78ae5e0-grunt-contrib-coffee-1-0-0 grunt-contrib-coffee@1.0.0
+414 verbose lock grunt-contrib-coffee@1.0.0 /home/samanyu/.npm/c78ae5e0-grunt-contrib-coffee-1-0-0.lock
+415 verbose cache add name="grunt-contrib-concat" spec="1.0.1" args=["grunt-contrib-concat","1.0.1"]
+416 verbose parsed url { protocol: null,
+416 verbose parsed url   slashes: null,
+416 verbose parsed url   auth: null,
+416 verbose parsed url   host: null,
+416 verbose parsed url   port: null,
+416 verbose parsed url   hostname: null,
+416 verbose parsed url   hash: null,
+416 verbose parsed url   search: null,
+416 verbose parsed url   query: null,
+416 verbose parsed url   pathname: '1.0.1',
+416 verbose parsed url   path: '1.0.1',
+416 verbose parsed url   href: '1.0.1' }
+417 verbose addNamed [ 'grunt-contrib-concat', '1.0.1' ]
+418 verbose addNamed [ '1.0.1', '1.0.1' ]
+419 silly lockFile 6c53d9ce-grunt-contrib-concat-1-0-1 grunt-contrib-concat@1.0.1
+420 verbose lock grunt-contrib-concat@1.0.1 /home/samanyu/.npm/6c53d9ce-grunt-contrib-concat-1-0-1.lock
+421 verbose cache add name="grunt-contrib-copy" spec="1.0.0" args=["grunt-contrib-copy","1.0.0"]
+422 verbose parsed url { protocol: null,
+422 verbose parsed url   slashes: null,
+422 verbose parsed url   auth: null,
+422 verbose parsed url   host: null,
+422 verbose parsed url   port: null,
+422 verbose parsed url   hostname: null,
+422 verbose parsed url   hash: null,
+422 verbose parsed url   search: null,
+422 verbose parsed url   query: null,
+422 verbose parsed url   pathname: '1.0.0',
+422 verbose parsed url   path: '1.0.0',
+422 verbose parsed url   href: '1.0.0' }
+423 verbose addNamed [ 'grunt-contrib-copy', '1.0.0' ]
+424 verbose addNamed [ '1.0.0', '1.0.0' ]
+425 silly lockFile be102878-grunt-contrib-copy-1-0-0 grunt-contrib-copy@1.0.0
+426 verbose lock grunt-contrib-copy@1.0.0 /home/samanyu/.npm/be102878-grunt-contrib-copy-1-0-0.lock
+427 verbose cache add name="grunt-contrib-cssmin" spec="1.0.1" args=["grunt-contrib-cssmin","1.0.1"]
+428 verbose parsed url { protocol: null,
+428 verbose parsed url   slashes: null,
+428 verbose parsed url   auth: null,
+428 verbose parsed url   host: null,
+428 verbose parsed url   port: null,
+428 verbose parsed url   hostname: null,
+428 verbose parsed url   hash: null,
+428 verbose parsed url   search: null,
+428 verbose parsed url   query: null,
+428 verbose parsed url   pathname: '1.0.1',
+428 verbose parsed url   path: '1.0.1',
+428 verbose parsed url   href: '1.0.1' }
+429 verbose addNamed [ 'grunt-contrib-cssmin', '1.0.1' ]
+430 verbose addNamed [ '1.0.1', '1.0.1' ]
+431 silly lockFile 49c63eba-grunt-contrib-cssmin-1-0-1 grunt-contrib-cssmin@1.0.1
+432 verbose lock grunt-contrib-cssmin@1.0.1 /home/samanyu/.npm/49c63eba-grunt-contrib-cssmin-1-0-1.lock
+433 verbose cache add name="grunt-contrib-jst" spec="1.0.0" args=["grunt-contrib-jst","1.0.0"]
+434 verbose parsed url { protocol: null,
+434 verbose parsed url   slashes: null,
+434 verbose parsed url   auth: null,
+434 verbose parsed url   host: null,
+434 verbose parsed url   port: null,
+434 verbose parsed url   hostname: null,
+434 verbose parsed url   hash: null,
+434 verbose parsed url   search: null,
+434 verbose parsed url   query: null,
+434 verbose parsed url   pathname: '1.0.0',
+434 verbose parsed url   path: '1.0.0',
+434 verbose parsed url   href: '1.0.0' }
+435 verbose addNamed [ 'grunt-contrib-jst', '1.0.0' ]
+436 verbose addNamed [ '1.0.0', '1.0.0' ]
+437 silly lockFile 776215eb-grunt-contrib-jst-1-0-0 grunt-contrib-jst@1.0.0
+438 verbose lock grunt-contrib-jst@1.0.0 /home/samanyu/.npm/776215eb-grunt-contrib-jst-1-0-0.lock
+439 verbose cache add name="grunt-contrib-less" spec="1.3.0" args=["grunt-contrib-less","1.3.0"]
+440 verbose parsed url { protocol: null,
+440 verbose parsed url   slashes: null,
+440 verbose parsed url   auth: null,
+440 verbose parsed url   host: null,
+440 verbose parsed url   port: null,
+440 verbose parsed url   hostname: null,
+440 verbose parsed url   hash: null,
+440 verbose parsed url   search: null,
+440 verbose parsed url   query: null,
+440 verbose parsed url   pathname: '1.3.0',
+440 verbose parsed url   path: '1.3.0',
+440 verbose parsed url   href: '1.3.0' }
+441 verbose addNamed [ 'grunt-contrib-less', '1.3.0' ]
+442 verbose addNamed [ '1.3.0', '1.3.0' ]
+443 silly lockFile c6cceae8-grunt-contrib-less-1-3-0 grunt-contrib-less@1.3.0
+444 verbose lock grunt-contrib-less@1.3.0 /home/samanyu/.npm/c6cceae8-grunt-contrib-less-1-3-0.lock
+445 verbose cache add name="grunt-contrib-uglify" spec="1.0.1" args=["grunt-contrib-uglify","1.0.1"]
+446 verbose parsed url { protocol: null,
+446 verbose parsed url   slashes: null,
+446 verbose parsed url   auth: null,
+446 verbose parsed url   host: null,
+446 verbose parsed url   port: null,
+446 verbose parsed url   hostname: null,
+446 verbose parsed url   hash: null,
+446 verbose parsed url   search: null,
+446 verbose parsed url   query: null,
+446 verbose parsed url   pathname: '1.0.1',
+446 verbose parsed url   path: '1.0.1',
+446 verbose parsed url   href: '1.0.1' }
+447 verbose addNamed [ 'grunt-contrib-uglify', '1.0.1' ]
+448 verbose addNamed [ '1.0.1', '1.0.1' ]
+449 silly lockFile 0cdb83d1-grunt-contrib-uglify-1-0-1 grunt-contrib-uglify@1.0.1
+450 verbose lock grunt-contrib-uglify@1.0.1 /home/samanyu/.npm/0cdb83d1-grunt-contrib-uglify-1-0-1.lock
+451 verbose cache add [ 'grunt-contrib-watch@1.0.0', null ]
+452 verbose cache add name=undefined spec="grunt-contrib-watch@1.0.0" args=["grunt-contrib-watch@1.0.0",null]
+453 verbose parsed url { protocol: null,
+453 verbose parsed url   slashes: null,
+453 verbose parsed url   auth: null,
+453 verbose parsed url   host: null,
+453 verbose parsed url   port: null,
+453 verbose parsed url   hostname: null,
+453 verbose parsed url   hash: null,
+453 verbose parsed url   search: null,
+453 verbose parsed url   query: null,
+453 verbose parsed url   pathname: 'grunt-contrib-watch@1.0.0',
+453 verbose parsed url   path: 'grunt-contrib-watch@1.0.0',
+453 verbose parsed url   href: 'grunt-contrib-watch@1.0.0' }
+454 verbose cache add [ 'grunt-sails-linker@~0.10.1', null ]
+455 verbose cache add name=undefined spec="grunt-sails-linker@~0.10.1" args=["grunt-sails-linker@~0.10.1",null]
+456 verbose parsed url { protocol: null,
+456 verbose parsed url   slashes: null,
+456 verbose parsed url   auth: null,
+456 verbose parsed url   host: null,
+456 verbose parsed url   port: null,
+456 verbose parsed url   hostname: null,
+456 verbose parsed url   hash: null,
+456 verbose parsed url   search: null,
+456 verbose parsed url   query: null,
+456 verbose parsed url   pathname: 'grunt-sails-linker@~0.10.1',
+456 verbose parsed url   path: 'grunt-sails-linker@~0.10.1',
+456 verbose parsed url   href: 'grunt-sails-linker@~0.10.1' }
+457 verbose cache add [ 'grunt-sync@0.5.2', null ]
+458 verbose cache add name=undefined spec="grunt-sync@0.5.2" args=["grunt-sync@0.5.2",null]
+459 verbose parsed url { protocol: null,
+459 verbose parsed url   slashes: null,
+459 verbose parsed url   auth: null,
+459 verbose parsed url   host: null,
+459 verbose parsed url   port: null,
+459 verbose parsed url   hostname: null,
+459 verbose parsed url   hash: null,
+459 verbose parsed url   search: null,
+459 verbose parsed url   query: null,
+459 verbose parsed url   pathname: 'grunt-sync@0.5.2',
+459 verbose parsed url   path: 'grunt-sync@0.5.2',
+459 verbose parsed url   href: 'grunt-sync@0.5.2' }
+460 verbose cache add [ 'i18n@0.8.1', null ]
+461 verbose cache add name=undefined spec="i18n@0.8.1" args=["i18n@0.8.1",null]
+462 verbose parsed url { protocol: null,
+462 verbose parsed url   slashes: null,
+462 verbose parsed url   auth: null,
+462 verbose parsed url   host: null,
+462 verbose parsed url   port: null,
+462 verbose parsed url   hostname: null,
+462 verbose parsed url   hash: null,
+462 verbose parsed url   search: null,
+462 verbose parsed url   query: null,
+462 verbose parsed url   pathname: 'i18n@0.8.1',
+462 verbose parsed url   path: 'i18n@0.8.1',
+462 verbose parsed url   href: 'i18n@0.8.1' }
+463 verbose cache add [ 'include-all@^1.0.0', null ]
+464 verbose cache add name=undefined spec="include-all@^1.0.0" args=["include-all@^1.0.0",null]
+465 verbose parsed url { protocol: null,
+465 verbose parsed url   slashes: null,
+465 verbose parsed url   auth: null,
+465 verbose parsed url   host: null,
+465 verbose parsed url   port: null,
+465 verbose parsed url   hostname: null,
+465 verbose parsed url   hash: null,
+465 verbose parsed url   search: null,
+465 verbose parsed url   query: null,
+465 verbose parsed url   pathname: 'include-all@^1.0.0',
+465 verbose parsed url   path: 'include-all@^1.0.0',
+465 verbose parsed url   href: 'include-all@^1.0.0' }
+466 verbose cache add [ '@sailshq/lodash@^3.10.2', null ]
+467 verbose cache add name=undefined spec="@sailshq/lodash@^3.10.2" args=["@sailshq/lodash@^3.10.2",null]
+468 verbose parsed url { protocol: null,
+468 verbose parsed url   slashes: null,
+468 verbose parsed url   auth: null,
+468 verbose parsed url   host: null,
+468 verbose parsed url   port: null,
+468 verbose parsed url   hostname: null,
+468 verbose parsed url   hash: null,
+468 verbose parsed url   search: null,
+468 verbose parsed url   query: null,
+468 verbose parsed url   pathname: '@sailshq/lodash@^3.10.2',
+468 verbose parsed url   path: '@sailshq/lodash@^3.10.2',
+468 verbose parsed url   href: '@sailshq/lodash@^3.10.2' }
+469 verbose cache add [ 'merge-defaults@~0.2.1', null ]
+470 verbose cache add name=undefined spec="merge-defaults@~0.2.1" args=["merge-defaults@~0.2.1",null]
+471 verbose parsed url { protocol: null,
+471 verbose parsed url   slashes: null,
+471 verbose parsed url   auth: null,
+471 verbose parsed url   host: null,
+471 verbose parsed url   port: null,
+471 verbose parsed url   hostname: null,
+471 verbose parsed url   hash: null,
+471 verbose parsed url   search: null,
+471 verbose parsed url   query: null,
+471 verbose parsed url   pathname: 'merge-defaults@~0.2.1',
+471 verbose parsed url   path: 'merge-defaults@~0.2.1',
+471 verbose parsed url   href: 'merge-defaults@~0.2.1' }
+472 verbose cache add [ 'method-override@2.3.5', null ]
+473 verbose cache add name=undefined spec="method-override@2.3.5" args=["method-override@2.3.5",null]
+474 verbose parsed url { protocol: null,
+474 verbose parsed url   slashes: null,
+474 verbose parsed url   auth: null,
+474 verbose parsed url   host: null,
+474 verbose parsed url   port: null,
+474 verbose parsed url   hostname: null,
+474 verbose parsed url   hash: null,
+474 verbose parsed url   search: null,
+474 verbose parsed url   query: null,
+474 verbose parsed url   pathname: 'method-override@2.3.5',
+474 verbose parsed url   path: 'method-override@2.3.5',
+474 verbose parsed url   href: 'method-override@2.3.5' }
+475 verbose cache add [ 'mock-req@0.2.0', null ]
+476 verbose cache add name=undefined spec="mock-req@0.2.0" args=["mock-req@0.2.0",null]
+477 verbose parsed url { protocol: null,
+477 verbose parsed url   slashes: null,
+477 verbose parsed url   auth: null,
+477 verbose parsed url   host: null,
+477 verbose parsed url   port: null,
+477 verbose parsed url   hostname: null,
+477 verbose parsed url   hash: null,
+477 verbose parsed url   search: null,
+477 verbose parsed url   query: null,
+477 verbose parsed url   pathname: 'mock-req@0.2.0',
+477 verbose parsed url   path: 'mock-req@0.2.0',
+477 verbose parsed url   href: 'mock-req@0.2.0' }
+478 verbose cache add [ 'mock-res@0.3.0', null ]
+479 verbose cache add name=undefined spec="mock-res@0.3.0" args=["mock-res@0.3.0",null]
+480 verbose parsed url { protocol: null,
+480 verbose parsed url   slashes: null,
+480 verbose parsed url   auth: null,
+480 verbose parsed url   host: null,
+480 verbose parsed url   port: null,
+480 verbose parsed url   hostname: null,
+480 verbose parsed url   hash: null,
+480 verbose parsed url   search: null,
+480 verbose parsed url   query: null,
+480 verbose parsed url   pathname: 'mock-res@0.3.0',
+480 verbose parsed url   path: 'mock-res@0.3.0',
+480 verbose parsed url   href: 'mock-res@0.3.0' }
+481 verbose cache add [ 'parseurl@1.3.1', null ]
+482 verbose cache add name=undefined spec="parseurl@1.3.1" args=["parseurl@1.3.1",null]
+483 verbose parsed url { protocol: null,
+483 verbose parsed url   slashes: null,
+483 verbose parsed url   auth: null,
+483 verbose parsed url   host: null,
+483 verbose parsed url   port: null,
+483 verbose parsed url   hostname: null,
+483 verbose parsed url   hash: null,
+483 verbose parsed url   search: null,
+483 verbose parsed url   query: null,
+483 verbose parsed url   pathname: 'parseurl@1.3.1',
+483 verbose parsed url   path: 'parseurl@1.3.1',
+483 verbose parsed url   href: 'parseurl@1.3.1' }
+484 verbose cache add [ 'path-to-regexp@1.5.3', null ]
+485 verbose cache add name=undefined spec="path-to-regexp@1.5.3" args=["path-to-regexp@1.5.3",null]
+486 verbose parsed url { protocol: null,
+486 verbose parsed url   slashes: null,
+486 verbose parsed url   auth: null,
+486 verbose parsed url   host: null,
+486 verbose parsed url   port: null,
+486 verbose parsed url   hostname: null,
+486 verbose parsed url   hash: null,
+486 verbose parsed url   search: null,
+486 verbose parsed url   query: null,
+486 verbose parsed url   pathname: 'path-to-regexp@1.5.3',
+486 verbose parsed url   path: 'path-to-regexp@1.5.3',
+486 verbose parsed url   href: 'path-to-regexp@1.5.3' }
+487 verbose cache add [ 'pluralize@1.2.1', null ]
+488 verbose cache add name=undefined spec="pluralize@1.2.1" args=["pluralize@1.2.1",null]
+489 verbose parsed url { protocol: null,
+489 verbose parsed url   slashes: null,
+489 verbose parsed url   auth: null,
+489 verbose parsed url   host: null,
+489 verbose parsed url   port: null,
+489 verbose parsed url   hostname: null,
+489 verbose parsed url   hash: null,
+489 verbose parsed url   search: null,
+489 verbose parsed url   query: null,
+489 verbose parsed url   pathname: 'pluralize@1.2.1',
+489 verbose parsed url   path: 'pluralize@1.2.1',
+489 verbose parsed url   href: 'pluralize@1.2.1' }
+490 verbose cache add [ 'prompt@0.2.14', null ]
+491 verbose cache add name=undefined spec="prompt@0.2.14" args=["prompt@0.2.14",null]
+492 verbose parsed url { protocol: null,
+492 verbose parsed url   slashes: null,
+492 verbose parsed url   auth: null,
+492 verbose parsed url   host: null,
+492 verbose parsed url   port: null,
+492 verbose parsed url   hostname: null,
+492 verbose parsed url   hash: null,
+492 verbose parsed url   search: null,
+492 verbose parsed url   query: null,
+492 verbose parsed url   pathname: 'prompt@0.2.14',
+492 verbose parsed url   path: 'prompt@0.2.14',
+492 verbose parsed url   href: 'prompt@0.2.14' }
+493 verbose cache add [ 'rc@1.0.1', null ]
+494 verbose cache add name=undefined spec="rc@1.0.1" args=["rc@1.0.1",null]
+495 verbose parsed url { protocol: null,
+495 verbose parsed url   slashes: null,
+495 verbose parsed url   auth: null,
+495 verbose parsed url   host: null,
+495 verbose parsed url   port: null,
+495 verbose parsed url   hostname: null,
+495 verbose parsed url   hash: null,
+495 verbose parsed url   search: null,
+495 verbose parsed url   query: null,
+495 verbose parsed url   pathname: 'rc@1.0.1',
+495 verbose parsed url   path: 'rc@1.0.1',
+495 verbose parsed url   href: 'rc@1.0.1' }
+496 verbose cache add [ 'reportback@~0.1.9', null ]
+497 verbose cache add name=undefined spec="reportback@~0.1.9" args=["reportback@~0.1.9",null]
+498 verbose parsed url { protocol: null,
+498 verbose parsed url   slashes: null,
+498 verbose parsed url   auth: null,
+498 verbose parsed url   host: null,
+498 verbose parsed url   port: null,
+498 verbose parsed url   hostname: null,
+498 verbose parsed url   hash: null,
+498 verbose parsed url   search: null,
+498 verbose parsed url   query: null,
+498 verbose parsed url   pathname: 'reportback@~0.1.9',
+498 verbose parsed url   path: 'reportback@~0.1.9',
+498 verbose parsed url   href: 'reportback@~0.1.9' }
+499 silly addNameRange { name: 'flaverr', range: '>=1.0.0-0 <2.0.0-0', hasData: false }
+500 verbose cache add name="grunt-contrib-watch" spec="1.0.0" args=["grunt-contrib-watch","1.0.0"]
+501 verbose parsed url { protocol: null,
+501 verbose parsed url   slashes: null,
+501 verbose parsed url   auth: null,
+501 verbose parsed url   host: null,
+501 verbose parsed url   port: null,
+501 verbose parsed url   hostname: null,
+501 verbose parsed url   hash: null,
+501 verbose parsed url   search: null,
+501 verbose parsed url   query: null,
+501 verbose parsed url   pathname: '1.0.0',
+501 verbose parsed url   path: '1.0.0',
+501 verbose parsed url   href: '1.0.0' }
+502 verbose addNamed [ 'grunt-contrib-watch', '1.0.0' ]
+503 verbose addNamed [ '1.0.0', '1.0.0' ]
+504 silly lockFile 1aa728f2-grunt-contrib-watch-1-0-0 grunt-contrib-watch@1.0.0
+505 verbose lock grunt-contrib-watch@1.0.0 /home/samanyu/.npm/1aa728f2-grunt-contrib-watch-1-0-0.lock
+506 verbose cache add name="grunt-sails-linker" spec="~0.10.1" args=["grunt-sails-linker","~0.10.1"]
+507 verbose parsed url { protocol: null,
+507 verbose parsed url   slashes: null,
+507 verbose parsed url   auth: null,
+507 verbose parsed url   host: null,
+507 verbose parsed url   port: null,
+507 verbose parsed url   hostname: null,
+507 verbose parsed url   hash: null,
+507 verbose parsed url   search: null,
+507 verbose parsed url   query: null,
+507 verbose parsed url   pathname: '~0.10.1',
+507 verbose parsed url   path: '~0.10.1',
+507 verbose parsed url   href: '~0.10.1' }
+508 verbose addNamed [ 'grunt-sails-linker', '~0.10.1' ]
+509 verbose addNamed [ null, '>=0.10.1-0 <0.11.0-0' ]
+510 silly lockFile 5867c3e5-grunt-sails-linker-0-10-1 grunt-sails-linker@~0.10.1
+511 verbose lock grunt-sails-linker@~0.10.1 /home/samanyu/.npm/5867c3e5-grunt-sails-linker-0-10-1.lock
+512 verbose cache add name="grunt-sync" spec="0.5.2" args=["grunt-sync","0.5.2"]
+513 verbose parsed url { protocol: null,
+513 verbose parsed url   slashes: null,
+513 verbose parsed url   auth: null,
+513 verbose parsed url   host: null,
+513 verbose parsed url   port: null,
+513 verbose parsed url   hostname: null,
+513 verbose parsed url   hash: null,
+513 verbose parsed url   search: null,
+513 verbose parsed url   query: null,
+513 verbose parsed url   pathname: '0.5.2',
+513 verbose parsed url   path: '0.5.2',
+513 verbose parsed url   href: '0.5.2' }
+514 verbose addNamed [ 'grunt-sync', '0.5.2' ]
+515 verbose addNamed [ '0.5.2', '0.5.2' ]
+516 silly lockFile 78b73a7b-grunt-sync-0-5-2 grunt-sync@0.5.2
+517 verbose lock grunt-sync@0.5.2 /home/samanyu/.npm/78b73a7b-grunt-sync-0-5-2.lock
+518 verbose cache add name="i18n" spec="0.8.1" args=["i18n","0.8.1"]
+519 verbose parsed url { protocol: null,
+519 verbose parsed url   slashes: null,
+519 verbose parsed url   auth: null,
+519 verbose parsed url   host: null,
+519 verbose parsed url   port: null,
+519 verbose parsed url   hostname: null,
+519 verbose parsed url   hash: null,
+519 verbose parsed url   search: null,
+519 verbose parsed url   query: null,
+519 verbose parsed url   pathname: '0.8.1',
+519 verbose parsed url   path: '0.8.1',
+519 verbose parsed url   href: '0.8.1' }
+520 verbose addNamed [ 'i18n', '0.8.1' ]
+521 verbose addNamed [ '0.8.1', '0.8.1' ]
+522 silly lockFile 4b1d5cc3-i18n-0-8-1 i18n@0.8.1
+523 verbose lock i18n@0.8.1 /home/samanyu/.npm/4b1d5cc3-i18n-0-8-1.lock
+524 verbose cache add name="include-all" spec="^1.0.0" args=["include-all","^1.0.0"]
+525 verbose parsed url { protocol: null,
+525 verbose parsed url   slashes: null,
+525 verbose parsed url   auth: null,
+525 verbose parsed url   host: null,
+525 verbose parsed url   port: null,
+525 verbose parsed url   hostname: null,
+525 verbose parsed url   hash: null,
+525 verbose parsed url   search: null,
+525 verbose parsed url   query: null,
+525 verbose parsed url   pathname: '^1.0.0',
+525 verbose parsed url   path: '^1.0.0',
+525 verbose parsed url   href: '^1.0.0' }
+526 verbose addNamed [ 'include-all', '^1.0.0' ]
+527 verbose addNamed [ null, '>=1.0.0-0 <2.0.0-0' ]
+528 silly lockFile a134538e-include-all-1-0-0 include-all@^1.0.0
+529 verbose lock include-all@^1.0.0 /home/samanyu/.npm/a134538e-include-all-1-0-0.lock
+530 verbose cache add name="" spec="sailshq/lodash@^3.10.2" args=["","sailshq/lodash@^3.10.2"]
+531 verbose parsed url { protocol: null,
+531 verbose parsed url   slashes: null,
+531 verbose parsed url   auth: null,
+531 verbose parsed url   host: null,
+531 verbose parsed url   port: null,
+531 verbose parsed url   hostname: null,
+531 verbose parsed url   hash: null,
+531 verbose parsed url   search: null,
+531 verbose parsed url   query: null,
+531 verbose parsed url   pathname: 'sailshq/lodash@^3.10.2',
+531 verbose parsed url   path: 'sailshq/lodash@^3.10.2',
+531 verbose parsed url   href: 'sailshq/lodash@^3.10.2' }
+532 verbose cache add name="merge-defaults" spec="~0.2.1" args=["merge-defaults","~0.2.1"]
+533 verbose parsed url { protocol: null,
+533 verbose parsed url   slashes: null,
+533 verbose parsed url   auth: null,
+533 verbose parsed url   host: null,
+533 verbose parsed url   port: null,
+533 verbose parsed url   hostname: null,
+533 verbose parsed url   hash: null,
+533 verbose parsed url   search: null,
+533 verbose parsed url   query: null,
+533 verbose parsed url   pathname: '~0.2.1',
+533 verbose parsed url   path: '~0.2.1',
+533 verbose parsed url   href: '~0.2.1' }
+534 verbose addNamed [ 'merge-defaults', '~0.2.1' ]
+535 verbose addNamed [ null, '>=0.2.1-0 <0.3.0-0' ]
+536 silly lockFile 6c3a183b-merge-defaults-0-2-1 merge-defaults@~0.2.1
+537 verbose lock merge-defaults@~0.2.1 /home/samanyu/.npm/6c3a183b-merge-defaults-0-2-1.lock
+538 verbose cache add name="method-override" spec="2.3.5" args=["method-override","2.3.5"]
+539 verbose parsed url { protocol: null,
+539 verbose parsed url   slashes: null,
+539 verbose parsed url   auth: null,
+539 verbose parsed url   host: null,
+539 verbose parsed url   port: null,
+539 verbose parsed url   hostname: null,
+539 verbose parsed url   hash: null,
+539 verbose parsed url   search: null,
+539 verbose parsed url   query: null,
+539 verbose parsed url   pathname: '2.3.5',
+539 verbose parsed url   path: '2.3.5',
+539 verbose parsed url   href: '2.3.5' }
+540 verbose addNamed [ 'method-override', '2.3.5' ]
+541 verbose addNamed [ '2.3.5', '2.3.5' ]
+542 silly lockFile f87bcb61-method-override-2-3-5 method-override@2.3.5
+543 verbose lock method-override@2.3.5 /home/samanyu/.npm/f87bcb61-method-override-2-3-5.lock
+544 verbose cache add name="mock-req" spec="0.2.0" args=["mock-req","0.2.0"]
+545 verbose parsed url { protocol: null,
+545 verbose parsed url   slashes: null,
+545 verbose parsed url   auth: null,
+545 verbose parsed url   host: null,
+545 verbose parsed url   port: null,
+545 verbose parsed url   hostname: null,
+545 verbose parsed url   hash: null,
+545 verbose parsed url   search: null,
+545 verbose parsed url   query: null,
+545 verbose parsed url   pathname: '0.2.0',
+545 verbose parsed url   path: '0.2.0',
+545 verbose parsed url   href: '0.2.0' }
+546 verbose addNamed [ 'mock-req', '0.2.0' ]
+547 verbose addNamed [ '0.2.0', '0.2.0' ]
+548 silly lockFile 1cf8bc55-mock-req-0-2-0 mock-req@0.2.0
+549 verbose lock mock-req@0.2.0 /home/samanyu/.npm/1cf8bc55-mock-req-0-2-0.lock
+550 verbose cache add name="mock-res" spec="0.3.0" args=["mock-res","0.3.0"]
+551 verbose parsed url { protocol: null,
+551 verbose parsed url   slashes: null,
+551 verbose parsed url   auth: null,
+551 verbose parsed url   host: null,
+551 verbose parsed url   port: null,
+551 verbose parsed url   hostname: null,
+551 verbose parsed url   hash: null,
+551 verbose parsed url   search: null,
+551 verbose parsed url   query: null,
+551 verbose parsed url   pathname: '0.3.0',
+551 verbose parsed url   path: '0.3.0',
+551 verbose parsed url   href: '0.3.0' }
+552 verbose addNamed [ 'mock-res', '0.3.0' ]
+553 verbose addNamed [ '0.3.0', '0.3.0' ]
+554 silly lockFile 7aeb4610-mock-res-0-3-0 mock-res@0.3.0
+555 verbose lock mock-res@0.3.0 /home/samanyu/.npm/7aeb4610-mock-res-0-3-0.lock
+556 verbose cache add name="parseurl" spec="1.3.1" args=["parseurl","1.3.1"]
+557 verbose parsed url { protocol: null,
+557 verbose parsed url   slashes: null,
+557 verbose parsed url   auth: null,
+557 verbose parsed url   host: null,
+557 verbose parsed url   port: null,
+557 verbose parsed url   hostname: null,
+557 verbose parsed url   hash: null,
+557 verbose parsed url   search: null,
+557 verbose parsed url   query: null,
+557 verbose parsed url   pathname: '1.3.1',
+557 verbose parsed url   path: '1.3.1',
+557 verbose parsed url   href: '1.3.1' }
+558 verbose addNamed [ 'parseurl', '1.3.1' ]
+559 verbose addNamed [ '1.3.1', '1.3.1' ]
+560 silly lockFile cc4f44a2-parseurl-1-3-1 parseurl@1.3.1
+561 verbose lock parseurl@1.3.1 /home/samanyu/.npm/cc4f44a2-parseurl-1-3-1.lock
+562 verbose cache add name="path-to-regexp" spec="1.5.3" args=["path-to-regexp","1.5.3"]
+563 verbose parsed url { protocol: null,
+563 verbose parsed url   slashes: null,
+563 verbose parsed url   auth: null,
+563 verbose parsed url   host: null,
+563 verbose parsed url   port: null,
+563 verbose parsed url   hostname: null,
+563 verbose parsed url   hash: null,
+563 verbose parsed url   search: null,
+563 verbose parsed url   query: null,
+563 verbose parsed url   pathname: '1.5.3',
+563 verbose parsed url   path: '1.5.3',
+563 verbose parsed url   href: '1.5.3' }
+564 verbose addNamed [ 'path-to-regexp', '1.5.3' ]
+565 verbose addNamed [ '1.5.3', '1.5.3' ]
+566 silly lockFile 62b58fd5-path-to-regexp-1-5-3 path-to-regexp@1.5.3
+567 verbose lock path-to-regexp@1.5.3 /home/samanyu/.npm/62b58fd5-path-to-regexp-1-5-3.lock
+568 verbose cache add name="pluralize" spec="1.2.1" args=["pluralize","1.2.1"]
+569 verbose parsed url { protocol: null,
+569 verbose parsed url   slashes: null,
+569 verbose parsed url   auth: null,
+569 verbose parsed url   host: null,
+569 verbose parsed url   port: null,
+569 verbose parsed url   hostname: null,
+569 verbose parsed url   hash: null,
+569 verbose parsed url   search: null,
+569 verbose parsed url   query: null,
+569 verbose parsed url   pathname: '1.2.1',
+569 verbose parsed url   path: '1.2.1',
+569 verbose parsed url   href: '1.2.1' }
+570 verbose addNamed [ 'pluralize', '1.2.1' ]
+571 verbose addNamed [ '1.2.1', '1.2.1' ]
+572 silly lockFile 9a41edcd-pluralize-1-2-1 pluralize@1.2.1
+573 verbose lock pluralize@1.2.1 /home/samanyu/.npm/9a41edcd-pluralize-1-2-1.lock
+574 verbose cache add name="prompt" spec="0.2.14" args=["prompt","0.2.14"]
+575 verbose parsed url { protocol: null,
+575 verbose parsed url   slashes: null,
+575 verbose parsed url   auth: null,
+575 verbose parsed url   host: null,
+575 verbose parsed url   port: null,
+575 verbose parsed url   hostname: null,
+575 verbose parsed url   hash: null,
+575 verbose parsed url   search: null,
+575 verbose parsed url   query: null,
+575 verbose parsed url   pathname: '0.2.14',
+575 verbose parsed url   path: '0.2.14',
+575 verbose parsed url   href: '0.2.14' }
+576 verbose addNamed [ 'prompt', '0.2.14' ]
+577 verbose addNamed [ '0.2.14', '0.2.14' ]
+578 silly lockFile e336d148-prompt-0-2-14 prompt@0.2.14
+579 verbose lock prompt@0.2.14 /home/samanyu/.npm/e336d148-prompt-0-2-14.lock
+580 verbose cache add name="rc" spec="1.0.1" args=["rc","1.0.1"]
+581 verbose parsed url { protocol: null,
+581 verbose parsed url   slashes: null,
+581 verbose parsed url   auth: null,
+581 verbose parsed url   host: null,
+581 verbose parsed url   port: null,
+581 verbose parsed url   hostname: null,
+581 verbose parsed url   hash: null,
+581 verbose parsed url   search: null,
+581 verbose parsed url   query: null,
+581 verbose parsed url   pathname: '1.0.1',
+581 verbose parsed url   path: '1.0.1',
+581 verbose parsed url   href: '1.0.1' }
+582 verbose addNamed [ 'rc', '1.0.1' ]
+583 verbose addNamed [ '1.0.1', '1.0.1' ]
+584 silly lockFile 34b104b9-rc-1-0-1 rc@1.0.1
+585 verbose lock rc@1.0.1 /home/samanyu/.npm/34b104b9-rc-1-0-1.lock
+586 verbose cache add name="reportback" spec="~0.1.9" args=["reportback","~0.1.9"]
+587 verbose parsed url { protocol: null,
+587 verbose parsed url   slashes: null,
+587 verbose parsed url   auth: null,
+587 verbose parsed url   host: null,
+587 verbose parsed url   port: null,
+587 verbose parsed url   hostname: null,
+587 verbose parsed url   hash: null,
+587 verbose parsed url   search: null,
+587 verbose parsed url   query: null,
+587 verbose parsed url   pathname: '~0.1.9',
+587 verbose parsed url   path: '~0.1.9',
+587 verbose parsed url   href: '~0.1.9' }
+588 verbose addNamed [ 'reportback', '~0.1.9' ]
+589 verbose addNamed [ null, '>=0.1.9-0 <0.2.0-0' ]
+590 silly lockFile a367d97a-reportback-0-1-9 reportback@~0.1.9
+591 verbose lock reportback@~0.1.9 /home/samanyu/.npm/a367d97a-reportback-0-1-9.lock
+592 verbose cache add [ 'rttc@9.3.3', null ]
+593 verbose cache add name=undefined spec="rttc@9.3.3" args=["rttc@9.3.3",null]
+594 verbose parsed url { protocol: null,
+594 verbose parsed url   slashes: null,
+594 verbose parsed url   auth: null,
+594 verbose parsed url   host: null,
+594 verbose parsed url   port: null,
+594 verbose parsed url   hostname: null,
+594 verbose parsed url   hash: null,
+594 verbose parsed url   search: null,
+594 verbose parsed url   query: null,
+594 verbose parsed url   pathname: 'rttc@9.3.3',
+594 verbose parsed url   path: 'rttc@9.3.3',
+594 verbose parsed url   href: 'rttc@9.3.3' }
+595 verbose cache add [ 'sails-disk@~0.10.9', null ]
+596 verbose cache add name=undefined spec="sails-disk@~0.10.9" args=["sails-disk@~0.10.9",null]
+597 verbose parsed url { protocol: null,
+597 verbose parsed url   slashes: null,
+597 verbose parsed url   auth: null,
+597 verbose parsed url   host: null,
+597 verbose parsed url   port: null,
+597 verbose parsed url   hostname: null,
+597 verbose parsed url   hash: null,
+597 verbose parsed url   search: null,
+597 verbose parsed url   query: null,
+597 verbose parsed url   pathname: 'sails-disk@~0.10.9',
+597 verbose parsed url   path: 'sails-disk@~0.10.9',
+597 verbose parsed url   href: 'sails-disk@~0.10.9' }
+598 verbose cache add [ 'sails-generate@~0.13.0', null ]
+599 verbose cache add name=undefined spec="sails-generate@~0.13.0" args=["sails-generate@~0.13.0",null]
+600 verbose parsed url { protocol: null,
+600 verbose parsed url   slashes: null,
+600 verbose parsed url   auth: null,
+600 verbose parsed url   host: null,
+600 verbose parsed url   port: null,
+600 verbose parsed url   hostname: null,
+600 verbose parsed url   hash: null,
+600 verbose parsed url   search: null,
+600 verbose parsed url   query: null,
+600 verbose parsed url   pathname: 'sails-generate@~0.13.0',
+600 verbose parsed url   path: 'sails-generate@~0.13.0',
+600 verbose parsed url   href: 'sails-generate@~0.13.0' }
+601 verbose cache add [ 'sails-hook-orm@~1.0.9', null ]
+602 verbose cache add name=undefined spec="sails-hook-orm@~1.0.9" args=["sails-hook-orm@~1.0.9",null]
+603 verbose parsed url { protocol: null,
+603 verbose parsed url   slashes: null,
+603 verbose parsed url   auth: null,
+603 verbose parsed url   host: null,
+603 verbose parsed url   port: null,
+603 verbose parsed url   hostname: null,
+603 verbose parsed url   hash: null,
+603 verbose parsed url   search: null,
+603 verbose parsed url   query: null,
+603 verbose parsed url   pathname: 'sails-hook-orm@~1.0.9',
+603 verbose parsed url   path: 'sails-hook-orm@~1.0.9',
+603 verbose parsed url   href: 'sails-hook-orm@~1.0.9' }
+604 verbose cache add [ 'sails-hook-sockets@^0.13.9', null ]
+605 verbose cache add name=undefined spec="sails-hook-sockets@^0.13.9" args=["sails-hook-sockets@^0.13.9",null]
+606 verbose parsed url { protocol: null,
+606 verbose parsed url   slashes: null,
+606 verbose parsed url   auth: null,
+606 verbose parsed url   host: null,
+606 verbose parsed url   port: null,
+606 verbose parsed url   hostname: null,
+606 verbose parsed url   hash: null,
+606 verbose parsed url   search: null,
+606 verbose parsed url   query: null,
+606 verbose parsed url   pathname: 'sails-hook-sockets@^0.13.9',
+606 verbose parsed url   path: 'sails-hook-sockets@^0.13.9',
+606 verbose parsed url   href: 'sails-hook-sockets@^0.13.9' }
+607 verbose cache add [ 'sails-stringfile@~0.3.2', null ]
+608 verbose cache add name=undefined spec="sails-stringfile@~0.3.2" args=["sails-stringfile@~0.3.2",null]
+609 verbose parsed url { protocol: null,
+609 verbose parsed url   slashes: null,
+609 verbose parsed url   auth: null,
+609 verbose parsed url   host: null,
+609 verbose parsed url   port: null,
+609 verbose parsed url   hostname: null,
+609 verbose parsed url   hash: null,
+609 verbose parsed url   search: null,
+609 verbose parsed url   query: null,
+609 verbose parsed url   pathname: 'sails-stringfile@~0.3.2',
+609 verbose parsed url   path: 'sails-stringfile@~0.3.2',
+609 verbose parsed url   href: 'sails-stringfile@~0.3.2' }
+610 verbose cache add [ 'sails-util@~0.11.0', null ]
+611 verbose cache add name=undefined spec="sails-util@~0.11.0" args=["sails-util@~0.11.0",null]
+612 verbose parsed url { protocol: null,
+612 verbose parsed url   slashes: null,
+612 verbose parsed url   auth: null,
+612 verbose parsed url   host: null,
+612 verbose parsed url   port: null,
+612 verbose parsed url   hostname: null,
+612 verbose parsed url   hash: null,
+612 verbose parsed url   search: null,
+612 verbose parsed url   query: null,
+612 verbose parsed url   pathname: 'sails-util@~0.11.0',
+612 verbose parsed url   path: 'sails-util@~0.11.0',
+612 verbose parsed url   href: 'sails-util@~0.11.0' }
+613 verbose cache add [ 'semver@5.1.0', null ]
+614 verbose cache add name=undefined spec="semver@5.1.0" args=["semver@5.1.0",null]
+615 verbose parsed url { protocol: null,
+615 verbose parsed url   slashes: null,
+615 verbose parsed url   auth: null,
+615 verbose parsed url   host: null,
+615 verbose parsed url   port: null,
+615 verbose parsed url   hostname: null,
+615 verbose parsed url   hash: null,
+615 verbose parsed url   search: null,
+615 verbose parsed url   query: null,
+615 verbose parsed url   pathname: 'semver@5.1.0',
+615 verbose parsed url   path: 'semver@5.1.0',
+615 verbose parsed url   href: 'semver@5.1.0' }
+616 verbose cache add [ 'serve-favicon@2.3.0', null ]
+617 verbose cache add name=undefined spec="serve-favicon@2.3.0" args=["serve-favicon@2.3.0",null]
+618 verbose parsed url { protocol: null,
+618 verbose parsed url   slashes: null,
+618 verbose parsed url   auth: null,
+618 verbose parsed url   host: null,
+618 verbose parsed url   port: null,
+618 verbose parsed url   hostname: null,
+618 verbose parsed url   hash: null,
+618 verbose parsed url   search: null,
+618 verbose parsed url   query: null,
+618 verbose parsed url   pathname: 'serve-favicon@2.3.0',
+618 verbose parsed url   path: 'serve-favicon@2.3.0',
+618 verbose parsed url   href: 'serve-favicon@2.3.0' }
+619 verbose cache add [ 'serve-static@1.10.2', null ]
+620 verbose cache add name=undefined spec="serve-static@1.10.2" args=["serve-static@1.10.2",null]
+621 verbose parsed url { protocol: null,
+621 verbose parsed url   slashes: null,
+621 verbose parsed url   auth: null,
+621 verbose parsed url   host: null,
+621 verbose parsed url   port: null,
+621 verbose parsed url   hostname: null,
+621 verbose parsed url   hash: null,
+621 verbose parsed url   search: null,
+621 verbose parsed url   query: null,
+621 verbose parsed url   pathname: 'serve-static@1.10.2',
+621 verbose parsed url   path: 'serve-static@1.10.2',
+621 verbose parsed url   href: 'serve-static@1.10.2' }
+622 verbose cache add [ 'skipper@~0.7.0', null ]
+623 verbose cache add name=undefined spec="skipper@~0.7.0" args=["skipper@~0.7.0",null]
+624 verbose parsed url { protocol: null,
+624 verbose parsed url   slashes: null,
+624 verbose parsed url   auth: null,
+624 verbose parsed url   host: null,
+624 verbose parsed url   port: null,
+624 verbose parsed url   hostname: null,
+624 verbose parsed url   hash: null,
+624 verbose parsed url   search: null,
+624 verbose parsed url   query: null,
+624 verbose parsed url   pathname: 'skipper@~0.7.0',
+624 verbose parsed url   path: 'skipper@~0.7.0',
+624 verbose parsed url   href: 'skipper@~0.7.0' }
+625 verbose cache add [ 'uid-safe@1.1.0', null ]
+626 verbose cache add name=undefined spec="uid-safe@1.1.0" args=["uid-safe@1.1.0",null]
+627 verbose parsed url { protocol: null,
+627 verbose parsed url   slashes: null,
+627 verbose parsed url   auth: null,
+627 verbose parsed url   host: null,
+627 verbose parsed url   port: null,
+627 verbose parsed url   hostname: null,
+627 verbose parsed url   hash: null,
+627 verbose parsed url   search: null,
+627 verbose parsed url   query: null,
+627 verbose parsed url   pathname: 'uid-safe@1.1.0',
+627 verbose parsed url   path: 'uid-safe@1.1.0',
+627 verbose parsed url   href: 'uid-safe@1.1.0' }
+628 verbose cache add [ 'walk@2.3.9', null ]
+629 verbose cache add name=undefined spec="walk@2.3.9" args=["walk@2.3.9",null]
+630 verbose parsed url { protocol: null,
+630 verbose parsed url   slashes: null,
+630 verbose parsed url   auth: null,
+630 verbose parsed url   host: null,
+630 verbose parsed url   port: null,
+630 verbose parsed url   hostname: null,
+630 verbose parsed url   hash: null,
+630 verbose parsed url   search: null,
+630 verbose parsed url   query: null,
+630 verbose parsed url   pathname: 'walk@2.3.9',
+630 verbose parsed url   path: 'walk@2.3.9',
+630 verbose parsed url   href: 'walk@2.3.9' }
+631 verbose cache add [ 'anchor@~0.10.5', null ]
+632 verbose cache add name=undefined spec="anchor@~0.10.5" args=["anchor@~0.10.5",null]
+633 verbose parsed url { protocol: null,
+633 verbose parsed url   slashes: null,
+633 verbose parsed url   auth: null,
+633 verbose parsed url   host: null,
+633 verbose parsed url   port: null,
+633 verbose parsed url   hostname: null,
+633 verbose parsed url   hash: null,
+633 verbose parsed url   search: null,
+633 verbose parsed url   query: null,
+633 verbose parsed url   pathname: 'anchor@~0.10.5',
+633 verbose parsed url   path: 'anchor@~0.10.5',
+633 verbose parsed url   href: 'anchor@~0.10.5' }
+634 verbose cache add [ 'async@1.5.0', null ]
+635 verbose cache add name=undefined spec="async@1.5.0" args=["async@1.5.0",null]
+636 verbose parsed url { protocol: null,
+636 verbose parsed url   slashes: null,
+636 verbose parsed url   auth: null,
+636 verbose parsed url   host: null,
+636 verbose parsed url   port: null,
+636 verbose parsed url   hostname: null,
+636 verbose parsed url   hash: null,
+636 verbose parsed url   search: null,
+636 verbose parsed url   query: null,
+636 verbose parsed url   pathname: 'async@1.5.0',
+636 verbose parsed url   path: 'async@1.5.0',
+636 verbose parsed url   href: 'async@1.5.0' }
+637 silly addNameRange { name: 'sailshq/express',
+637 silly addNameRange   range: '>=3.21.3-0 <4.0.0-0',
+637 silly addNameRange   hasData: false }
+638 verbose cache add name="sailshq/lodash" spec="^3.10.2" args=["sailshq/lodash","^3.10.2"]
+639 verbose parsed url { protocol: null,
+639 verbose parsed url   slashes: null,
+639 verbose parsed url   auth: null,
+639 verbose parsed url   host: null,
+639 verbose parsed url   port: null,
+639 verbose parsed url   hostname: null,
+639 verbose parsed url   hash: null,
+639 verbose parsed url   search: null,
+639 verbose parsed url   query: null,
+639 verbose parsed url   pathname: '^3.10.2',
+639 verbose parsed url   path: '^3.10.2',
+639 verbose parsed url   href: '^3.10.2' }
+640 verbose addNamed [ 'sailshq/lodash', '^3.10.2' ]
+641 verbose addNamed [ null, '>=3.10.2-0 <4.0.0-0' ]
+642 silly lockFile 6b065a7a-sailshq-lodash-3-10-2 sailshq/lodash@^3.10.2
+643 verbose lock sailshq/lodash@^3.10.2 /home/samanyu/.npm/6b065a7a-sailshq-lodash-3-10-2.lock
+644 verbose cache add name="rttc" spec="9.3.3" args=["rttc","9.3.3"]
+645 verbose parsed url { protocol: null,
+645 verbose parsed url   slashes: null,
+645 verbose parsed url   auth: null,
+645 verbose parsed url   host: null,
+645 verbose parsed url   port: null,
+645 verbose parsed url   hostname: null,
+645 verbose parsed url   hash: null,
+645 verbose parsed url   search: null,
+645 verbose parsed url   query: null,
+645 verbose parsed url   pathname: '9.3.3',
+645 verbose parsed url   path: '9.3.3',
+645 verbose parsed url   href: '9.3.3' }
+646 verbose addNamed [ 'rttc', '9.3.3' ]
+647 verbose addNamed [ '9.3.3', '9.3.3' ]
+648 silly lockFile 7f62cd1c-rttc-9-3-3 rttc@9.3.3
+649 verbose lock rttc@9.3.3 /home/samanyu/.npm/7f62cd1c-rttc-9-3-3.lock
+650 verbose cache add name="sails-disk" spec="~0.10.9" args=["sails-disk","~0.10.9"]
+651 verbose parsed url { protocol: null,
+651 verbose parsed url   slashes: null,
+651 verbose parsed url   auth: null,
+651 verbose parsed url   host: null,
+651 verbose parsed url   port: null,
+651 verbose parsed url   hostname: null,
+651 verbose parsed url   hash: null,
+651 verbose parsed url   search: null,
+651 verbose parsed url   query: null,
+651 verbose parsed url   pathname: '~0.10.9',
+651 verbose parsed url   path: '~0.10.9',
+651 verbose parsed url   href: '~0.10.9' }
+652 verbose addNamed [ 'sails-disk', '~0.10.9' ]
+653 verbose addNamed [ null, '>=0.10.9-0 <0.11.0-0' ]
+654 silly lockFile 57bd20f7-sails-disk-0-10-9 sails-disk@~0.10.9
+655 verbose lock sails-disk@~0.10.9 /home/samanyu/.npm/57bd20f7-sails-disk-0-10-9.lock
+656 verbose cache add name="sails-generate" spec="~0.13.0" args=["sails-generate","~0.13.0"]
+657 verbose parsed url { protocol: null,
+657 verbose parsed url   slashes: null,
+657 verbose parsed url   auth: null,
+657 verbose parsed url   host: null,
+657 verbose parsed url   port: null,
+657 verbose parsed url   hostname: null,
+657 verbose parsed url   hash: null,
+657 verbose parsed url   search: null,
+657 verbose parsed url   query: null,
+657 verbose parsed url   pathname: '~0.13.0',
+657 verbose parsed url   path: '~0.13.0',
+657 verbose parsed url   href: '~0.13.0' }
+658 verbose addNamed [ 'sails-generate', '~0.13.0' ]
+659 verbose addNamed [ null, '>=0.13.0-0 <0.14.0-0' ]
+660 silly lockFile 1e2933bd-sails-generate-0-13-0 sails-generate@~0.13.0
+661 verbose lock sails-generate@~0.13.0 /home/samanyu/.npm/1e2933bd-sails-generate-0-13-0.lock
+662 verbose cache add name="sails-hook-orm" spec="~1.0.9" args=["sails-hook-orm","~1.0.9"]
+663 verbose parsed url { protocol: null,
+663 verbose parsed url   slashes: null,
+663 verbose parsed url   auth: null,
+663 verbose parsed url   host: null,
+663 verbose parsed url   port: null,
+663 verbose parsed url   hostname: null,
+663 verbose parsed url   hash: null,
+663 verbose parsed url   search: null,
+663 verbose parsed url   query: null,
+663 verbose parsed url   pathname: '~1.0.9',
+663 verbose parsed url   path: '~1.0.9',
+663 verbose parsed url   href: '~1.0.9' }
+664 verbose addNamed [ 'sails-hook-orm', '~1.0.9' ]
+665 verbose addNamed [ null, '>=1.0.9-0 <1.1.0-0' ]
+666 silly lockFile 8009bc76-sails-hook-orm-1-0-9 sails-hook-orm@~1.0.9
+667 verbose lock sails-hook-orm@~1.0.9 /home/samanyu/.npm/8009bc76-sails-hook-orm-1-0-9.lock
+668 verbose cache add name="sails-hook-sockets" spec="^0.13.9" args=["sails-hook-sockets","^0.13.9"]
+669 verbose parsed url { protocol: null,
+669 verbose parsed url   slashes: null,
+669 verbose parsed url   auth: null,
+669 verbose parsed url   host: null,
+669 verbose parsed url   port: null,
+669 verbose parsed url   hostname: null,
+669 verbose parsed url   hash: null,
+669 verbose parsed url   search: null,
+669 verbose parsed url   query: null,
+669 verbose parsed url   pathname: '^0.13.9',
+669 verbose parsed url   path: '^0.13.9',
+669 verbose parsed url   href: '^0.13.9' }
+670 verbose addNamed [ 'sails-hook-sockets', '^0.13.9' ]
+671 verbose addNamed [ null, '>=0.13.9-0 <0.14.0-0' ]
+672 silly lockFile d662673d-sails-hook-sockets-0-13-9 sails-hook-sockets@^0.13.9
+673 verbose lock sails-hook-sockets@^0.13.9 /home/samanyu/.npm/d662673d-sails-hook-sockets-0-13-9.lock
+674 verbose cache add name="sails-stringfile" spec="~0.3.2" args=["sails-stringfile","~0.3.2"]
+675 verbose parsed url { protocol: null,
+675 verbose parsed url   slashes: null,
+675 verbose parsed url   auth: null,
+675 verbose parsed url   host: null,
+675 verbose parsed url   port: null,
+675 verbose parsed url   hostname: null,
+675 verbose parsed url   hash: null,
+675 verbose parsed url   search: null,
+675 verbose parsed url   query: null,
+675 verbose parsed url   pathname: '~0.3.2',
+675 verbose parsed url   path: '~0.3.2',
+675 verbose parsed url   href: '~0.3.2' }
+676 verbose addNamed [ 'sails-stringfile', '~0.3.2' ]
+677 verbose addNamed [ null, '>=0.3.2-0 <0.4.0-0' ]
+678 silly lockFile 9df62d6e-sails-stringfile-0-3-2 sails-stringfile@~0.3.2
+679 verbose lock sails-stringfile@~0.3.2 /home/samanyu/.npm/9df62d6e-sails-stringfile-0-3-2.lock
+680 verbose cache add name="sails-util" spec="~0.11.0" args=["sails-util","~0.11.0"]
+681 verbose parsed url { protocol: null,
+681 verbose parsed url   slashes: null,
+681 verbose parsed url   auth: null,
+681 verbose parsed url   host: null,
+681 verbose parsed url   port: null,
+681 verbose parsed url   hostname: null,
+681 verbose parsed url   hash: null,
+681 verbose parsed url   search: null,
+681 verbose parsed url   query: null,
+681 verbose parsed url   pathname: '~0.11.0',
+681 verbose parsed url   path: '~0.11.0',
+681 verbose parsed url   href: '~0.11.0' }
+682 verbose addNamed [ 'sails-util', '~0.11.0' ]
+683 verbose addNamed [ null, '>=0.11.0-0 <0.12.0-0' ]
+684 silly lockFile e5c503d0-sails-util-0-11-0 sails-util@~0.11.0
+685 verbose lock sails-util@~0.11.0 /home/samanyu/.npm/e5c503d0-sails-util-0-11-0.lock
+686 verbose cache add name="semver" spec="5.1.0" args=["semver","5.1.0"]
+687 verbose parsed url { protocol: null,
+687 verbose parsed url   slashes: null,
+687 verbose parsed url   auth: null,
+687 verbose parsed url   host: null,
+687 verbose parsed url   port: null,
+687 verbose parsed url   hostname: null,
+687 verbose parsed url   hash: null,
+687 verbose parsed url   search: null,
+687 verbose parsed url   query: null,
+687 verbose parsed url   pathname: '5.1.0',
+687 verbose parsed url   path: '5.1.0',
+687 verbose parsed url   href: '5.1.0' }
+688 verbose addNamed [ 'semver', '5.1.0' ]
+689 verbose addNamed [ '5.1.0', '5.1.0' ]
+690 silly lockFile 8b0493fe-semver-5-1-0 semver@5.1.0
+691 verbose lock semver@5.1.0 /home/samanyu/.npm/8b0493fe-semver-5-1-0.lock
+692 verbose cache add name="serve-favicon" spec="2.3.0" args=["serve-favicon","2.3.0"]
+693 verbose parsed url { protocol: null,
+693 verbose parsed url   slashes: null,
+693 verbose parsed url   auth: null,
+693 verbose parsed url   host: null,
+693 verbose parsed url   port: null,
+693 verbose parsed url   hostname: null,
+693 verbose parsed url   hash: null,
+693 verbose parsed url   search: null,
+693 verbose parsed url   query: null,
+693 verbose parsed url   pathname: '2.3.0',
+693 verbose parsed url   path: '2.3.0',
+693 verbose parsed url   href: '2.3.0' }
+694 verbose addNamed [ 'serve-favicon', '2.3.0' ]
+695 verbose addNamed [ '2.3.0', '2.3.0' ]
+696 silly lockFile d210d889-serve-favicon-2-3-0 serve-favicon@2.3.0
+697 verbose lock serve-favicon@2.3.0 /home/samanyu/.npm/d210d889-serve-favicon-2-3-0.lock
+698 verbose cache add name="serve-static" spec="1.10.2" args=["serve-static","1.10.2"]
+699 verbose parsed url { protocol: null,
+699 verbose parsed url   slashes: null,
+699 verbose parsed url   auth: null,
+699 verbose parsed url   host: null,
+699 verbose parsed url   port: null,
+699 verbose parsed url   hostname: null,
+699 verbose parsed url   hash: null,
+699 verbose parsed url   search: null,
+699 verbose parsed url   query: null,
+699 verbose parsed url   pathname: '1.10.2',
+699 verbose parsed url   path: '1.10.2',
+699 verbose parsed url   href: '1.10.2' }
+700 verbose addNamed [ 'serve-static', '1.10.2' ]
+701 verbose addNamed [ '1.10.2', '1.10.2' ]
+702 silly lockFile 2ad3cf0f-serve-static-1-10-2 serve-static@1.10.2
+703 verbose lock serve-static@1.10.2 /home/samanyu/.npm/2ad3cf0f-serve-static-1-10-2.lock
+704 verbose cache add name="skipper" spec="~0.7.0" args=["skipper","~0.7.0"]
+705 verbose parsed url { protocol: null,
+705 verbose parsed url   slashes: null,
+705 verbose parsed url   auth: null,
+705 verbose parsed url   host: null,
+705 verbose parsed url   port: null,
+705 verbose parsed url   hostname: null,
+705 verbose parsed url   hash: null,
+705 verbose parsed url   search: null,
+705 verbose parsed url   query: null,
+705 verbose parsed url   pathname: '~0.7.0',
+705 verbose parsed url   path: '~0.7.0',
+705 verbose parsed url   href: '~0.7.0' }
+706 verbose addNamed [ 'skipper', '~0.7.0' ]
+707 verbose addNamed [ null, '>=0.7.0-0 <0.8.0-0' ]
+708 silly lockFile d1966890-skipper-0-7-0 skipper@~0.7.0
+709 verbose lock skipper@~0.7.0 /home/samanyu/.npm/d1966890-skipper-0-7-0.lock
+710 verbose cache add name="uid-safe" spec="1.1.0" args=["uid-safe","1.1.0"]
+711 verbose parsed url { protocol: null,
+711 verbose parsed url   slashes: null,
+711 verbose parsed url   auth: null,
+711 verbose parsed url   host: null,
+711 verbose parsed url   port: null,
+711 verbose parsed url   hostname: null,
+711 verbose parsed url   hash: null,
+711 verbose parsed url   search: null,
+711 verbose parsed url   query: null,
+711 verbose parsed url   pathname: '1.1.0',
+711 verbose parsed url   path: '1.1.0',
+711 verbose parsed url   href: '1.1.0' }
+712 verbose addNamed [ 'uid-safe', '1.1.0' ]
+713 verbose addNamed [ '1.1.0', '1.1.0' ]
+714 silly lockFile 87fea303-uid-safe-1-1-0 uid-safe@1.1.0
+715 verbose lock uid-safe@1.1.0 /home/samanyu/.npm/87fea303-uid-safe-1-1-0.lock
+716 verbose cache add name="walk" spec="2.3.9" args=["walk","2.3.9"]
+717 verbose parsed url { protocol: null,
+717 verbose parsed url   slashes: null,
+717 verbose parsed url   auth: null,
+717 verbose parsed url   host: null,
+717 verbose parsed url   port: null,
+717 verbose parsed url   hostname: null,
+717 verbose parsed url   hash: null,
+717 verbose parsed url   search: null,
+717 verbose parsed url   query: null,
+717 verbose parsed url   pathname: '2.3.9',
+717 verbose parsed url   path: '2.3.9',
+717 verbose parsed url   href: '2.3.9' }
+718 verbose addNamed [ 'walk', '2.3.9' ]
+719 verbose addNamed [ '2.3.9', '2.3.9' ]
+720 silly lockFile ec2e6fc8-walk-2-3-9 walk@2.3.9
+721 verbose lock walk@2.3.9 /home/samanyu/.npm/ec2e6fc8-walk-2-3-9.lock
+722 verbose cache add name="anchor" spec="~0.10.5" args=["anchor","~0.10.5"]
+723 verbose parsed url { protocol: null,
+723 verbose parsed url   slashes: null,
+723 verbose parsed url   auth: null,
+723 verbose parsed url   host: null,
+723 verbose parsed url   port: null,
+723 verbose parsed url   hostname: null,
+723 verbose parsed url   hash: null,
+723 verbose parsed url   search: null,
+723 verbose parsed url   query: null,
+723 verbose parsed url   pathname: '~0.10.5',
+723 verbose parsed url   path: '~0.10.5',
+723 verbose parsed url   href: '~0.10.5' }
+724 verbose addNamed [ 'anchor', '~0.10.5' ]
+725 verbose addNamed [ null, '>=0.10.5-0 <0.11.0-0' ]
+726 silly lockFile fa3efa6e-anchor-0-10-5 anchor@~0.10.5
+727 verbose lock anchor@~0.10.5 /home/samanyu/.npm/fa3efa6e-anchor-0-10-5.lock
+728 verbose cache add name="async" spec="1.5.0" args=["async","1.5.0"]
+729 verbose parsed url { protocol: null,
+729 verbose parsed url   slashes: null,
+729 verbose parsed url   auth: null,
+729 verbose parsed url   host: null,
+729 verbose parsed url   port: null,
+729 verbose parsed url   hostname: null,
+729 verbose parsed url   hash: null,
+729 verbose parsed url   search: null,
+729 verbose parsed url   query: null,
+729 verbose parsed url   pathname: '1.5.0',
+729 verbose parsed url   path: '1.5.0',
+729 verbose parsed url   href: '1.5.0' }
+730 verbose addNamed [ 'async', '1.5.0' ]
+731 verbose addNamed [ '1.5.0', '1.5.0' ]
+732 silly lockFile 9f79283b-async-1-5-0 async@1.5.0
+733 verbose lock async@1.5.0 /home/samanyu/.npm/9f79283b-async-1-5-0.lock
+734 verbose request where is /captains-log
+735 verbose request registry https://registry.npmjs.org/
+736 verbose url raw /captains-log
+737 verbose url resolving [ 'https://registry.npmjs.org/', './captains-log' ]
+738 verbose url resolved https://registry.npmjs.org/captains-log
+739 verbose request where is https://registry.npmjs.org/captains-log
+740 info trying registry request attempt 1 at 17:09:30
+741 verbose etag W/"5973bca7-6ab1"
+742 http GET https://registry.npmjs.org/captains-log
+743 silly addNameRange { name: 'grunt-sails-linker',
+743 silly addNameRange   range: '>=0.10.1-0 <0.11.0-0',
+743 silly addNameRange   hasData: false }
+744 silly addNameRange { name: 'include-all',
+744 silly addNameRange   range: '>=1.0.0-0 <2.0.0-0',
+744 silly addNameRange   hasData: false }
+745 silly addNameRange { name: 'merge-defaults',
+745 silly addNameRange   range: '>=0.2.1-0 <0.3.0-0',
+745 silly addNameRange   hasData: false }
+746 silly addNameRange { name: 'reportback',
+746 silly addNameRange   range: '>=0.1.9-0 <0.2.0-0',
+746 silly addNameRange   hasData: false }
+747 verbose request where is /commander
+748 verbose request registry https://registry.npmjs.org/
+749 verbose url raw /commander
+750 verbose url resolving [ 'https://registry.npmjs.org/', './commander' ]
+751 verbose url resolved https://registry.npmjs.org/commander
+752 verbose request where is https://registry.npmjs.org/commander
+753 info trying registry request attempt 1 at 17:09:30
+754 verbose etag W/"59cf0ee2-11787"
+755 http GET https://registry.npmjs.org/commander
+756 verbose request where is /compression
+757 verbose request registry https://registry.npmjs.org/
+758 verbose url raw /compression
+759 verbose url resolving [ 'https://registry.npmjs.org/', './compression' ]
+760 verbose url resolved https://registry.npmjs.org/compression
+761 verbose request where is https://registry.npmjs.org/compression
+762 info trying registry request attempt 1 at 17:09:30
+763 verbose etag W/"59cb32bc-1135a"
+764 http GET https://registry.npmjs.org/compression
+765 verbose request where is /chalk
+766 verbose request registry https://registry.npmjs.org/
+767 verbose url raw /chalk
+768 verbose url resolving [ 'https://registry.npmjs.org/', './chalk' ]
+769 verbose url resolved https://registry.npmjs.org/chalk
+770 verbose request where is https://registry.npmjs.org/chalk
+771 info trying registry request attempt 1 at 17:09:30
+772 verbose etag W/"59cd9076-b6ff"
+773 http GET https://registry.npmjs.org/chalk
+774 verbose request where is /connect
+775 verbose request registry https://registry.npmjs.org/
+776 verbose url raw /connect
+777 verbose url resolving [ 'https://registry.npmjs.org/', './connect' ]
+778 verbose url resolved https://registry.npmjs.org/connect
+779 verbose request where is https://registry.npmjs.org/connect
+780 info trying registry request attempt 1 at 17:09:30
+781 verbose etag W/"59c560a0-59292"
+782 http GET https://registry.npmjs.org/connect
+783 verbose request where is /connect-flash
+784 verbose request registry https://registry.npmjs.org/
+785 verbose url raw /connect-flash
+786 verbose url resolving [ 'https://registry.npmjs.org/', './connect-flash' ]
+787 verbose url resolved https://registry.npmjs.org/connect-flash
+788 verbose request where is https://registry.npmjs.org/connect-flash
+789 info trying registry request attempt 1 at 17:09:30
+790 verbose etag W/"59c0f374-1981"
+791 http GET https://registry.npmjs.org/connect-flash
+792 silly addNameRange { name: 'sailshq/lodash',
+792 silly addNameRange   range: '>=3.10.2-0 <4.0.0-0',
+792 silly addNameRange   hasData: false }
+793 silly addNameRange { name: 'sails-disk',
+793 silly addNameRange   range: '>=0.10.9-0 <0.11.0-0',
+793 silly addNameRange   hasData: false }
+794 silly addNameRange { name: 'sails-generate',
+794 silly addNameRange   range: '>=0.13.0-0 <0.14.0-0',
+794 silly addNameRange   hasData: false }
+795 silly addNameRange { name: 'sails-hook-orm',
+795 silly addNameRange   range: '>=1.0.9-0 <1.1.0-0',
+795 silly addNameRange   hasData: false }
+796 silly addNameRange { name: 'sails-hook-sockets',
+796 silly addNameRange   range: '>=0.13.9-0 <0.14.0-0',
+796 silly addNameRange   hasData: false }
+797 silly addNameRange { name: 'sails-stringfile',
+797 silly addNameRange   range: '>=0.3.2-0 <0.4.0-0',
+797 silly addNameRange   hasData: false }
+798 silly addNameRange { name: 'sails-util',
+798 silly addNameRange   range: '>=0.11.0-0 <0.12.0-0',
+798 silly addNameRange   hasData: false }
+799 silly addNameRange { name: 'skipper', range: '>=0.7.0-0 <0.8.0-0', hasData: false }
+800 silly addNameRange { name: 'anchor', range: '>=0.10.5-0 <0.11.0-0', hasData: false }
+801 verbose request where is /consolidate
+802 verbose request registry https://registry.npmjs.org/
+803 verbose url raw /consolidate
+804 verbose url resolving [ 'https://registry.npmjs.org/', './consolidate' ]
+805 verbose url resolved https://registry.npmjs.org/consolidate
+806 verbose request where is https://registry.npmjs.org/consolidate
+807 info trying registry request attempt 1 at 17:09:30
+808 verbose etag W/"59c4713f-ada7"
+809 http GET https://registry.npmjs.org/consolidate
+810 verbose request where is /cookie
+811 verbose request registry https://registry.npmjs.org/
+812 verbose url raw /cookie
+813 verbose url resolving [ 'https://registry.npmjs.org/', './cookie' ]
+814 verbose url resolved https://registry.npmjs.org/cookie
+815 verbose request where is https://registry.npmjs.org/cookie
+816 info trying registry request attempt 1 at 17:09:30
+817 verbose etag W/"59af68a9-8141"
+818 http GET https://registry.npmjs.org/cookie
+819 verbose request where is /cookie-parser
+820 verbose request registry https://registry.npmjs.org/
+821 verbose url raw /cookie-parser
+822 verbose url resolving [ 'https://registry.npmjs.org/', './cookie-parser' ]
+823 verbose url resolved https://registry.npmjs.org/cookie-parser
+824 verbose request where is https://registry.npmjs.org/cookie-parser
+825 info trying registry request attempt 1 at 17:09:30
+826 verbose etag W/"59bf43ed-6ba2"
+827 http GET https://registry.npmjs.org/cookie-parser
+828 verbose request where is /cookie-signature
+829 verbose request registry https://registry.npmjs.org/
+830 verbose url raw /cookie-signature
+831 verbose url resolving [ 'https://registry.npmjs.org/', './cookie-signature' ]
+832 verbose url resolved https://registry.npmjs.org/cookie-signature
+833 verbose request where is https://registry.npmjs.org/cookie-signature
+834 info trying registry request attempt 1 at 17:09:30
+835 verbose etag W/"598927bb-24e9"
+836 http GET https://registry.npmjs.org/cookie-signature
+837 verbose request where is /csurf
+838 verbose request registry https://registry.npmjs.org/
+839 verbose url raw /csurf
+840 verbose url resolving [ 'https://registry.npmjs.org/', './csurf' ]
+841 verbose url resolved https://registry.npmjs.org/csurf
+842 verbose request where is https://registry.npmjs.org/csurf
+843 info trying registry request attempt 1 at 17:09:30
+844 verbose etag W/"59bcb518-cadf"
+845 http GET https://registry.npmjs.org/csurf
+846 verbose request where is /ejs
+847 verbose request registry https://registry.npmjs.org/
+848 verbose url raw /ejs
+849 verbose url resolving [ 'https://registry.npmjs.org/', './ejs' ]
+850 verbose url resolved https://registry.npmjs.org/ejs
+851 verbose request where is https://registry.npmjs.org/ejs
+852 info trying registry request attempt 1 at 17:09:30
+853 verbose etag W/"59cf0f3f-11335"
+854 http GET https://registry.npmjs.org/ejs
+855 verbose request where is /express-handlebars
+856 verbose request registry https://registry.npmjs.org/
+857 verbose url raw /express-handlebars
+858 verbose url resolving [ 'https://registry.npmjs.org/', './express-handlebars' ]
+859 verbose url resolved https://registry.npmjs.org/express-handlebars
+860 verbose request where is https://registry.npmjs.org/express-handlebars
+861 info trying registry request attempt 1 at 17:09:30
+862 verbose etag W/"59c60f80-b265"
+863 http GET https://registry.npmjs.org/express-handlebars
+864 verbose request where is /ejs-locals
+865 verbose request registry https://registry.npmjs.org/
+866 verbose url raw /ejs-locals
+867 verbose url resolving [ 'https://registry.npmjs.org/', './ejs-locals' ]
+868 verbose url resolved https://registry.npmjs.org/ejs-locals
+869 verbose request where is https://registry.npmjs.org/ejs-locals
+870 info trying registry request attempt 1 at 17:09:30
+871 verbose etag W/"5148a21d-1ba6c"
+872 http GET https://registry.npmjs.org/ejs-locals
+873 verbose request where is /flaverr
+874 verbose request registry https://registry.npmjs.org/
+875 verbose url raw /flaverr
+876 verbose url resolving [ 'https://registry.npmjs.org/', './flaverr' ]
+877 verbose url resolved https://registry.npmjs.org/flaverr
+878 verbose request where is https://registry.npmjs.org/flaverr
+879 info trying registry request attempt 1 at 17:09:30
+880 verbose etag W/"59ad6c58-4628"
+881 http GET https://registry.npmjs.org/flaverr
+882 verbose request where is /express-session
+883 verbose request registry https://registry.npmjs.org/
+884 verbose url raw /express-session
+885 verbose url resolving [ 'https://registry.npmjs.org/', './express-session' ]
+886 verbose url resolved https://registry.npmjs.org/express-session
+887 verbose request where is https://registry.npmjs.org/express-session
+888 info trying registry request attempt 1 at 17:09:30
+889 verbose etag W/"59caa6be-20dfe"
+890 http GET https://registry.npmjs.org/express-session
+891 verbose request where is /sailshq/express
+892 verbose request registry https://registry.npmjs.org/
+893 verbose url raw /sailshq/express
+894 verbose url resolving [ 'https://registry.npmjs.org/', './sailshq/express' ]
+895 verbose url resolved https://registry.npmjs.org/sailshq/express
+896 verbose request where is https://registry.npmjs.org/sailshq/express
+897 info trying registry request attempt 1 at 17:09:30
+898 http GET https://registry.npmjs.org/sailshq/express
+899 verbose request where is /glob
+900 verbose request registry https://registry.npmjs.org/
+901 verbose url raw /glob
+902 verbose url resolving [ 'https://registry.npmjs.org/', './glob' ]
+903 verbose url resolved https://registry.npmjs.org/glob
+904 verbose request where is https://registry.npmjs.org/glob
+905 info trying registry request attempt 1 at 17:09:30
+906 verbose etag W/"59cbcb19-1ff73"
+907 http GET https://registry.npmjs.org/glob
+908 verbose request where is /grunt-cli
+909 verbose request registry https://registry.npmjs.org/
+910 verbose url raw /grunt-cli
+911 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-cli' ]
+912 verbose url resolved https://registry.npmjs.org/grunt-cli
+913 verbose request where is https://registry.npmjs.org/grunt-cli
+914 info trying registry request attempt 1 at 17:09:30
+915 verbose etag W/"59ce023b-81b2"
+916 http GET https://registry.npmjs.org/grunt-cli
+917 verbose request where is /grunt-contrib-clean
+918 verbose request registry https://registry.npmjs.org/
+919 verbose url raw /grunt-contrib-clean
+920 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-clean' ]
+921 verbose url resolved https://registry.npmjs.org/grunt-contrib-clean
+922 verbose request where is https://registry.npmjs.org/grunt-contrib-clean
+923 info trying registry request attempt 1 at 17:09:30
+924 verbose etag W/"59809134-7fbc"
+925 http GET https://registry.npmjs.org/grunt-contrib-clean
+926 verbose request where is /grunt
+927 verbose request registry https://registry.npmjs.org/
+928 verbose url raw /grunt
+929 verbose url resolving [ 'https://registry.npmjs.org/', './grunt' ]
+930 verbose url resolved https://registry.npmjs.org/grunt
+931 verbose request where is https://registry.npmjs.org/grunt
+932 info trying registry request attempt 1 at 17:09:30
+933 verbose etag W/"59ce0239-18c59"
+934 http GET https://registry.npmjs.org/grunt
+935 verbose request where is /grunt-contrib-concat
+936 verbose request registry https://registry.npmjs.org/
+937 verbose url raw /grunt-contrib-concat
+938 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-concat' ]
+939 verbose url resolved https://registry.npmjs.org/grunt-contrib-concat
+940 verbose request where is https://registry.npmjs.org/grunt-contrib-concat
+941 info trying registry request attempt 1 at 17:09:30
+942 verbose etag W/"59b677f8-8b7e"
+943 http GET https://registry.npmjs.org/grunt-contrib-concat
+944 verbose request where is /grunt-contrib-coffee
+945 verbose request registry https://registry.npmjs.org/
+946 verbose url raw /grunt-contrib-coffee
+947 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-coffee' ]
+948 verbose url resolved https://registry.npmjs.org/grunt-contrib-coffee
+949 verbose request where is https://registry.npmjs.org/grunt-contrib-coffee
+950 info trying registry request attempt 1 at 17:09:30
+951 verbose etag W/"5962eb17-d895"
+952 http GET https://registry.npmjs.org/grunt-contrib-coffee
+953 verbose request where is /grunt-contrib-copy
+954 verbose request registry https://registry.npmjs.org/
+955 verbose url raw /grunt-contrib-copy
+956 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-copy' ]
+957 verbose url resolved https://registry.npmjs.org/grunt-contrib-copy
+958 verbose request where is https://registry.npmjs.org/grunt-contrib-copy
+959 info trying registry request attempt 1 at 17:09:30
+960 verbose etag W/"5962ee92-9cf3"
+961 http GET https://registry.npmjs.org/grunt-contrib-copy
+962 verbose request where is /grunt-contrib-jst
+963 verbose request registry https://registry.npmjs.org/
+964 verbose url raw /grunt-contrib-jst
+965 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-jst' ]
+966 verbose url resolved https://registry.npmjs.org/grunt-contrib-jst
+967 verbose request where is https://registry.npmjs.org/grunt-contrib-jst
+968 info trying registry request attempt 1 at 17:09:30
+969 verbose etag W/"56da09cc-73dd"
+970 http GET https://registry.npmjs.org/grunt-contrib-jst
+971 verbose request where is /grunt-contrib-cssmin
+972 verbose request registry https://registry.npmjs.org/
+973 verbose url raw /grunt-contrib-cssmin
+974 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-cssmin' ]
+975 verbose url resolved https://registry.npmjs.org/grunt-contrib-cssmin
+976 verbose request where is https://registry.npmjs.org/grunt-contrib-cssmin
+977 info trying registry request attempt 1 at 17:09:30
+978 verbose etag W/"59b677f9-df44"
+979 http GET https://registry.npmjs.org/grunt-contrib-cssmin
+980 verbose request where is /grunt-contrib-less
+981 verbose request registry https://registry.npmjs.org/
+982 verbose url raw /grunt-contrib-less
+983 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-less' ]
+984 verbose url resolved https://registry.npmjs.org/grunt-contrib-less
+985 verbose request where is https://registry.npmjs.org/grunt-contrib-less
+986 info trying registry request attempt 1 at 17:09:30
+987 verbose etag W/"59b677fa-1344e"
+988 http GET https://registry.npmjs.org/grunt-contrib-less
+989 verbose request where is /grunt-contrib-uglify
+990 verbose request registry https://registry.npmjs.org/
+991 verbose url raw /grunt-contrib-uglify
+992 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-uglify' ]
+993 verbose url resolved https://registry.npmjs.org/grunt-contrib-uglify
+994 verbose request where is https://registry.npmjs.org/grunt-contrib-uglify
+995 info trying registry request attempt 1 at 17:09:30
+996 verbose etag W/"59b677fb-18dda"
+997 http GET https://registry.npmjs.org/grunt-contrib-uglify
+998 verbose request where is /grunt-contrib-watch
+999 verbose request registry https://registry.npmjs.org/
+1000 verbose url raw /grunt-contrib-watch
+1001 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-watch' ]
+1002 verbose url resolved https://registry.npmjs.org/grunt-contrib-watch
+1003 verbose request where is https://registry.npmjs.org/grunt-contrib-watch
+1004 info trying registry request attempt 1 at 17:09:30
+1005 verbose etag W/"59b677fb-fba8"
+1006 http GET https://registry.npmjs.org/grunt-contrib-watch
+1007 verbose request where is /grunt-sync
+1008 verbose request registry https://registry.npmjs.org/
+1009 verbose url raw /grunt-sync
+1010 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-sync' ]
+1011 verbose url resolved https://registry.npmjs.org/grunt-sync
+1012 verbose request where is https://registry.npmjs.org/grunt-sync
+1013 info trying registry request attempt 1 at 17:09:30
+1014 verbose etag W/"59c82b36-8f52"
+1015 http GET https://registry.npmjs.org/grunt-sync
+1016 verbose request where is /i18n
+1017 verbose request registry https://registry.npmjs.org/
+1018 verbose url raw /i18n
+1019 verbose url resolving [ 'https://registry.npmjs.org/', './i18n' ]
+1020 verbose url resolved https://registry.npmjs.org/i18n
+1021 verbose request where is https://registry.npmjs.org/i18n
+1022 info trying registry request attempt 1 at 17:09:30
+1023 verbose etag W/"59ae7497-d9bc"
+1024 http GET https://registry.npmjs.org/i18n
+1025 verbose request where is /include-all
+1026 verbose request registry https://registry.npmjs.org/
+1027 verbose url raw /include-all
+1028 verbose url resolving [ 'https://registry.npmjs.org/', './include-all' ]
+1029 verbose url resolved https://registry.npmjs.org/include-all
+1030 verbose request where is https://registry.npmjs.org/include-all
+1031 info trying registry request attempt 1 at 17:09:30
+1032 verbose etag W/"5957e175-be6c"
+1033 http GET https://registry.npmjs.org/include-all
+1034 verbose request where is /grunt-sails-linker
+1035 verbose request registry https://registry.npmjs.org/
+1036 verbose url raw /grunt-sails-linker
+1037 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-sails-linker' ]
+1038 verbose url resolved https://registry.npmjs.org/grunt-sails-linker
+1039 verbose request where is https://registry.npmjs.org/grunt-sails-linker
+1040 info trying registry request attempt 1 at 17:09:30
+1041 verbose etag W/"581be02b-589c"
+1042 http GET https://registry.npmjs.org/grunt-sails-linker
+1043 verbose request where is /merge-defaults
+1044 verbose request registry https://registry.npmjs.org/
+1045 verbose url raw /merge-defaults
+1046 verbose url resolving [ 'https://registry.npmjs.org/', './merge-defaults' ]
+1047 verbose url resolved https://registry.npmjs.org/merge-defaults
+1048 verbose request where is https://registry.npmjs.org/merge-defaults
+1049 info trying registry request attempt 1 at 17:09:31
+1050 verbose etag W/"5818d5eb-1d9d"
+1051 http GET https://registry.npmjs.org/merge-defaults
+1052 verbose request where is /method-override
+1053 verbose request registry https://registry.npmjs.org/
+1054 verbose url raw /method-override
+1055 verbose url resolving [ 'https://registry.npmjs.org/', './method-override' ]
+1056 verbose url resolved https://registry.npmjs.org/method-override
+1057 verbose request where is https://registry.npmjs.org/method-override
+1058 info trying registry request attempt 1 at 17:09:31
+1059 verbose etag W/"59cbad11-bacf"
+1060 http GET https://registry.npmjs.org/method-override
+1061 verbose request where is /mock-req
+1062 verbose request registry https://registry.npmjs.org/
+1063 verbose url raw /mock-req
+1064 verbose url resolving [ 'https://registry.npmjs.org/', './mock-req' ]
+1065 verbose url resolved https://registry.npmjs.org/mock-req
+1066 verbose request where is https://registry.npmjs.org/mock-req
+1067 info trying registry request attempt 1 at 17:09:31
+1068 verbose etag W/"54f6faa9-115b"
+1069 http GET https://registry.npmjs.org/mock-req
+1070 verbose request where is /mock-res
+1071 verbose request registry https://registry.npmjs.org/
+1072 verbose url raw /mock-res
+1073 verbose url resolving [ 'https://registry.npmjs.org/', './mock-res' ]
+1074 verbose url resolved https://registry.npmjs.org/mock-res
+1075 verbose request where is https://registry.npmjs.org/mock-res
+1076 info trying registry request attempt 1 at 17:09:31
+1077 verbose etag W/"595f0419-2f24"
+1078 http GET https://registry.npmjs.org/mock-res
+1079 verbose request where is /parseurl
+1080 verbose request registry https://registry.npmjs.org/
+1081 verbose url raw /parseurl
+1082 verbose url resolving [ 'https://registry.npmjs.org/', './parseurl' ]
+1083 verbose url resolved https://registry.npmjs.org/parseurl
+1084 verbose request where is https://registry.npmjs.org/parseurl
+1085 info trying registry request attempt 1 at 17:09:31
+1086 verbose etag W/"59b45b50-44aa"
+1087 http GET https://registry.npmjs.org/parseurl
+1088 verbose request where is /path-to-regexp
+1089 verbose request registry https://registry.npmjs.org/
+1090 verbose url raw /path-to-regexp
+1091 verbose url resolving [ 'https://registry.npmjs.org/', './path-to-regexp' ]
+1092 verbose url resolved https://registry.npmjs.org/path-to-regexp
+1093 verbose request where is https://registry.npmjs.org/path-to-regexp
+1094 info trying registry request attempt 1 at 17:09:31
+1095 verbose etag W/"59ce207c-17d05"
+1096 http GET https://registry.npmjs.org/path-to-regexp
+1097 verbose request where is /pluralize
+1098 verbose request registry https://registry.npmjs.org/
+1099 verbose url raw /pluralize
+1100 verbose url resolving [ 'https://registry.npmjs.org/', './pluralize' ]
+1101 verbose url resolved https://registry.npmjs.org/pluralize
+1102 verbose request where is https://registry.npmjs.org/pluralize
+1103 info trying registry request attempt 1 at 17:09:31
+1104 verbose etag W/"59c78bce-a73c"
+1105 http GET https://registry.npmjs.org/pluralize
+1106 verbose request where is /prompt
+1107 verbose request registry https://registry.npmjs.org/
+1108 verbose url raw /prompt
+1109 verbose url resolving [ 'https://registry.npmjs.org/', './prompt' ]
+1110 verbose url resolved https://registry.npmjs.org/prompt
+1111 verbose request where is https://registry.npmjs.org/prompt
+1112 info trying registry request attempt 1 at 17:09:31
+1113 verbose etag W/"59ce1790-c826"
+1114 http GET https://registry.npmjs.org/prompt
+1115 verbose request where is /rc
+1116 verbose request registry https://registry.npmjs.org/
+1117 verbose url raw /rc
+1118 verbose url resolving [ 'https://registry.npmjs.org/', './rc' ]
+1119 verbose url resolved https://registry.npmjs.org/rc
+1120 verbose request where is https://registry.npmjs.org/rc
+1121 info trying registry request attempt 1 at 17:09:31
+1122 verbose etag W/"5995a799-bdb6"
+1123 http GET https://registry.npmjs.org/rc
+1124 verbose request where is /reportback
+1125 verbose request registry https://registry.npmjs.org/
+1126 verbose url raw /reportback
+1127 verbose url resolving [ 'https://registry.npmjs.org/', './reportback' ]
+1128 verbose url resolved https://registry.npmjs.org/reportback
+1129 verbose request where is https://registry.npmjs.org/reportback
+1130 info trying registry request attempt 1 at 17:09:31
+1131 verbose etag W/"5957e2aa-30dd"
+1132 http GET https://registry.npmjs.org/reportback
+1133 verbose request where is /sailshq/lodash
+1134 verbose request registry https://registry.npmjs.org/
+1135 verbose url raw /sailshq/lodash
+1136 verbose url resolving [ 'https://registry.npmjs.org/', './sailshq/lodash' ]
+1137 verbose url resolved https://registry.npmjs.org/sailshq/lodash
+1138 verbose request where is https://registry.npmjs.org/sailshq/lodash
+1139 info trying registry request attempt 1 at 17:09:31
+1140 http GET https://registry.npmjs.org/sailshq/lodash
+1141 verbose request where is /sails-disk
+1142 verbose request registry https://registry.npmjs.org/
+1143 verbose url raw /sails-disk
+1144 verbose url resolving [ 'https://registry.npmjs.org/', './sails-disk' ]
+1145 verbose url resolved https://registry.npmjs.org/sails-disk
+1146 verbose request where is https://registry.npmjs.org/sails-disk
+1147 info trying registry request attempt 1 at 17:09:31
+1148 verbose etag W/"598bec1f-da28"
+1149 http GET https://registry.npmjs.org/sails-disk
+1150 verbose request where is /sails-generate
+1151 verbose request registry https://registry.npmjs.org/
+1152 verbose url raw /sails-generate
+1153 verbose url resolving [ 'https://registry.npmjs.org/', './sails-generate' ]
+1154 verbose url resolved https://registry.npmjs.org/sails-generate
+1155 verbose request where is https://registry.npmjs.org/sails-generate
+1156 info trying registry request attempt 1 at 17:09:31
+1157 verbose etag W/"5979580f-20cc3"
+1158 http GET https://registry.npmjs.org/sails-generate
+1159 verbose request where is /sails-hook-sockets
+1160 verbose request registry https://registry.npmjs.org/
+1161 verbose url raw /sails-hook-sockets
+1162 verbose url resolving [ 'https://registry.npmjs.org/', './sails-hook-sockets' ]
+1163 verbose url resolved https://registry.npmjs.org/sails-hook-sockets
+1164 verbose request where is https://registry.npmjs.org/sails-hook-sockets
+1165 info trying registry request attempt 1 at 17:09:31
+1166 verbose etag W/"5957e1dd-1723a"
+1167 http GET https://registry.npmjs.org/sails-hook-sockets
+1168 verbose request where is /rttc
+1169 verbose request registry https://registry.npmjs.org/
+1170 verbose url raw /rttc
+1171 verbose url resolving [ 'https://registry.npmjs.org/', './rttc' ]
+1172 verbose url resolved https://registry.npmjs.org/rttc
+1173 verbose request where is https://registry.npmjs.org/rttc
+1174 info trying registry request attempt 1 at 17:09:31
+1175 verbose etag W/"59230ce2-2f190"
+1176 http GET https://registry.npmjs.org/rttc
+1177 verbose request where is /sails-stringfile
+1178 verbose request registry https://registry.npmjs.org/
+1179 verbose url raw /sails-stringfile
+1180 verbose url resolving [ 'https://registry.npmjs.org/', './sails-stringfile' ]
+1181 verbose url resolved https://registry.npmjs.org/sails-stringfile
+1182 verbose request where is https://registry.npmjs.org/sails-stringfile
+1183 info trying registry request attempt 1 at 17:09:31
+1184 verbose etag W/"52f424ae-22d8"
+1185 http GET https://registry.npmjs.org/sails-stringfile
+1186 verbose request where is /sails-util
+1187 verbose request registry https://registry.npmjs.org/
+1188 verbose url raw /sails-util
+1189 verbose url resolving [ 'https://registry.npmjs.org/', './sails-util' ]
+1190 verbose url resolved https://registry.npmjs.org/sails-util
+1191 verbose request where is https://registry.npmjs.org/sails-util
+1192 info trying registry request attempt 1 at 17:09:31
+1193 verbose etag W/"5957e1e3-2ea4"
+1194 http GET https://registry.npmjs.org/sails-util
+1195 verbose request where is /serve-favicon
+1196 verbose request registry https://registry.npmjs.org/
+1197 verbose url raw /serve-favicon
+1198 verbose url resolving [ 'https://registry.npmjs.org/', './serve-favicon' ]
+1199 verbose url resolved https://registry.npmjs.org/serve-favicon
+1200 verbose request where is https://registry.npmjs.org/serve-favicon
+1201 info trying registry request attempt 1 at 17:09:31
+1202 verbose etag W/"59ca8af8-9780"
+1203 http GET https://registry.npmjs.org/serve-favicon
+1204 verbose request where is /semver
+1205 verbose request registry https://registry.npmjs.org/
+1206 verbose url raw /semver
+1207 verbose url resolving [ 'https://registry.npmjs.org/', './semver' ]
+1208 verbose url resolved https://registry.npmjs.org/semver
+1209 verbose request where is https://registry.npmjs.org/semver
+1210 info trying registry request attempt 1 at 17:09:31
+1211 verbose etag W/"59c8fe95-12735"
+1212 http GET https://registry.npmjs.org/semver
+1213 verbose request where is /skipper
+1214 verbose request registry https://registry.npmjs.org/
+1215 verbose url raw /skipper
+1216 verbose url resolving [ 'https://registry.npmjs.org/', './skipper' ]
+1217 verbose url resolved https://registry.npmjs.org/skipper
+1218 verbose request where is https://registry.npmjs.org/skipper
+1219 info trying registry request attempt 1 at 17:09:31
+1220 verbose etag W/"59ae56c0-179bb"
+1221 http GET https://registry.npmjs.org/skipper
+1222 verbose request where is /uid-safe
+1223 verbose request registry https://registry.npmjs.org/
+1224 verbose url raw /uid-safe
+1225 verbose url resolving [ 'https://registry.npmjs.org/', './uid-safe' ]
+1226 verbose url resolved https://registry.npmjs.org/uid-safe
+1227 verbose request where is https://registry.npmjs.org/uid-safe
+1228 info trying registry request attempt 1 at 17:09:31
+1229 verbose etag W/"5982982a-5cda"
+1230 http GET https://registry.npmjs.org/uid-safe
+1231 verbose request where is /serve-static
+1232 verbose request registry https://registry.npmjs.org/
+1233 verbose url raw /serve-static
+1234 verbose url resolving [ 'https://registry.npmjs.org/', './serve-static' ]
+1235 verbose url resolved https://registry.npmjs.org/serve-static
+1236 verbose request where is https://registry.npmjs.org/serve-static
+1237 info trying registry request attempt 1 at 17:09:31
+1238 verbose etag W/"59cea8dc-17f44"
+1239 http GET https://registry.npmjs.org/serve-static
+1240 verbose request where is /walk
+1241 verbose request registry https://registry.npmjs.org/
+1242 verbose url raw /walk
+1243 verbose url resolving [ 'https://registry.npmjs.org/', './walk' ]
+1244 verbose url resolved https://registry.npmjs.org/walk
+1245 verbose request where is https://registry.npmjs.org/walk
+1246 info trying registry request attempt 1 at 17:09:31
+1247 verbose etag W/"5973ea88-5f87"
+1248 http GET https://registry.npmjs.org/walk
+1249 verbose request where is /anchor
+1250 verbose request registry https://registry.npmjs.org/
+1251 verbose url raw /anchor
+1252 verbose url resolving [ 'https://registry.npmjs.org/', './anchor' ]
+1253 verbose url resolved https://registry.npmjs.org/anchor
+1254 verbose request where is https://registry.npmjs.org/anchor
+1255 info trying registry request attempt 1 at 17:09:31
+1256 verbose etag W/"59c828af-c4cb"
+1257 http GET https://registry.npmjs.org/anchor
+1258 verbose request where is /sails-hook-orm
+1259 verbose request registry https://registry.npmjs.org/
+1260 verbose url raw /sails-hook-orm
+1261 verbose url resolving [ 'https://registry.npmjs.org/', './sails-hook-orm' ]
+1262 verbose url resolved https://registry.npmjs.org/sails-hook-orm
+1263 verbose request where is https://registry.npmjs.org/sails-hook-orm
+1264 info trying registry request attempt 1 at 17:09:31
+1265 verbose etag W/"598e23ab-f269"
+1266 http GET https://registry.npmjs.org/sails-hook-orm
+1267 verbose request where is /async
+1268 verbose request registry https://registry.npmjs.org/
+1269 verbose url raw /async
+1270 verbose url resolving [ 'https://registry.npmjs.org/', './async' ]
+1271 verbose url resolved https://registry.npmjs.org/async
+1272 verbose request where is https://registry.npmjs.org/async
+1273 info trying registry request attempt 1 at 17:09:31
+1274 verbose etag W/"59cd3d70-21f9e"
+1275 http GET https://registry.npmjs.org/async
+1276 http 304 https://registry.npmjs.org/compression
+1277 silly registry.get cb [ 304,
+1277 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1277 silly registry.get     via: '1.1 varnish',
+1277 silly registry.get     'cache-control': 'max-age=300',
+1277 silly registry.get     etag: 'W/"59cb32bc-1135a"',
+1277 silly registry.get     age: '221',
+1277 silly registry.get     connection: 'keep-alive',
+1277 silly registry.get     'x-served-by': 'cache-sin18029-SIN',
+1277 silly registry.get     'x-cache': 'HIT',
+1277 silly registry.get     'x-cache-hits': '3',
+1277 silly registry.get     'x-timer': 'S1506771572.536908,VS0,VE0',
+1277 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1278 verbose etag https://registry.npmjs.org/compression from cache
+1279 http 304 https://registry.npmjs.org/commander
+1280 silly registry.get cb [ 304,
+1280 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1280 silly registry.get     via: '1.1 varnish',
+1280 silly registry.get     'cache-control': 'max-age=300',
+1280 silly registry.get     etag: 'W/"59cf0ee2-11787"',
+1280 silly registry.get     age: '220',
+1280 silly registry.get     connection: 'keep-alive',
+1280 silly registry.get     'x-served-by': 'cache-sin18033-SIN',
+1280 silly registry.get     'x-cache': 'HIT',
+1280 silly registry.get     'x-cache-hits': '6',
+1280 silly registry.get     'x-timer': 'S1506771572.538685,VS0,VE0',
+1280 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1281 verbose etag https://registry.npmjs.org/commander from cache
+1282 http 304 https://registry.npmjs.org/chalk
+1283 silly registry.get cb [ 304,
+1283 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1283 silly registry.get     via: '1.1 varnish',
+1283 silly registry.get     'cache-control': 'max-age=300',
+1283 silly registry.get     etag: 'W/"59cd9076-b6ff"',
+1283 silly registry.get     age: '126',
+1283 silly registry.get     connection: 'keep-alive',
+1283 silly registry.get     'x-served-by': 'cache-sin18027-SIN',
+1283 silly registry.get     'x-cache': 'HIT',
+1283 silly registry.get     'x-cache-hits': '3',
+1283 silly registry.get     'x-timer': 'S1506771572.542114,VS0,VE0',
+1283 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1284 verbose etag https://registry.npmjs.org/chalk from cache
+1285 http 304 https://registry.npmjs.org/connect
+1286 silly registry.get cb [ 304,
+1286 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1286 silly registry.get     via: '1.1 varnish',
+1286 silly registry.get     'cache-control': 'max-age=300',
+1286 silly registry.get     etag: 'W/"59c560a0-59292"',
+1286 silly registry.get     age: '135',
+1286 silly registry.get     connection: 'keep-alive',
+1286 silly registry.get     'x-served-by': 'cache-sin18021-SIN',
+1286 silly registry.get     'x-cache': 'HIT',
+1286 silly registry.get     'x-cache-hits': '1',
+1286 silly registry.get     'x-timer': 'S1506771572.575256,VS0,VE0',
+1286 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1287 verbose etag https://registry.npmjs.org/connect from cache
+1288 http 304 https://registry.npmjs.org/captains-log
+1289 silly registry.get cb [ 304,
+1289 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1289 silly registry.get     via: '1.1 varnish',
+1289 silly registry.get     'cache-control': 'max-age=300',
+1289 silly registry.get     etag: 'W/"5973bca7-6ab1"',
+1289 silly registry.get     age: '0',
+1289 silly registry.get     connection: 'keep-alive',
+1289 silly registry.get     'x-served-by': 'cache-sin18023-SIN',
+1289 silly registry.get     'x-cache': 'HIT',
+1289 silly registry.get     'x-cache-hits': '1',
+1289 silly registry.get     'x-timer': 'S1506771571.447904,VS0,VE160',
+1289 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1290 verbose etag https://registry.npmjs.org/captains-log from cache
+1291 silly lockFile 07267fc6-commander-2-9-0 commander@2.9.0
+1292 silly lockFile 07267fc6-commander-2-9-0 commander@2.9.0
+1293 silly lockFile c8af993c-compression-1-6-2 compression@1.6.2
+1294 silly lockFile c8af993c-compression-1-6-2 compression@1.6.2
+1295 silly lockFile bf7a37a7-chalk-1-1-3 chalk@1.1.3
+1296 silly lockFile bf7a37a7-chalk-1-1-3 chalk@1.1.3
+1297 silly lockFile defb4693-connect-3-4-1 connect@3.4.1
+1298 silly lockFile defb4693-connect-3-4-1 connect@3.4.1
+1299 silly lockFile aee6dbaa-captains-log-1-0-0 captains-log@1.0.0
+1300 silly lockFile aee6dbaa-captains-log-1-0-0 captains-log@1.0.0
+1301 http 304 https://registry.npmjs.org/consolidate
+1302 silly registry.get cb [ 304,
+1302 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1302 silly registry.get     via: '1.1 varnish',
+1302 silly registry.get     'cache-control': 'max-age=300',
+1302 silly registry.get     etag: 'W/"59c4713f-ada7"',
+1302 silly registry.get     age: '102',
+1302 silly registry.get     connection: 'keep-alive',
+1302 silly registry.get     'x-served-by': 'cache-sin18033-SIN',
+1302 silly registry.get     'x-cache': 'HIT',
+1302 silly registry.get     'x-cache-hits': '1',
+1302 silly registry.get     'x-timer': 'S1506771572.659315,VS0,VE0',
+1302 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1303 verbose etag https://registry.npmjs.org/consolidate from cache
+1304 http 304 https://registry.npmjs.org/cookie
+1305 silly registry.get cb [ 304,
+1305 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1305 silly registry.get     via: '1.1 varnish',
+1305 silly registry.get     'cache-control': 'max-age=300',
+1305 silly registry.get     etag: 'W/"59af68a9-8141"',
+1305 silly registry.get     age: '138',
+1305 silly registry.get     connection: 'keep-alive',
+1305 silly registry.get     'x-served-by': 'cache-sin18027-SIN',
+1305 silly registry.get     'x-cache': 'HIT',
+1305 silly registry.get     'x-cache-hits': '3',
+1305 silly registry.get     'x-timer': 'S1506771572.667168,VS0,VE0',
+1305 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1306 verbose etag https://registry.npmjs.org/cookie from cache
+1307 http 304 https://registry.npmjs.org/cookie-parser
+1308 silly registry.get cb [ 304,
+1308 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1308 silly registry.get     via: '1.1 varnish',
+1308 silly registry.get     'cache-control': 'max-age=300',
+1308 silly registry.get     etag: 'W/"59bf43ed-6ba2"',
+1308 silly registry.get     age: '18',
+1308 silly registry.get     connection: 'keep-alive',
+1308 silly registry.get     'x-served-by': 'cache-sin18021-SIN',
+1308 silly registry.get     'x-cache': 'HIT',
+1308 silly registry.get     'x-cache-hits': '1',
+1308 silly registry.get     'x-timer': 'S1506771572.700347,VS0,VE0',
+1308 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1309 verbose etag https://registry.npmjs.org/cookie-parser from cache
+1310 silly lockFile dc0664e7-consolidate-0-14-1 consolidate@0.14.1
+1311 silly lockFile dc0664e7-consolidate-0-14-1 consolidate@0.14.1
+1312 silly lockFile ccf606cf-cookie-0-1-2 cookie@0.1.2
+1313 silly lockFile ccf606cf-cookie-0-1-2 cookie@0.1.2
+1314 silly lockFile b6f1abc3-cookie-parser-1-3-5 cookie-parser@1.3.5
+1315 silly lockFile b6f1abc3-cookie-parser-1-3-5 cookie-parser@1.3.5
+1316 http 304 https://registry.npmjs.org/cookie-signature
+1317 silly registry.get cb [ 304,
+1317 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1317 silly registry.get     via: '1.1 varnish',
+1317 silly registry.get     'cache-control': 'max-age=300',
+1317 silly registry.get     etag: 'W/"598927bb-24e9"',
+1317 silly registry.get     age: '139',
+1317 silly registry.get     connection: 'keep-alive',
+1317 silly registry.get     'x-served-by': 'cache-sin18023-SIN',
+1317 silly registry.get     'x-cache': 'HIT',
+1317 silly registry.get     'x-cache-hits': '2',
+1317 silly registry.get     'x-timer': 'S1506771572.738132,VS0,VE0',
+1317 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1318 verbose etag https://registry.npmjs.org/cookie-signature from cache
+1319 silly lockFile 73d54cec-cookie-signature-1-0-6 cookie-signature@1.0.6
+1320 silly lockFile 73d54cec-cookie-signature-1-0-6 cookie-signature@1.0.6
+1321 http 304 https://registry.npmjs.org/csurf
+1322 silly registry.get cb [ 304,
+1322 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1322 silly registry.get     via: '1.1 varnish',
+1322 silly registry.get     'cache-control': 'max-age=300',
+1322 silly registry.get     etag: 'W/"59bcb518-cadf"',
+1322 silly registry.get     age: '254',
+1322 silly registry.get     connection: 'keep-alive',
+1322 silly registry.get     'x-served-by': 'cache-sin18033-SIN',
+1322 silly registry.get     'x-cache': 'HIT',
+1322 silly registry.get     'x-cache-hits': '6',
+1322 silly registry.get     'x-timer': 'S1506771572.788740,VS0,VE0',
+1322 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1323 verbose etag https://registry.npmjs.org/csurf from cache
+1324 http 304 https://registry.npmjs.org/ejs
+1325 silly registry.get cb [ 304,
+1325 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1325 silly registry.get     via: '1.1 varnish',
+1325 silly registry.get     'cache-control': 'max-age=300',
+1325 silly registry.get     etag: 'W/"59cf0f3f-11335"',
+1325 silly registry.get     age: '189',
+1325 silly registry.get     connection: 'keep-alive',
+1325 silly registry.get     'x-served-by': 'cache-sin18027-SIN',
+1325 silly registry.get     'x-cache': 'HIT',
+1325 silly registry.get     'x-cache-hits': '1',
+1325 silly registry.get     'x-timer': 'S1506771572.797216,VS0,VE0',
+1325 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1326 verbose etag https://registry.npmjs.org/ejs from cache
+1327 silly lockFile cf2fbec6-csurf-1-9-0 csurf@1.9.0
+1328 silly lockFile cf2fbec6-csurf-1-9-0 csurf@1.9.0
+1329 silly lockFile 7d57aeaf-ejs-2-3-4 ejs@2.3.4
+1330 silly lockFile 7d57aeaf-ejs-2-3-4 ejs@2.3.4
+1331 http 304 https://registry.npmjs.org/express-session
+1332 silly registry.get cb [ 304,
+1332 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1332 silly registry.get     via: '1.1 varnish',
+1332 silly registry.get     'cache-control': 'max-age=300',
+1332 silly registry.get     etag: 'W/"59caa6be-20dfe"',
+1332 silly registry.get     age: '220',
+1332 silly registry.get     connection: 'keep-alive',
+1332 silly registry.get     'x-served-by': 'cache-sin18027-SIN',
+1332 silly registry.get     'x-cache': 'HIT',
+1332 silly registry.get     'x-cache-hits': '1',
+1332 silly registry.get     'x-timer': 'S1506771572.912159,VS0,VE0',
+1332 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1333 verbose etag https://registry.npmjs.org/express-session from cache
+1334 silly lockFile fd16d1cb-express-session-1-14-2 express-session@1.14.2
+1335 silly lockFile fd16d1cb-express-session-1-14-2 express-session@1.14.2
+1336 http 304 https://registry.npmjs.org/express-handlebars
+1337 silly registry.get cb [ 304,
+1337 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1337 silly registry.get     via: '1.1 varnish',
+1337 silly registry.get     'cache-control': 'max-age=300',
+1337 silly registry.get     etag: 'W/"59c60f80-b265"',
+1337 silly registry.get     age: '0',
+1337 silly registry.get     connection: 'keep-alive',
+1337 silly registry.get     'x-served-by': 'cache-sin18021-SIN',
+1337 silly registry.get     'x-cache': 'MISS',
+1337 silly registry.get     'x-cache-hits': '0',
+1337 silly registry.get     'x-timer': 'S1506771572.830641,VS0,VE158',
+1337 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1338 verbose etag https://registry.npmjs.org/express-handlebars from cache
+1339 silly lockFile a5448e6c-express-handlebars-3-0-0 express-handlebars@3.0.0
+1340 silly lockFile a5448e6c-express-handlebars-3-0-0 express-handlebars@3.0.0
+1341 http 304 https://registry.npmjs.org/flaverr
+1342 silly registry.get cb [ 304,
+1342 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1342 silly registry.get     via: '1.1 varnish',
+1342 silly registry.get     'cache-control': 'max-age=300',
+1342 silly registry.get     etag: 'W/"59ad6c58-4628"',
+1342 silly registry.get     age: '0',
+1342 silly registry.get     connection: 'keep-alive',
+1342 silly registry.get     'x-served-by': 'cache-sin18033-SIN',
+1342 silly registry.get     'x-cache': 'HIT',
+1342 silly registry.get     'x-cache-hits': '1',
+1342 silly registry.get     'x-timer': 'S1506771572.909649,VS0,VE159',
+1342 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1343 verbose etag https://registry.npmjs.org/flaverr from cache
+1344 http 304 https://registry.npmjs.org/glob
+1345 silly registry.get cb [ 304,
+1345 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:32 GMT',
+1345 silly registry.get     via: '1.1 varnish',
+1345 silly registry.get     'cache-control': 'max-age=300',
+1345 silly registry.get     etag: 'W/"59cbcb19-1ff73"',
+1345 silly registry.get     age: '236',
+1345 silly registry.get     connection: 'keep-alive',
+1345 silly registry.get     'x-served-by': 'cache-sin18021-SIN',
+1345 silly registry.get     'x-cache': 'HIT',
+1345 silly registry.get     'x-cache-hits': '5',
+1345 silly registry.get     'x-timer': 'S1506771572.105376,VS0,VE0',
+1345 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1346 verbose etag https://registry.npmjs.org/glob from cache
+1347 silly addNameRange number 2 { name: 'flaverr', range: '>=1.0.0-0 <2.0.0-0', hasData: true }
+1348 silly addNameRange versions [ 'flaverr',
+1348 silly addNameRange   [ '1.0.0', '1.1.0', '1.1.1', '1.2.0', '1.2.2', '1.2.3', '1.2.4' ] ]
+1349 verbose addNamed [ 'flaverr', '1.2.4' ]
+1350 verbose addNamed [ '1.2.4', '1.2.4' ]
+1351 silly lockFile 4354e78c-flaverr-1-2-4 flaverr@1.2.4
+1352 verbose lock flaverr@1.2.4 /home/samanyu/.npm/4354e78c-flaverr-1-2-4.lock
+1353 silly lockFile 03e27dc7-glob-5-0-15 glob@5.0.15
+1354 silly lockFile 03e27dc7-glob-5-0-15 glob@5.0.15
+1355 silly lockFile 4354e78c-flaverr-1-2-4 flaverr@1.2.4
+1356 silly lockFile 4354e78c-flaverr-1-2-4 flaverr@1.2.4
+1357 silly lockFile e2ed5ebf-flaverr-1-0-0 flaverr@^1.0.0
+1358 silly lockFile e2ed5ebf-flaverr-1-0-0 flaverr@^1.0.0
+1359 http 304 https://registry.npmjs.org/grunt-cli
+1360 silly registry.get cb [ 304,
+1360 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:32 GMT',
+1360 silly registry.get     via: '1.1 varnish',
+1360 silly registry.get     'cache-control': 'max-age=300',
+1360 silly registry.get     etag: 'W/"59ce023b-81b2"',
+1360 silly registry.get     age: '115',
+1360 silly registry.get     connection: 'keep-alive',
+1360 silly registry.get     'x-served-by': 'cache-sin18033-SIN',
+1360 silly registry.get     'x-cache': 'HIT',
+1360 silly registry.get     'x-cache-hits': '1',
+1360 silly registry.get     'x-timer': 'S1506771572.189525,VS0,VE0',
+1360 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1361 verbose etag https://registry.npmjs.org/grunt-cli from cache
+1362 silly lockFile 923e46ff-grunt-cli-1-2-0 grunt-cli@1.2.0
+1363 silly lockFile 923e46ff-grunt-cli-1-2-0 grunt-cli@1.2.0
+1364 http 304 https://registry.npmjs.org/grunt-contrib-clean
+1365 silly registry.get cb [ 304,
+1365 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:32 GMT',
+1365 silly registry.get     via: '1.1 varnish',
+1365 silly registry.get     'cache-control': 'max-age=300',
+1365 silly registry.get     etag: 'W/"59809134-7fbc"',
+1365 silly registry.get     age: '207',
+1365 silly registry.get     connection: 'keep-alive',
+1365 silly registry.get     'x-served-by': 'cache-sin18021-SIN',
+1365 silly registry.get     'x-cache': 'HIT',
+1365 silly registry.get     'x-cache-hits': '4',
+1365 silly registry.get     'x-timer': 'S1506771572.230162,VS0,VE0',
+1365 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1366 verbose etag https://registry.npmjs.org/grunt-contrib-clean from cache
+1367 silly lockFile c8126091-grunt-contrib-clean-1-0-0 grunt-contrib-clean@1.0.0
+1368 silly lockFile c8126091-grunt-contrib-clean-1-0-0 grunt-contrib-clean@1.0.0
+1369 http 304 https://registry.npmjs.org/grunt
+1370 silly registry.get cb [ 304,
+1370 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:32 GMT',
+1370 silly registry.get     via: '1.1 varnish',
+1370 silly registry.get     'cache-control': 'max-age=300',
+1370 silly registry.get     etag: 'W/"59ce0239-18c59"',
+1370 silly registry.get     age: '160',
+1370 silly registry.get     connection: 'keep-alive',
+1370 silly registry.get     'x-served-by': 'cache-sin18033-SIN',
+1370 silly registry.get     'x-cache': 'HIT',
+1370 silly registry.get     'x-cache-hits': '1',
+1370 silly registry.get     'x-timer': 'S1506771572.309159,VS0,VE0',
+1370 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1371 verbose etag https://registry.npmjs.org/grunt from cache
+1372 http 304 https://registry.npmjs.org/grunt-contrib-concat
+1373 silly registry.get cb [ 304,
+1373 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:32 GMT',
+1373 silly registry.get     via: '1.1 varnish',
+1373 silly registry.get     'cache-control': 'max-age=300',
+1373 silly registry.get     etag: 'W/"59b677f8-8b7e"',
+1373 silly registry.get     age: '231',
+1373 silly registry.get     connection: 'keep-alive',
+1373 silly registry.get     'x-served-by': 'cache-sin18021-SIN',
+1373 silly registry.get     'x-cache': 'HIT',
+1373 silly registry.get     'x-cache-hits': '11',
+1373 silly registry.get     'x-timer': 'S1506771572.350309,VS0,VE0',
+1373 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1374 verbose etag https://registry.npmjs.org/grunt-contrib-concat from cache
+1375 silly lockFile 75468da5-grunt-1-0-1 grunt@1.0.1
+1376 silly lockFile 75468da5-grunt-1-0-1 grunt@1.0.1
+1377 silly lockFile 6c53d9ce-grunt-contrib-concat-1-0-1 grunt-contrib-concat@1.0.1
+1378 silly lockFile 6c53d9ce-grunt-contrib-concat-1-0-1 grunt-contrib-concat@1.0.1
+1379 http 304 https://registry.npmjs.org/connect-flash
+1380 silly registry.get cb [ 304,
+1380 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1380 silly registry.get     via: '1.1 varnish',
+1380 silly registry.get     'cache-control': 'max-age=300',
+1380 silly registry.get     etag: 'W/"59c0f374-1981"',
+1380 silly registry.get     age: '0',
+1380 silly registry.get     connection: 'keep-alive',
+1380 silly registry.get     'x-served-by': 'cache-sin18029-SIN',
+1380 silly registry.get     'x-cache': 'HIT',
+1380 silly registry.get     'x-cache-hits': '1',
+1380 silly registry.get     'x-timer': 'S1506771572.656941,VS0,VE671',
+1380 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1381 verbose etag https://registry.npmjs.org/connect-flash from cache
+1382 silly lockFile 0cdf4f98-connect-flash-0-1-1 connect-flash@0.1.1
+1383 silly lockFile 0cdf4f98-connect-flash-0-1-1 connect-flash@0.1.1
+1384 http 304 https://registry.npmjs.org/grunt-contrib-copy
+1385 silly registry.get cb [ 304,
+1385 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:32 GMT',
+1385 silly registry.get     via: '1.1 varnish',
+1385 silly registry.get     'cache-control': 'max-age=300',
+1385 silly registry.get     etag: 'W/"5962ee92-9cf3"',
+1385 silly registry.get     age: '250',
+1385 silly registry.get     connection: 'keep-alive',
+1385 silly registry.get     'x-served-by': 'cache-sin18021-SIN',
+1385 silly registry.get     'x-cache': 'HIT',
+1385 silly registry.get     'x-cache-hits': '1',
+1385 silly registry.get     'x-timer': 'S1506771572.465873,VS0,VE0',
+1385 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1386 verbose etag https://registry.npmjs.org/grunt-contrib-copy from cache
+1387 silly lockFile be102878-grunt-contrib-copy-1-0-0 grunt-contrib-copy@1.0.0
+1388 silly lockFile be102878-grunt-contrib-copy-1-0-0 grunt-contrib-copy@1.0.0
+1389 http 304 https://registry.npmjs.org/ejs-locals
+1390 silly registry.get cb [ 304,
+1390 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:31 GMT',
+1390 silly registry.get     via: '1.1 varnish',
+1390 silly registry.get     'cache-control': 'max-age=300',
+1390 silly registry.get     etag: 'W/"5148a21d-1ba6c"',
+1390 silly registry.get     age: '0',
+1390 silly registry.get     connection: 'keep-alive',
+1390 silly registry.get     'x-served-by': 'cache-sin18023-SIN',
+1390 silly registry.get     'x-cache': 'HIT',
+1390 silly registry.get     'x-cache-hits': '1',
+1390 silly registry.get     'x-timer': 'S1506771572.858556,VS0,VE707',
+1390 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1391 verbose etag https://registry.npmjs.org/ejs-locals from cache
+1392 http 304 https://registry.npmjs.org/grunt-contrib-cssmin
+1393 silly registry.get cb [ 304,
+1393 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:32 GMT',
+1393 silly registry.get     via: '1.1 varnish',
+1393 silly registry.get     'cache-control': 'max-age=300',
+1393 silly registry.get     etag: 'W/"59b677f9-df44"',
+1393 silly registry.get     age: '160',
+1393 silly registry.get     connection: 'keep-alive',
+1393 silly registry.get     'x-served-by': 'cache-sin18021-SIN',
+1393 silly registry.get     'x-cache': 'HIT',
+1393 silly registry.get     'x-cache-hits': '1',
+1393 silly registry.get     'x-timer': 'S1506771573.595441,VS0,VE0',
+1393 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1394 verbose etag https://registry.npmjs.org/grunt-contrib-cssmin from cache
+1395 silly lockFile 49c63eba-grunt-contrib-cssmin-1-0-1 grunt-contrib-cssmin@1.0.1
+1396 silly lockFile 49c63eba-grunt-contrib-cssmin-1-0-1 grunt-contrib-cssmin@1.0.1
+1397 silly lockFile 993d366b-ejs-locals-1-0-2 ejs-locals@1.0.2
+1398 silly lockFile 993d366b-ejs-locals-1-0-2 ejs-locals@1.0.2
+1399 http 304 https://registry.npmjs.org/grunt-contrib-coffee
+1400 silly registry.get cb [ 304,
+1400 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:32 GMT',
+1400 silly registry.get     via: '1.1 varnish',
+1400 silly registry.get     'cache-control': 'max-age=300',
+1400 silly registry.get     etag: 'W/"5962eb17-d895"',
+1400 silly registry.get     age: '0',
+1400 silly registry.get     connection: 'keep-alive',
+1400 silly registry.get     'x-served-by': 'cache-sin18033-SIN',
+1400 silly registry.get     'x-cache': 'HIT',
+1400 silly registry.get     'x-cache-hits': '1',
+1400 silly registry.get     'x-timer': 'S1506771572.428758,VS0,VE160',
+1400 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1401 verbose etag https://registry.npmjs.org/grunt-contrib-coffee from cache
+1402 http 304 https://registry.npmjs.org/grunt-contrib-jst
+1403 silly registry.get cb [ 304,
+1403 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:32 GMT',
+1403 silly registry.get     via: '1.1 varnish',
+1403 silly registry.get     'cache-control': 'max-age=300',
+1403 silly registry.get     etag: 'W/"56da09cc-73dd"',
+1403 silly registry.get     age: '0',
+1403 silly registry.get     connection: 'keep-alive',
+1403 silly registry.get     'x-served-by': 'cache-sin18029-SIN',
+1403 silly registry.get     'x-cache': 'HIT',
+1403 silly registry.get     'x-cache-hits': '1',
+1403 silly registry.get     'x-timer': 'S1506771572.436987,VS0,VE159',
+1403 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1404 verbose etag https://registry.npmjs.org/grunt-contrib-jst from cache
+1405 silly lockFile c78ae5e0-grunt-contrib-coffee-1-0-0 grunt-contrib-coffee@1.0.0
+1406 silly lockFile c78ae5e0-grunt-contrib-coffee-1-0-0 grunt-contrib-coffee@1.0.0
+1407 silly lockFile 776215eb-grunt-contrib-jst-1-0-0 grunt-contrib-jst@1.0.0
+1408 silly lockFile 776215eb-grunt-contrib-jst-1-0-0 grunt-contrib-jst@1.0.0
+1409 http 304 https://registry.npmjs.org/grunt-contrib-uglify
+1410 silly registry.get cb [ 304,
+1410 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:32 GMT',
+1410 silly registry.get     via: '1.1 varnish',
+1410 silly registry.get     'cache-control': 'max-age=300',
+1410 silly registry.get     etag: 'W/"59b677fb-18dda"',
+1410 silly registry.get     age: '160',
+1410 silly registry.get     connection: 'keep-alive',
+1410 silly registry.get     'x-served-by': 'cache-sin18021-SIN',
+1410 silly registry.get     'x-cache': 'HIT',
+1410 silly registry.get     'x-cache-hits': '1',
+1410 silly registry.get     'x-timer': 'S1506771573.720103,VS0,VE0',
+1410 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1411 verbose etag https://registry.npmjs.org/grunt-contrib-uglify from cache
+1412 http 304 https://registry.npmjs.org/grunt-contrib-watch
+1413 silly registry.get cb [ 304,
+1413 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:32 GMT',
+1413 silly registry.get     via: '1.1 varnish',
+1413 silly registry.get     'cache-control': 'max-age=300',
+1413 silly registry.get     etag: 'W/"59b677fb-fba8"',
+1413 silly registry.get     age: '19',
+1413 silly registry.get     connection: 'keep-alive',
+1413 silly registry.get     'x-served-by': 'cache-sin18033-SIN',
+1413 silly registry.get     'x-cache': 'HIT',
+1413 silly registry.get     'x-cache-hits': '1',
+1413 silly registry.get     'x-timer': 'S1506771573.699121,VS0,VE0',
+1413 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1414 verbose etag https://registry.npmjs.org/grunt-contrib-watch from cache
+1415 silly lockFile 0cdb83d1-grunt-contrib-uglify-1-0-1 grunt-contrib-uglify@1.0.1
+1416 silly lockFile 0cdb83d1-grunt-contrib-uglify-1-0-1 grunt-contrib-uglify@1.0.1
+1417 silly lockFile 1aa728f2-grunt-contrib-watch-1-0-0 grunt-contrib-watch@1.0.0
+1418 silly lockFile 1aa728f2-grunt-contrib-watch-1-0-0 grunt-contrib-watch@1.0.0
+1419 http 304 https://registry.npmjs.org/grunt-contrib-less
+1420 silly registry.get cb [ 304,
+1420 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:32 GMT',
+1420 silly registry.get     via: '1.1 varnish',
+1420 silly registry.get     'cache-control': 'max-age=300',
+1420 silly registry.get     etag: 'W/"59b677fa-1344e"',
+1420 silly registry.get     age: '0',
+1420 silly registry.get     connection: 'keep-alive',
+1420 silly registry.get     'x-served-by': 'cache-sin18023-SIN',
+1420 silly registry.get     'x-cache': 'HIT',
+1420 silly registry.get     'x-cache-hits': '1',
+1420 silly registry.get     'x-timer': 'S1506771573.678105,VS0,VE159',
+1420 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1421 verbose etag https://registry.npmjs.org/grunt-contrib-less from cache
+1422 silly lockFile c6cceae8-grunt-contrib-less-1-3-0 grunt-contrib-less@1.3.0
+1423 silly lockFile c6cceae8-grunt-contrib-less-1-3-0 grunt-contrib-less@1.3.0
+1424 http 304 https://registry.npmjs.org/grunt-sync
+1425 silly registry.get cb [ 304,
+1425 silly registry.get   { date: 'Sat, 30 Sep 2017 11:39:32 GMT',
+1425 silly registry.get     via: '1.1 varnish',
+1425 silly registry.get     'cache-control': 'max-age=300',
+1425 silly registry.get     etag: 'W/"59c82b36-8f52"',
+1425 silly registry.get     age: '0',
+1425 silly registry.get     connection: 'keep-alive',
+1425 silly registry.get     'x-served-by': 'cache-sin18029-SIN',
+1425 silly registry.get     'x-cache': 'HIT',
+1425 silly registry.get     'x-cache-hits': '1',
+1425 silly registry.get     'x-timer': 'S1506771573.707140,VS0,VE159',
+1425 silly registry.get     vary: 'Accept-Encoding, Accept' } ]
+1426 verbose etag https://registry.npmjs.org/grunt-sync from cache
+1427 silly lockFile 78b73a7b-grunt-sync-0-5-2 grunt-sync@0.5.2
+1428 silly lockFile 78b73a7b-grunt-sync-0-5-2 grunt-sync@0.5.2
+1429 http 404 https://registry.npmjs.org/sailshq/express
+1430 silly registry.get cb [ 404,
+1430 silly registry.get   { 'content-type': 'application/json',
+1430 silly registry.get     'cache-control': 'max-age=0',
+1430 silly registry.get     'content-length': '2',
+1430 silly registry.get     'accept-ranges': 'bytes',
+1430 silly registry.get     date: 'Sat, 30 Sep 2017 11:39:32 GMT',
+1430 silly registry.get     via: '1.1 varnish',
+1430 silly registry.get     age: '0',
+1430 silly registry.get     connection: 'keep-alive',
+1430 silly registry.get     'x-served-by': 'cache-sin18027-SIN',
+1430 silly registry.get     'x-cache': 'MISS',
+1430 silly registry.get     'x-cache-hits': '0',
+1430 silly registry.get     'x-timer': 'S1506771572.062224,VS0,VE813',
+1430 silly registry.get     vary: 'Accept-Encoding' } ]
+1431 silly lockFile 65d717ab-sailshq-express-3-21-3 sailshq/express@^3.21.3
+1432 silly lockFile 65d717ab-sailshq-express-3-21-3 sailshq/express@^3.21.3
+1433 verbose about to build /usr/local/lib/node_modules/sails
+1434 verbose lib/node_modules/sails unbuild
+1435 info preuninstall sails@0.12.14
+1436 info uninstall sails@0.12.14
+1437 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild sails@0.12.14
+1438 verbose /usr/local/bin,[object Object] binRoot
+1439 info postuninstall sails@0.12.14
+1440 error 404 Not Found
+1440 error 404
+1440 error 404 'sailshq/express' is not in the npm registry.
+1440 error 404 You should bug the author to publish it
+1440 error 404 It was specified as a dependency of 'sails'
+1440 error 404
+1440 error 404 Note that you can also install from a
+1440 error 404 tarball, folder, or http url, or git url.
+1441 error System Linux 3.19.0-84-generic
+1442 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "sails" "-g"
+1443 error cwd /InfoTrophic/git/InfoTrophic/OnlineOrder
+1444 error node -v v0.10.25
+1445 error npm -v 1.4.21
+1446 error code E404
+1447 verbose exit [ 1, true ]

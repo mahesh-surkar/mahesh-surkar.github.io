@@ -1,0 +1,1072 @@
+h1 {
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 140%;
+	color: rgba(130, 112, 112, 0.9);
+	/*color:maroon;*/
+}
+
+div.swEditContainer {
+	
+	width: 1240px;
+	height: 610px; 
+	/*border: 0.1em solid #E6CCCC;*/
+	border: 0.1em solid maroon;
+	margin: 0 0 0 0;
+	padding:  0 0 0 0;
+	overflow: none;
+	display: flex;
+	/*top: 0%;
+	left: 0%;
+	position: relative;
+	transform: translate(-0%, -0%);
+	word-wrap: break-word;
+	/*margin-left: auto;
+	margin-right: auto;
+	display: block;*/
+	/*margin-top: 0px;*/
+/*	position: fixed;
+	top: 50%;
+	left: 51.1%;
+	transform: translate(-50%, -50%);
+	border: 0.1em solid #FFFFCC;
+	overflow: hidden;*/
+}
+
+.swEditorAddLeft {
+
+	width: 0px;
+	height: 610px; 
+	display: inline-block;
+	/*border: 0.1em solid red;*/
+}
+
+div.swEditorTitle {
+	width: 1240px;
+	height: 1px; 
+	display: none;
+	/*position: relative;*/
+	background: maroon; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(maroon,#66000F); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(maroon,#66000F); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(maroon,#66000F); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(maroon,#66000F); /* Standard syntax */
+}
+
+div.swControlsDiv {
+	width: 300px;
+	height: 95%; 
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	
+	/*border: 0em solid green;*/
+	
+	background: #E6CCCC; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(#E6CCCC, white); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(#E6CCCC, white); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(#E6CCCC, white); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(#E6CCCC, white); /* Standard syntax */
+    
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+
+div.swRightControlsDiv {
+	width: 139px; /*133px* //for border*/
+	display: inline-block;
+	height: 95%; 
+	overflow: hidden;
+	margin-top: 0px;
+	padding: 0px;
+	/*border: 0.1em solid green;*/
+	
+	background: #E6CCCC; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#E6CCCC, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#E6CCCC, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#E6CCCC, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#E6CCCC, white); /* Standard syntax */
+    
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.mainControlDiv {/* in swControlsDiv*/
+	width: 300px;
+	height: 75px; 
+	margin: 0px;
+	padding: 0px;
+	background: #E6CCCC; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#FDF7F7, #E6CCCC); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FDF7F7, #E6CCCC); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FDF7F7, #E6CCCC); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FDF7F7, #E6CCCC); /* Standard syntax */
+}
+
+
+.controlPanel {
+	width: 290px;
+	height: 22px;
+	display: inline-block;
+	border: 0.1em solid #E6CCCC;
+	background: #F8F1F1; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#FFFEFE, #F8F1F1);	/* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#FFFEFE, #F8F1F1);	/* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#FFFEFE, #F8F1F1);	/* For Firefox 3.6 to 15 */
+	background: linear-gradient(#FFFEFE, #F8F1F1); /* Standard syntax */
+	float: right;
+	margin-top: 5px;
+	padding-top: 4px;
+	overflow: hidden;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
+}
+
+.editorLeftVerticalControlPanel {
+	width: 31px;
+	height: 505px;
+	background: inherit;
+	/*float :left;*/
+	display: inline-block;
+	margin-left: 4px;
+	margin-right: 1px;
+	margin-top: 0px;
+	padding-top: 0px;
+}
+	
+div.controlPanel.editorTitle {
+	width: 160px;
+    font-weight: bold;
+    font-size: 18px;
+	border: 0.1em solid #E6CCCC;
+	background: maroon;
+	color: white;
+	padding-top: 0px;
+	padding-bottom: 5px;
+	padding-left: 35px;
+	padding-right: 0px;
+}
+
+.SWEditorToolBarSubmenu {		
+	max-height: 90vh;
+	overflow: auto;	
+}
+
+.SWEditorControlBtn { /* in mainControlDiv*/
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline;
+	padding-top: 0px;
+	padding-bottom: 2px;
+	padding-left: 3px;
+	padding-right: 4px;
+	margin-top: 3px;
+	margin-left: 2px;
+	margin-bottom: 1px;
+	border: 0.1em solid #E6CCCC;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.SWEditorControlBtn.tableIcon {
+	display: inline-block;
+	border-radius: 0px 0px 0px 0px;
+	/*margin: 1px 1px 1px 1px;*/
+	margin-bottom: 1px;
+	margin-top: 1px;
+	width: 7px;
+	height: 10px;
+	padding: 3px;
+}
+
+.SWEditorControlBtn.tableIconInfo {
+	display: inline-block;
+	border: none;
+	width: 150px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	color: white;
+}
+
+.SWEditorControlBtn.tableIconInfo:hover {
+	color: black;
+}
+
+.SWEditorControlBtn.tableIcon.selected {
+	background: #F3E9E9; /* Standard syntax */
+}
+
+.SWEditorControlBtn.inVerticalpanel {
+	font-size: 10px;
+	width: 26px;
+	height: 26px;
+	display: inline-block;
+	background: #F8F1F1;
+	padding-right: 0px;
+	padding-left: 1px;
+	margin-left: 1px;
+	float : right;
+}
+
+.SWEditorControlBtn.inHorizontalpanel {
+	font-size: 10px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	background: #F8F1F1;
+	padding-right: 0px;
+	padding-left: 1px;
+	margin-left: 1px;
+	margin-top: 0px;
+}
+
+.SWEditorControlBtn.inVerticalpanel.keepLeft {
+	float: left
+}
+
+.SWEditorControlBtn.svgTool {
+
+	display:inline-block;
+}
+
+.SWEditorControlBtn:hover {
+	background: #F3E9E9; /* Standard syntax */
+	border: 0.1em solid #E6CCCC;
+	/*zoom: 1.1;*/
+}
+
+div.swEditorDiv {
+	width: 800px;
+	height: 95%;
+	display: inline-block; 
+	/*border: 0.1em solid #FFFFCC;*/
+	overflow: auto;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	top: 0;
+}
+
+.inlineBlock {
+	display: inline-block;
+	background: inherit;
+	width: 100vh;
+	height: 505px;
+	margin: 0px;
+	padding :0px;
+	top :0;
+	
+}
+
+.inlineBlock.broad {
+     width: 258px;
+     background: inherit;
+}
+
+.inlineBlock.narrow {
+    width: 30px;
+     margin-left: 6px;
+}
+.editorSlidePanelContainer {
+	/*width: 91%;
+	height: 85%;*/
+	 width: 258px;
+	 height: 505px;
+	 display: inline-block;
+	 background: inherit;
+	 top :0;
+	 margin-left: 1px;
+	/*overflow: auto;*/
+}
+
+div.slidePanel {
+	margin-top: 0px;
+	border: 0.1em solid #E6CCCC;
+	color: rgba(130, 112, 112, 0.9);
+	/*color:maroon;*/
+	background: white;
+	width: 100%;
+	height: 86%;
+	/*resize: vertical;*/
+	overflow: auto;
+}
+
+div.slidePanel.editor {
+	width: 99%;
+	overflow: hidden;
+}
+
+div.slideContainer {
+	margin-top: 0px;
+	padding-top: 1px;
+	border: 0.1em solid #E6CCCC;
+	border-bottom: 0.1em solid maroon;
+	color: black;
+	background: rgba(130, 112, 112, 0.9);
+	width: 255px;
+	height: 145px;
+	/* resize: vertical;*/
+	display: inline-block;
+	overflow: hidden;
+	background: #E6CCCF; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#E6CCCF, maroon);	/* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#E6CCCF, maroon);	/* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#E6CCCF, maroon);	/* For Firefox 3.6 to 15 */
+	background: linear-gradient(#E6CCCC, maroon); /* Standard syntax */
+}
+
+div.slideContainer:hover {
+	height: 160px;
+	border: 0.1em solid maroon;
+	border-left: none;
+	/*overflow: auto;*/
+	background: #E6CCCF; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(maroon, #E6CCCC);	/* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(maroon, #E6CCCC);	/* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(maroon, #E6CCCC);	/* For Firefox 3.6 to 15 */
+	background: linear-gradient(maroon, #E6CCCC); /* Standard syntax */
+}
+
+div.svgSlideContainer {
+	margin: 10px;
+	padding-top: 1px;
+	border: 0.1em solid #E6CCCC;
+	border-bottom: 0.1em solid maroon;
+	color: black;
+	background: rgba(130, 112, 112, 0.9);
+	width: 230px;
+	height: 155px;
+	overflow: hidden;
+	background: #E6CCCF; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#E6CCCF, maroon);	/* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#E6CCCF, maroon);	/* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#E6CCCF, maroon);	/* For Firefox 3.6 to 15 */
+	background: linear-gradient(#E6CCCC, maroon); /* Standard syntax */
+	
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+div.svgSlideContainer.selected {
+	background: yellow; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(yellow, maroon);	/* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(yellow, maroon);	/* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(yellow, maroon);	/* For Firefox 3.6 to 15 */
+	background: linear-gradient(yellow, red); /* Standard syntax */
+	
+}
+div.svgSlideContainer:hover {
+	border: 0.1em solid #E6CCCC;
+	border-left: none;
+	
+	background: #E6CCCF; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(red, #E6CCCC);	/* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(red, #E6CCCC);	/* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(red, #E6CCCC);	/* For Firefox 3.6 to 15 */
+	background: linear-gradient(red, #E6CCCC); /* Standard syntax */
+}
+
+div.sgvSlideInfo {
+	display: table-cell;
+	width: 20px;
+	color: maroon;
+	padding: 5px;
+	text-align: right;
+	font-weight: bold;
+	vertical-align: top;
+}
+div.sgvSlide {
+	width: 200px;
+	height: 150px;
+	background: white;
+	overflow-x: hidden;	
+	display: table-cell;
+	border: 0.1em solid #E6CCCC;
+	/*-moz-transform: scale(0.86);*/
+}
+
+div.slide {
+	/*font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;*/
+	margin-top: 0px;
+	border: 0.1em solid #E6CCCC;
+	color: rgba(130, 112, 112, 0.9);
+	/*color:maroon;*/
+	background: white;
+	width: 795px;
+	height: 503px;
+	/*padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;*/
+	/* resize: vertical;*/
+	overflow: auto;
+	word-wrap: break-word;
+    white-space: wrap;	
+	zoom: 1;
+	-ms-zoom: 0.30;
+	-moz-transform: scale(0.30);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(0.30);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(0.30);
+	-webkit-transform-origin: 0 0;
+}
+
+div.slide:hover {
+   zoom:1.0;
+}
+.slideShow {
+	/*font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;*/
+	margin-top: 0px;
+	border: 0.1em solid #E6CCCC;
+	/*color:maroon;*/
+	background: white;
+	width: 795px;
+	height: 503px;
+	/* resize: vertical;*/
+	overflow: auto;
+	word-wrap: break-word;
+	white-space: wrap;
+	border: 0.1em solid #FFFFCC;
+	
+	
+	/*margin-left: 30px;
+	margin-top: auto;
+	margin-right: auto;
+	display: inine-block;*/
+	border: 0.1em solid #FFFFCC;
+
+	zoom: 1;
+	-ms-zoom: 1.0;
+	-moz-transform: scale(1.0);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(1.0);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(1.0);
+	-webkit-transform-origin: 0 0;
+}
+
+
+.slideShow.scale1_1 {
+	margin-left:100px;
+	zoom: 1;
+	-ms-zoom: 1.0;
+	-moz-transform: scale(1.1);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(1.1);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(1.1);
+	-webkit-transform-origin: 0 0;
+}
+
+
+.slideShow.scale1_2 {
+	margin-left:100px;
+	zoom: 1;
+	-ms-zoom: 1.0;
+	-moz-transform: scale(1.2);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(1.2);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(1.2);
+	-webkit-transform-origin: 0 0;
+}
+
+.slideShow.scale1_3 {
+	margin-left:100px;
+	zoom: 1;
+	-ms-zoom: 1.0;
+	-moz-transform: scale(1.3);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(1.3);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(1.3);
+	-webkit-transform-origin: 0 0;
+}
+
+.slideShow.scale1_4 {
+	margin-left:40px;
+	zoom: 1;
+	-ms-zoom: 1.0;
+	-moz-transform: scale(1.4);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(1.4);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(1.4);
+	-webkit-transform-origin: 0 0;
+}
+
+.slideShow.scale1_5 {
+	margin-left:60px;
+	zoom: 1;
+	-ms-zoom: 1.0;
+	-moz-transform: scale(1.5);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(1.5);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(1.5);
+	-webkit-transform-origin: 0 0;
+}
+
+.slideShow.scale2_0 {
+	margin-left:40px;
+	zoom: 1;
+	-ms-zoom: 1.0;
+	-moz-transform: scale(2.0);
+	-moz-transform-origin: 0 0;
+	-o-transform: scale(2.0);
+	-o-transform-origin: 0 0;
+	-webkit-transform: scale(2.0);
+	-webkit-transform-origin: 0 0;
+}
+.savelink {
+	text-decoration: none;
+	background: maroon;
+	color: white;
+	height: 30px;
+	width: 60%;
+	padding: 0 7 2 7;
+}
+
+.savelink:hover {
+	border: 0.1em solid #FFFFCC;
+}
+
+div.templateEquation {
+	background: rgba(130, 112, 112, 0.9);
+	color: white;
+	border: 0.1em solid #FFFFCC;
+	display: inline-block;
+	width: 60%;
+	height: 20px;
+	overflow: auto;
+}
+
+div.templateEqnVarMaxVal {
+	background: rgba(130, 112, 112, 0.9);
+	color: white;
+	border: 0.1em solid #FFFFCC;
+	display: inline-block;
+	width: 70%;
+	height: 20px;
+	overflow: auto;
+}
+
+div.templateVarSet {
+	background: rgba(130, 112, 112, 0.9);
+	color: white;
+	border: 0.1em solid #FFFFCC;
+	display: inline-block;
+	width: 70%;
+	height: 60px;
+	overflow: auto;
+}
+
+div.templateProblem {
+	background: rgba(130, 112, 112, 0.9);
+	color: white;
+	border: 0.1em solid #FFFFCC;
+	width: 90%;
+	height: 40px;
+	overflow: auto;
+}
+
+.SWMathsStaicData {
+	background: maroon;
+	color: white;
+	min-width: 200q;
+	border: 0.3em solid maroon;
+}
+
+.SWMathsAddtion,.SWMathsSubtraction,.SWMathsMultiplication,.SWMathsDivision
+	{
+	background: gray;
+	width: 30px;
+}
+
+div.bookIndex {
+	background: rgba(130, 112, 112, 0.9);
+	padding: 20 0 0 0;
+	float: left;
+	height: 100%;
+	width: 230px;
+	overflow: auto;
+	white-space: nowrap;
+}
+
+div.bookElement {
+	border-left: 0.6em solid transparent;
+}
+
+.CMSLink {
+	color: white;
+	text-decoration: none;
+}
+
+.CMSLinkHeading {
+	color: #FFFFCC;
+	text-decoration: none;
+	font-style: italic;
+}
+
+.CMSLink:hover {
+	color: maroon;
+	background: rgba(255, 255, 204, 0.8);
+	text-decoration: underline;
+}
+
+.CMSdispToggler {
+	background: transparent;
+	color: rgba(255, 255, 204, 1);
+	width: 16px;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+
+.SWIndex {
+	top: 0px;
+	display: inline;
+	width: 30%;
+	height: 100%;
+	background: rgba(130, 112, 112, 0.9);
+	color: black;
+}
+
+.SWTextEditor {
+	top: 0px;
+	position: fixed;
+	width: 98.5%;
+	height: 18px;
+	background: #FFFFCC;;
+	color: black;
+}
+
+.SWTextEditorBack {
+	width: 100%;
+	background: black;
+	height: 12px;
+}
+
+.SWCreatorElem {
+	margin-top: 0px;
+	border: 0.1em solid #E6CCCC;
+	color: black;
+	background: white;
+	width: 100%;
+	height: 89%;
+	resize: vertical;
+	overflow: auto;
+}
+
+.SWCreatorElem:hover {
+	background: white;
+	/*height: 60%;*/
+}
+
+.SWCreatorElemHeader {
+	margin-top: 0px;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: maroon;
+	background: #FFFFCC;
+	width: 100%;
+	height: 20;
+	resize: vertical;
+	overflow: auto;
+}
+
+.SWCreatorToolDisplay {
+	width: 99%;
+	height: 75vh;
+	border: 0.1em solid #FFFFCC;
+	resize: vertical;
+	overflow: auto;
+}
+
+h2 {
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 120%;
+	color: rgba(130, 112, 112, 0.9);
+	/*color:maroon;*/
+}
+
+h3 {
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: rgba(130, 112, 112, 0.9);
+	/*color:maroon;*/
+}
+
+h4 {
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	color: rgba(130, 112, 112, 0.9);
+	/*color:maroon;*/
+}
+
+p {
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 25px;
+	text-align: left;
+	color: rgba(130, 112, 112, 0.9);
+	/*color:maroon;*/
+}
+
+.SWCratorTag_Content {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 18px;
+	background: #FFFFCC;
+	/*color: maroon;*/
+	width: 30%;
+	height: 20px;
+	min-height: 10px;
+	resize: both;
+	overflow: auto;
+}
+
+.SWCratorTag_Table {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 18px;
+	background: #FFFFCC;
+	color: rgba(130, 112, 112, 0.9);
+	/*color:maroon;*/
+	width: 30%;
+	min-width: 20px;
+	height: 30%;
+	min-height: 20px;
+	max-width: 100% !important;
+	resize: both;
+	overflow: auto;
+}
+
+td { /*background:  #FFFFCC;
+    color: rgba(130,112,112,0.9); 
+    /*color:maroon;*/
+	
+}
+
+tr { /* background: #FFFFCC;
+    color: rgba(130,112,112,0.9); 
+    /*color:maroon;*/
+	
+}
+
+hr {
+	background-color: #E6CCCC;;
+	height: 1px;
+	border: 0;
+}
+
+input[type=textarea],input[type=text],input[type=url],input[type=tel],input[type=number],input[type=color],input[type=file],input[type=email]
+	{ /*background: #FFFFCC;*/
+	color: rgba(130, 112, 112, 0.9);
+	/*color:maroon;*/
+	border: 0.1em solid #E6CCCC;
+}
+
+input[type=textarea].overlay,input[type=text].overlay,input[type=url].overlay,input[type=tel].overlay,input[type=number].overlay,input[type=color].overlay,input[type=file].overlay,input[type=email].overlay
+	{
+	background: rgba(130, 112, 112, 0.9);
+	color: white;
+	border: 0.1em solid #E6CCCC;
+	font-style: italic;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.list1 {
+	background: #FFFFCC;
+	color: rgba(130, 112, 112, 0.9);
+	/*color:maroon;*/
+}
+
+.infoLabel {
+	background: #FFFFCC;
+	color: maroon;
+}
+
+.infoLabel.whitebg {
+	background: white;
+}
+
+.infoLabel.italics {
+	font-style: italic;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.infoLabel.right {
+	float: right;
+}
+
+.overlayAlert {
+	background: #FFFFCC;
+	color: red;
+}
+
+.warnLabel {
+	background: #FFFFCC;
+	color: red;
+}
+
+.warnLabel.italics {
+	font-style: italic;
+}
+
+.transparent { /* background:transparent*/
+	background: rgba(130, 112, 112, 0.8);
+	color: "#FFFFCC";
+}
+
+.overlay {
+	font-size: 16px;
+	background: rgba(130, 112, 112, 0.9);
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.date {
+	width: 77px;
+}
+
+.time {
+	width: 70px;
+}
+
+.btn {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	/*background:maroon;*/
+	background: rgba(130, 0, 0, 1);
+	border: maroon;
+	border-style: solid;
+	cursor: hand;
+	/* box-shadow: 0 0 2px #FFFFCC;*/
+	box-shadow: green;
+}
+
+.btn.right {
+	float: right;
+}
+
+.btn.right {
+	float: right;
+}
+
+.btn.inline {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline;
+	padding-top: 0px;
+	padding-bottom: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 1px;
+	margin-bottom: 1px;
+}
+
+button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: white;
+	background: maroon;
+	border: maroon;
+	border-style: solid;
+	cursor: hand;
+	box-shadow: 0 0 2px #FFFFCC;
+}
+
+.smallbutton {
+	font-family: Arial, Helvetica, sans-serif;
+	/* font-size: 2px;*/
+	height: 20px;
+	width: 30px;
+	background: maroon;
+	border: maroon;
+	cursor: hand;
+	box-shadow: 0 0 2px #FFFFCC;
+}
+
+.disabledsmallbutton {
+	height: 30px;
+	Opacity: 0.2;
+	/*text-decoration: underline;*/
+}
+
+.SWCratorSectionDiv {
+	background: #FFFFCC;
+	border: 1px solid #F4C2C2;
+	background-color: inherit;
+	margin: 10px auto 0px auto;
+	padding: 0.3% 1% 0.7% 1%;
+}
+
+/***SET THE BUTTON'S HOVER AND FOCUS STATES***/
+.btn:hover,.btn:focus {
+	/*reduce the drop shadow size to give a pushed button effect*/
+	color: #FFFFCC;
+	box-shadow: 0 0 1px rgba(0, 0, 0, .75);
+}
+
+.ui-icon {
+	width: 10 px;
+	height: 20px;
+	font-size: 0.8em;
+}
+
+.ui-widget-content {
+	min-width: 200px;
+}
+
+.ui-button:focus {
+	outline: none !important
+}
+
+.ui-button:active {
+	outline: none !important
+}
+
+.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+	float: none;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+	text-align: center; /* left/center/right */
+	font-weight: normal;
+}
+
+.ui-dialog-titlebar-close {
+	visibility: visible; /*hidden;*/
+}
+
+/*
+.ui-tooltip-content
+{
+
+    max-width: 30 !important;
+}
+*/
+
+
+.ui-tooltip{
+	/*outline: none;*/
+	position: relative;
+	display:inline;
+	background: rgba(54, 25, 25, .9);
+    padding: 3;
+}
+
+.ui-tooltip-content
+{
+ 	display:inline;
+    background: rgba(54, 25, 25, 0.0);
+    color: white;
+    font-family: "courier new,courier,monospace";
+	font-style: italic;
+	font-size: 15px; 
+	/*font-weight: bold;*/
+	padding :  3;
+	text-align: center !important;
+	
+}
+
+.SWMathKeyboard {
+	background: rgba(130, 112, 112, 0.9);
+	border: none;
+	width: 630px;
+	height: 70px;
+}
+
+.SWMathKeyboardBtn {
+	background: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+	height: 70px;
+	width: 70px;
+	cursor: hand;
+	box-shadow: none;
+	outline: none;
+}
+
+.SWMathKeyboardBtn:hover {
+	color: maroon;
+}
+
+.SWmathInputDiv {
+	background: #FFFFCC;
+	color: maroon;
+	width: 80%;
+}
+
+#SWmathInputDiv .matrixed {
+	background: #FFFFCC;
+}
+
+#SWmathInputDiv .matrixed-container {
+	filter: progid:DXImageTransform.Microsoft.Chroma(color='#FFFFCC' );
+}
+
+.svgforeign {
+    text-align: left;
+    //magically made the div fit the text
+}
+
+.insidesvgforeign {
+    display: inline-block;
+}
+
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #E6CCCC;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #F8F1F1;; 
+}

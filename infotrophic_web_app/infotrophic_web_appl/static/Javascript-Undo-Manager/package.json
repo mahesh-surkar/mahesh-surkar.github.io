@@ -1,0 +1,31 @@
+{
+  "name": "undo-manager",
+  "version": "1.0.5",
+  "description": "Simple undo manager to provide undo and redo actions in JavaScript applications.",
+  "main": "lib/undomanager.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthurClemens/Javascript-Undo-Manager.git"
+  },
+  "keywords": [
+    "undo"
+  ],
+  "author": "Arthur Clemens <arthurclemens@gmail.com> (http://visiblearea.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArthurClemens/Javascript-Undo-Manager/issues"
+  },
+  "homepage": "https://github.com/ArthurClemens/Javascript-Undo-Manager",
+  "jspm": {
+    "directories": {
+      "lib": "lib"
+    },
+    "files": [
+      "lib"
+    ]
+  }
+}

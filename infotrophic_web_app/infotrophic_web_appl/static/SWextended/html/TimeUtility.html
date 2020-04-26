@@ -1,0 +1,28 @@
+<! DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <meta name="title" content="Time Conversion Tool">
+     <meta name="keywords" content="Time TimeZone epoch convertor conversion conver tool infotrophic">
+     <meta name="author" content="InfoTrophic.com">
+     <meta name="displaySection" content="Technology:Utilities">
+     <meta name="description" content="Tool to convert time in defferent timezones, time to and from epoch time.">
+     {% load staticfiles %}
+     <link rel="stylesheet" media="all" type="text/css" href="static/jquery/css/jquery-ui-timepicker-addon.css">
+     <link rel="stylesheet" href="static/jquery/css/jquery-ui.css">
+
+     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+     <script type="text/javascript" src="static/jquery/js/jquery-ui.min.js"></script>
+     <script type="text/javascript" src="static/jquery/js/jquery-ui-timepicker-addon.js"></script>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+     <script src="static/jquery/js/timezones.full.js"></script>
+
+     <link rel="stylesheet" type="text/css" media="screen" href="{% static as %}{{ contentCSS }}"> </link>
+     <script type="text/javascript" src="static/SWextended/js/TimeUtility.js"></script>
+
+   </head>
+   <body onload="laodTimeUtility()">
+   </body>
+</html>
+

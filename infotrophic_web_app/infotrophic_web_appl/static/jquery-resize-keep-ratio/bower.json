@@ -1,0 +1,20 @@
+{
+  "name": "jquery.keep-ratio",
+  "version": "0.1.1",
+  "ignore": [
+    "test",
+    "**/.*",
+    "bower.json",
+    "gulpconfig.js",
+    "gulpfile.js",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "jquery": "2.*",
+    "request-animation-frame": "https://gist.github.com/1579671.git"
+  },
+  "devDependencies": {
+    "qunit": "^1.15.0"
+  }
+}

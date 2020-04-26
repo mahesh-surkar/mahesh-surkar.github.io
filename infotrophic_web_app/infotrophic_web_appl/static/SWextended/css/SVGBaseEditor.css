@@ -1,0 +1,157 @@
+.editorLayout
+{
+	overflow: auto;
+	background-color: gray;
+}
+
+.menuBarContainer 
+{
+	/*display: inline-flex;*/	
+	border: 0.1em solid #E6CCCC;
+	background: #F8F1F1; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(#FFFEFE, #F8F1F1);	/* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#FFFEFE, #F8F1F1);	/* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#FFFEFE, #F8F1F1);	/* For Firefox 3.6 to 15 */
+	background: linear-gradient(#FFFEFE, #F8F1F1); /* Standard syntax */
+	/*float: right;*/
+	margin-top: 2px;
+	padding-top: 4px;
+	margin-bottom: 2px;
+	padding-bottom: 4px;
+	margin-left: 3px;
+	padding-left: 2px;
+	margin-right: 3px;
+	padding-right: 2px;
+	overflow: hidden;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.makeLabel
+{
+	color: white;
+	font-size: 14px;
+	font-style: italic;
+	font-family: "courier new,courier,monospace";
+	display: inline-block;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.makeLabel.verticalsvg
+{
+	width:7px;
+	/*border: 0.1em solid #E6CCCC;*/
+	display: inline-block;
+	word-wrap: break-word;
+	font-size: 14px;
+	color: white;
+	padding-top: 3;
+	padding-bottom: 0;
+	padding-left: 3;
+	margin-top: 0;
+	font-style: italic;
+	font-family: "courier new,courier,monospace";
+	
+}
+.makeUnselectable
+{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.makeInline
+{
+	display: inline;
+}
+
+.menuBarContainer.horizontal
+{	
+	height: 22px;
+}
+
+
+.menuBarContainer.vertMenuAndEditAreaContainer
+{
+ 	background : gray;
+	height: 88%;	
+}
+
+.menuBarContainer.vertical
+{
+	width: 32px;	
+	height: 99%;
+	display: inline-block;
+}
+
+.menuBarContainer.vertical.left
+{
+	width: 2%;	
+	/*float: left;*/
+}
+.menuBarContainer.vertical.right
+{
+	width: 12%;	
+	/*float: right;*/
+}
+
+.menuBarContainer.vertical.middle 
+{
+	width: 76%;	
+	background : gray;
+}
+
+.menuBarContainer.minHeight
+{
+	min-height: 200px;
+}
+
+.editableAreaContainer
+{		
+	width: 100%;	
+	height: 100%;
+	/*background : green;*/
+	overflow-y : auto;
+	overflow-x : hidden;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;	
+	/*border: 1px solid #E6CCCC;*/
+}
+
+.sizedEditableAreaContainer
+{
+	width:800;
+	height:600;	
+	background-color: white;
+	resize: vertical;
+	overflow : hidden;
+	/*overflow: auto;*/
+	/*overflow: auto;*/
+}
+
+
+.insideforeign
+ { /*-webkit-transform: translate(10px,10px);*/
+  /*	-webkit-transform: scale(1);
+	-webkit-transform-origin: 0 0;*/
+}

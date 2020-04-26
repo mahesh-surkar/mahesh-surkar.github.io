@@ -1,0 +1,28 @@
+{
+    "Tools": [
+        {
+            "Name": "Math Word Problem Generator",
+            "Description": "Math Word Problem Generator",
+            "Publish": true,
+            "Author": "InfoTrophic.com",         
+            "LinkPage": "InteractiveSimpleMath",             
+            "ToolCodeGeneratorAPI" : "SWToolCodeGeneratorForInteractiveSimpleMath"
+        },
+        {
+            "Name": "Question Generator",
+            "Description": "Question Generator",
+            "Publish": true,
+            "Author": "InfoTrophic.com",         
+            "LinkPage": "QuestionGeneratorTool" 
+        },
+        
+        {
+            "Name": "SVG Editor",
+            "Description": "SVG Editor",
+            "Publish": true,
+            "Author": "InfoTrophic.com",         
+            "LinkPage": "SVGEditor" 
+        }
+                      
+    ]
+}

@@ -1,0 +1,71 @@
+{
+    "Pages": [
+        {
+            "LinkName": "InfoTrophic Tools",
+            "LinkPage": "",
+            "Description": "InfoTrophic Tools",
+            "Publish": true,
+            "DisplayStyle": "bookTemplate",
+            "Type": "MainPage",
+            "Author": "InfoTrophic.com",           
+            "SubPages": [
+                {
+                    "IndexNumber": 1,
+                    "Category": "INDEX",
+                    "LinkName": "Mathematical Tools"                  
+                },
+                {
+                    "IndexNumber": 2,
+                    "Category": "INDEX",
+                    "LinkName": "Web Publishing Tools"                    
+                },
+                {
+                    "IndexNumber": 3,
+                    "Category": "CONTENT",
+                    "LinkName": "Time Conversion Tools", 
+                    "LinkPage": "TimeUtility"                  
+                }
+            ]
+        },
+        {
+            "LinkName": "Mathematical Tools",
+            "LinkPage": "",
+            "Description": "Mathematical Tools",
+            "Publish": true,
+            "DisplayStyle": "bookTemplate",
+            "Type": "SubPage",
+            "Author": "InfoTrophic.com",            
+            "SubPages": [
+                {
+                    "IndexNumber": 1,
+                    "Category": "CONTENT",
+                    "LinkName": "Linear Equation solver",
+                    "LinkPage": "LinearEquation"
+                },
+                {
+                    "IndexNumber": 2,
+                    "Category": "CONTENT",
+                    "LinkName": "Derivative/Integration solver",
+                    "LinkPage": "Calculus"
+                }
+            ]
+        },
+        {
+            "LinkName": "Web Publishing Tools",
+            "LinkPage": "",
+            "Description": "Web Publishing Tools",
+            "Publish": true,
+            "DisplayStyle": "bookTemplate",
+            "Type": "SubPage",
+            "Author": "InfoTrophic.com",            
+            "SubPages": [
+                {
+                    "IndexNumber": 1,
+                    "Category": "CONTENT",
+                    "LinkName": "SimpleWeb Creator",
+                    "LinkPage": "SWCreateor"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://infotrophic.com">
+            <url>
+                <loc>http://www.infotrophic.com/</loc>
+                <lastmod>2015-09-07</lastmod>
+                <changefreq>daily</changefreq>
+                <priority>1.0</priority>
+            </url>
+            <url>
+                <loc>http://infotrophic.com/InfoTrophicHome?page=TimeUtility</loc>
+                <changefreq>monthly</changefreq>
+                <priority>1.0</priority>
+            </url>
+
+</urlset>
+

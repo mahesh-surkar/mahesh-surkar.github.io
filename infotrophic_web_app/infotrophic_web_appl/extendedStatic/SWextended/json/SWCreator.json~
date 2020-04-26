@@ -1,0 +1,14 @@
+{
+    "Tools": [
+        {
+            "Name": "Math Word Problem Generator",
+            "Description": "Math Word Problem Generator",
+            "Publish": true,
+            "Author": "InfoTrophic.com",         
+            "LinkPage": "InteractiveSimpleMath",
+            "JavaScript": "InteractiveSimpleMath.js", 
+            "AddPageSectionId" : "InteractiveSimpleMathTool"
+        }
+                      
+    ]
+}

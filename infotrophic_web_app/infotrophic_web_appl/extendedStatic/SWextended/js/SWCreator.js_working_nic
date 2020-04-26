@@ -1,0 +1,569 @@
+//headingType
+var HEADING_TITLE="Page Title...";
+var SECTION_TITLE="Section Heading... ";
+
+var nicIconPath = 'static/nicEdit-0.9r25/nicEditorIcons.gif';
+var toolsIconPath = 'static/nicEdit-0.9r25/tools.ico';
+
+function handleFileSelect(evt, fileData) {
+	//alert("fie selected");
+	var files = evt.target.files; // FileList object
+    //Loop through the FileList.
+	for (var i = 0, f; f = files[i]; i++) {   
+		var reader = new FileReader();
+		// Closure to capture the file information.
+		reader.onload = (function(theFile) {    		
+			return function(e) {				
+				//alert(escape(theFile.name));
+				//alert(e.target.result);
+				fileData.innerHTML = e.target.result;
+			};
+		})(f);
+
+		// Read in the  file as a data text.
+		reader.readAsText(f);
+	}
+}
+
+
+function readFile(i_objToAttachFile)
+{
+	//alert(":reading file");
+	var fileInputDiv = document.createElement("div");
+	
+	fileInputDiv.appendChild(document.createTextNode("Select the File: "));
+	fileInputDiv.appendChild(document.createElement("br"));
+	fileInputDiv.appendChild(document.createElement("br"));
+	
+	var fileInput = document.createElement("input");
+	fileInput.type = "file";
+	fileInput.id = "files";
+	fileInputDiv.appendChild(fileInput);
+	
+	
+	//
+	//var fileAddBtn = document.createElement("button");
+	//fileAddBtn.id = "fileAddBtn";
+	//fileAddBtn.innerHTML = "Add";
+	//fileInputDiv.appendChild(fileAddBtn);
+	
+	var fileData = document.createElement("span");
+	
+
+	fileInput.addEventListener('change', function (evt) { handleFileSelect(evt, i_objToAttachFile) }, false);
+	createOverlay(fileInputDiv, function (evt)
+			      { 
+		              i_objToAttachFile.innerHTM = i_objToAttachFile.innerHTML.trim();	
+		          });
+}
+
+function createOverlay(objToShow, closeCallBack)
+{
+	
+	var overlayDiv = document.createElement("div");
+	overlayDiv.name = "overlayDiv";
+	overlayDiv.id = "overlayDiv";
+	performCallbackAction = false;
+	
+	overlayDiv.appendChild(objToShow);
+	
+	document.body.appendChild(overlayDiv);
+	
+	$("#overlayDiv").dialog({
+		autoOpen : false,
+		hide : "puff",
+		show : "slide",
+		closeText : "hide",
+		//dialogClass : 'noTitleStuff',
+		modal : true,
+		title: "InfoTrophic",
+		//zIndex: 3999,
+	//	height : "",
+		width : "50%",
+		//draggable : false,
+		//resizable: false,
+		overflow : false,
+		closeOnEscape: true,
+		beforeClose : function(event, ui)
+		{
+			//$(this).dialog('destroy').remove();
+		},
+	
+	    close: function(event, ui)
+        {
+	    	if (performCallbackAction)
+	    	{
+	    		closeCallBack();
+	    	}
+	    	$(this).dialog('destroy').remove();	
+        },
+		
+		buttons: 
+		{
+			"Cancel": function () 
+			{
+				performCallbackAction = false;
+				$(this).dialog("close");
+			},
+			
+			"Ok": function () 
+			{
+				performCallbackAction = true;
+				$(this).dialog("close");
+			},
+			
+		}
+	});
+
+	$("#overlayDiv").dialog("open");
+	$(".ui-dialog-titlebar").hide();
+	
+}
+
+
+function addOpenFileMenu()
+{
+	var nicToolsOptions = {
+			buttons : {
+				'save' : {name : 'Open File', type : 'nicEditorOpenFileButton'}	
+			}, iconFiles : {'tools' : toolsIconPath}
+	};
+
+	nicEditorOpenFileButton=nicEditorAdvancedButton.extend({
+		init:function()
+		{	
+		},
+
+		mouseClick:function()
+		{            
+			var A= this.ne.selectedInstance;
+			//B(A.getContent(),A.elm.id,A)}});
+			//alert(' '+A.elm.id+' = '+A.getContent());
+			var elemObj = document.getElementById(A.elm.id);
+			readFile(elemObj);
+			//var elemObj = document.getElementById(A.elm.id);
+		    //elemObj.appendChild(data);	
+			//elemObj.innerHTML = data[0];	
+		}
+	});
+
+	nicEditors.registerPlugin(nicPlugin,nicToolsOptions);
+}
+
+
+function addTableMenu()
+{
+	var nicToolsOptions = {
+			buttons : {
+				'save' : {name : 'Add Table', type : 'nicEditorTableButton'}	
+			}, iconFiles : {'tools' : toolsIconPath}
+	};
+
+	nicEditorTableButton=nicEditorAdvancedButton.extend({
+		init:function()
+		{	
+		},
+
+		mouseClick:function()
+		{            
+			var A=this.ne.selectedInstance;
+			//B(A.getContent(),A.elm.id,A)}});
+			alert(' '+A.elm.id+' = '+A.getContent());
+			var table = getTable();
+			var elemObj = document.getElementById(A.elm.id);
+			elemObj.appendChild(table);		          
+		}
+	});
+
+	nicEditors.registerPlugin(nicPlugin,nicToolsOptions);
+}
+
+function addToolsMenu()
+{
+	var nicToolsOptions = {
+			buttons : {
+				'image' : {name : 'Add Tools', type : 'nicEditorToolsButton'}	  
+			}, iconFiles : {'tools' : toolsIconPath}
+	};
+
+	nicEditorToolsButton=nicEditorAdvancedButton.extend({
+		init:function()
+		{	
+
+		},
+
+		mouseClick:function()
+		{
+			alert("I am from tools! still waiting to be implemented.");   
+		}
+	});
+
+	nicEditors.registerPlugin(nicPlugin,nicToolsOptions);
+
+}
+
+function addtionalNicEditPlugins() 
+{ 
+	addOpenFileMenu();
+	addTableMenu();
+	addToolsMenu();
+}
+
+function addTextEditor2(appendToNode)
+{
+
+	tinymce.init({
+		selector: "div",
+		theme: "modern",
+		plugins: [
+		          "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+		          "searchreplace wordcount visualblocks visualchars code fullscreen",
+		          "insertdatetime media nonbreaking save table contextmenu directionality",
+		          "emoticons template paste textcolor colorpicker textpattern imagetools"
+		          ],
+		          toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+		          toolbar2: "print preview media | forecolor backcolor emoticons",
+		          image_advtab: true,
+		          templates: [
+		                      {title: 'Test template 1', content: 'Test 1'},
+		                      {title: 'Test template 2', content: 'Test 2'}
+		                      ]
+	});
+
+
+
+}
+
+//alert ("added extentions");
+
+
+function addTextEditor(appendToNode)
+{
+	addtionalNicEditPlugins(myTextEditor);
+
+	var myTextEditor = new nicEditor({fullPanel : true, xhtml : true,
+		onSave : function(content, id, instance) {
+			saveHTMLFile(content, id, instance);
+			alert('save button clicked for element '+id+' = '+content);
+		},
+		iconsPath : nicIconPath});
+	var textEditPannel = document.createElement("div");	
+	textEditPannel.className = "SWTextEditor";
+	textEditPannel.id = "textEditPannel";
+
+	appendToNode.appendChild(textEditPannel);
+	myTextEditor.setPanel('textEditPannel');
+
+	return myTextEditor;
+}
+
+function addTextEditor1(appendToNode)
+{
+	var textEditPannel = document.createElement("div");	
+	//textEditPannel.className = "SWTextFormator";
+	textEditPannel.id = "textEditPannel";
+	textEditPannel.name = "textEditPannel";
+	appendToNode.appendChild(textEditPannel);
+	CKEDITOR.replace( 'textEditPannel');
+	return textEditPannel;
+
+}
+
+
+function laodSWCreator()
+{
+	//alert("SWCreator Loaded");	
+
+	TEXT_FORMAT_PANNEL = addTextEditor(document.body);
+
+
+	var HTMLPage = document.createElement("div");
+	HTMLPage.id = "HTMLPageToCreate"
+		document.body.appendChild(HTMLPage);	
+
+	pageHeading = document.createElement("div");
+	HTMLPage.appendChild(pageHeading);	
+	addContainer(pageHeading);
+}
+
+
+function saveHTMLFile(content, id, instance)
+{
+	//alert(content);
+	var fileName = prompt("Please enter file name to save:");
+
+	/*var blob = new Blob([content], {type: "text/plain;charset=utf-8"});
+	saveAs(blob, fileName);*/
+	var a = document.createElement("a");
+	document.body.appendChild(a);
+	var file = new Blob([content], {type: "text/html;charset=utf-8"});
+	a.href = URL.createObjectURL(file);
+	a.download = fileName;
+	a.click();
+
+}
+
+/*
+function addContainer(i_insertAfterNode)
+{
+	var container = getContainer();	
+	insertNodeAfter(container, i_insertAfterNode);
+}
+ */
+
+function addContainer(i_insertAfterNode)
+{
+	var container = document.createElement("div");		
+	insertNodeAfter(container, i_insertAfterNode);
+
+	var element = getElement();	
+
+	var newContainerAdder = getContainorAdder(container);
+	var elementDecorator = getElementDecorator(element, container, newContainerAdder);
+
+	container.appendChild(elementDecorator);
+	container.appendChild(element);
+	TEXT_FORMAT_PANNEL.addInstance(element.id);
+	container.appendChild(newContainerAdder);	
+	return container;
+}
+
+function getElement()
+{
+	var d = new Date();
+	var time = d.getTime();
+
+	var elementDiv = document.createElement("div");	
+	elementDiv.className = "SWCreatorElem";	
+	elementDiv.id = "SWC_Element_" + time;
+	elementDiv.contentEditable = "true";
+
+	return elementDiv;
+}
+
+function getElementDecorator(i_element, i_elementContainer, i_elementHelper)
+{
+	var elemDecoratorDiv = document.createElement("div");
+	elemDecoratorDiv.style.display = "none";
+
+	i_elementContainer.onmouseover = (function (){
+		elemDecoratorDiv.style.display = ""; 
+		i_elementHelper.style.display = "";
+		//i_element.focus();
+	});
+
+	i_elementContainer.onmousemove = (function (){
+		elemDecoratorDiv.style.display = ""; 
+		i_elementHelper.style.display = "";
+		//i_element.focus();
+	});
+
+	i_elementContainer.onmouseout = (function (){ 
+		elemDecoratorDiv.style.display = "none"; 
+		i_elementHelper.style.display = "none";
+	});
+
+	i_element.onfocus = (function (){  
+		elemDecoratorDiv.style.display = "";
+		i_elementHelper.style.display = "";
+		i_element.focus();
+	});
+
+	var elemRemover = getElementRemover(i_element, i_elementContainer);
+	var elemDispTogger = getDisplaytoggler(i_element);
+	//var elemTypeSetter = getElementTypeSetter(i_element);
+	//var elemAlignSetter = getElementAlignSetter(i_element);
+
+	elemDecoratorDiv.appendChild(elemRemover);
+	elemDecoratorDiv.appendChild(elemDispTogger);
+	//elemDecoratorDiv.appendChild(elemTypeSetter);
+	//elemDecoratorDiv.appendChild(elemAlignSetter);
+
+	return elemDecoratorDiv;
+}
+
+function getDisplaytoggler(i_elemToToggleDisplay)
+{
+	var origalHeight = i_elemToToggleDisplay.offsetHeight;
+	//alert(":"+origalHeight);
+	
+	var toggleBtn = document.createElement("button");
+	toggleBtn.className = "btn";
+	toggleBtn.innerHTML ="Hide";
+
+	toggleBtn.onclick = (function (evt) {
+		
+	//	alert(":"+origalHeight );
+		return (function (evt) {
+
+			if (i_elemToToggleDisplay.offsetHeight != 20 && i_elemToToggleDisplay.offsetHeight != 0)	
+			{  
+				origalHeight = i_elemToToggleDisplay.offsetHeight;
+
+			}
+
+
+			if (toggleBtn.innerHTML == "Hide")
+			{ 			
+				i_elemToToggleDisplay.style.height = "20";
+				toggleBtn.innerHTML ="Show";
+			}
+			else
+			{			
+				i_elemToToggleDisplay.style.height = origalHeight;
+				toggleBtn.innerHTML ="Hide";
+			}
+		})(evt, origalHeight);
+
+	});
+
+	return toggleBtn;
+}
+
+function getElementRemover(i_elemToRemove, i_elemHelperToRemove)
+{
+	var removeBtn = document.createElement("button");
+	//removeSectionBtn.id = "removeSectionBtn";
+	removeBtn.className = "btn";
+	removeBtn.innerHTML="-";
+	removeBtn.onclick = (function ()
+		{ 
+		    removeConfirm = document.createElement("div");
+		    removeConfirm.appendChild(document.createTextNode("Do you want to remove the page?"));
+		    
+		    createOverlay(removeConfirm, function () 
+		    		{ i_elemToRemove.remove(); i_elemHelperToRemove.remove(); }); 
+	    });
+	return removeBtn;
+}
+
+function getElementTypeSetter(i_elemToTypeSet)
+{
+	var optionAarray = ["Heading", "Content", "Table", "Tool"];
+
+	var elemTypeSetter = document.createElement("select");
+
+	elemTypeSetter.onchange = (function () {
+
+		if (i_elemToTypeSet.className.trim() == "SWCratorTag_Table")
+		{			
+			i_elemToTypeSet.innerHTML = "";
+		}
+
+		var index = elemTypeSetter.selectedIndex;
+		if (elemTypeSetter[index].value.match(/heading/i))
+		{
+			i_elemToTypeSet.className = "SWCratorTag_Heading";		
+		}
+		else if (elemTypeSetter[index].value.match(/table/i))
+		{
+			i_elemToTypeSet.className = "SWCratorTag_Table";
+			i_elemToTypeSet.innerHTML = "";
+			var myTable = getTable();
+			i_elemToTypeSet.appendChild(myTable);
+		}
+		else if (elemTypeSetter[index].value.match(/tool/i))
+		{
+
+		}
+		else
+		{
+			i_elemToTypeSet.className = "SWCratorTag_Content";
+
+		}
+
+		i_elemToTypeSet.focus();
+
+	});
+
+	//Create and append the options
+	for (var i = 0; i < optionAarray.length; i++) 
+	{
+		var option = document.createElement("option");
+		option.value = optionAarray[i];
+		option.text = optionAarray[i];
+		elemTypeSetter.appendChild(option);
+	}
+
+	return elemTypeSetter;
+}
+
+function getElementAlignSetter(i_elemToSetAlign)
+{
+	var optionAarray = ["Left", "Center", "Right"];
+	var elemAlignSetter = document.createElement("select");
+
+	elemAlignSetter.onchange = (function () {
+		var index = elemAlignSetter.selectedIndex;
+		if (elemAlignSetter[index].value.match(/Center/i))
+		{
+			i_elemToSetAlign.align = "center";
+			//addHeading(i_nodeToappend, i_SWCP_nodeToappend, i_elemAdder[index].value);
+		}
+		else if (elemAlignSetter[index].value.match(/Right/i))
+		{
+			i_elemToSetAlign.align = "right";
+			//addContent(i_nodeToappend, i_SWCP_nodeToappend, i_elemAdder[index].value);
+		}
+		else
+		{
+			i_elemToSetAlign.align = "left";
+		}
+
+		i_elemToSetAlign.focus();
+	});
+	//Create and append the options
+	for (var i = 0; i < optionAarray.length; i++) 
+	{
+		var option = document.createElement("option");
+		option.value = optionAarray[i];
+		option.text = optionAarray[i];
+		elemAlignSetter.appendChild(option);
+	}
+
+	return elemAlignSetter;
+}
+
+function getContainorAdder(i_insertAfter)
+{
+	var containorAdder = document.createElement("div");
+	var addBtn = document.createElement("button");
+	addBtn.id = "addSectionBtn";
+	addBtn.className = "btn";
+	addBtn.innerHTML="+";
+	addBtn.onclick =(function (){ addContainer(i_insertAfter); });
+
+	containorAdder.appendChild(addBtn);
+	return containorAdder;	
+}
+
+function getTable()
+{
+	var rows = prompt("Number of rows?");
+	var cols = prompt("Number of coloumns?");
+
+	var table = document.createElement('TABLE');
+	table.border = '1';
+
+	var tableBody = document.createElement('TBODY');
+	table.appendChild(tableBody);
+
+	for (var i = 0; i < rows; i++) {
+		var tr = document.createElement('TR');
+		tableBody.appendChild(tr);
+
+		for (var j = 0; j < cols; j++) {
+			var td = document.createElement('TD');
+			td.width = '75';
+			td.appendChild(document.createTextNode("Cell " + i + "," + j));
+			tr.appendChild(td);
+		}
+	}
+	return table;
+}
+
+
+function insertNodeAfter(newNode, afterReferenceNode)
+{
+	afterReferenceNode.parentNode.insertBefore(newNode, afterReferenceNode.nextSibling);
+}

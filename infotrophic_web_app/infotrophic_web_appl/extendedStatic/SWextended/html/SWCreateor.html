@@ -1,0 +1,41 @@
+<! DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <meta name="title" content="SimpleWeb Creator Tool">
+     <meta name="keywords" content="SimpleWeb Creator Tool SWCreator SW Creator Creator generate html pages web pages">
+     <meta name="author" content="InfoTrophic.com">
+     <meta name="displaySection" content="Technology:Utilities">
+     <meta name="description" content="SimpleWeb Creator Tool to generte web/html pages bundle.">
+    
+     {% load staticfiles %}
+     <link rel="stylesheet" media="all" type="text/css" href="static/jquery/css/jquery-ui-timepicker-addon.css">
+     <link rel="stylesheet" href="static/jquery/css/jquery-ui.css">
+
+     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+     <script type="text/javascript" src="static/jquery/js/jquery-ui.min.js"></script>
+ 
+     <!-- <script type="text/javascript" src="static/ckeditor/ckeditor.js"></script> -->
+     <script src="//cdn.ckeditor.com/4.5.4/full-all/ckeditor.js"></script> 
+     <script type="text/javascript" src="static/Downloadify/js/swfobject.js"></script>
+	 <script type="text/javascript" src="static/Downloadify/js/downloadify.min.js"></script>
+     <script type="text/javascript" src="{% static as %}{{ myJSConst }}"></script>
+    
+     <link rel="stylesheet" type="text/css" media="screen" href="{% static as %}{{ contentCSS }}"> </link>
+     <script type="text/javascript" src="static/simpleWeb/js/SimpleSlide.js"></script>
+     <script type="text/javascript" src="static/SWextended/js/SWCommon.js"></script>
+     <script type="text/javascript" src="static/SWextended/js/SWCreator.js"></script>
+	
+	<script type="text/javascript"> 
+       {% load SWTags %}
+       SWcreatorJasonDump = '{% generateExtentedJsonToSend "SWCreator.json"  %}' 
+	</script>
+</head>
+	
+<body onload="laodSWCreator()">
+		
+</body>
+
+</html>
+

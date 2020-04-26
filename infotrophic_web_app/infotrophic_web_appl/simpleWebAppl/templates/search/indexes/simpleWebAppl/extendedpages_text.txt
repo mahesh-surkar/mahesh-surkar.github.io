@@ -1,0 +1,4 @@
+{{ object.Title }}
+{{ object.PageId }}
+{{ object.Summary }}
+{{ object.Keywords }}

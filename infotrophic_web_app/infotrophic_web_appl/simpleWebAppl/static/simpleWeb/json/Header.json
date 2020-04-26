@@ -1,0 +1,103 @@
+{
+   "Menu": [  
+      {
+          "MenuName" : "About",
+          "MenuDesc" : "Welcome to InfoTrophic!",
+          "Display"  : "signleColoumnMenu",
+          "SubMenu"  : [
+             {
+                 "SubMenuHeading" : "",
+                 "Description" : [ "<p>Our vision at InfoTrophic is to provide quality oriented information in a redesigned way",
+                                   " making learning more interactive efficient and fun! </p> <p>No one is perfect at everything",
+                                   " There are some people who are more knowledgable about some topics",
+                                   " than others. We want to create an interactive platform where everyone can share their bit of 'infowealth'",
+                                   " to help others learn in a more engaging way.</p><p>Happy Learning!</p><p>- The InfoTrophic Team</p>"
+                                   
+                                  ],
+                 "Links" : [ 
+                     {
+                      "LinkName" : "",
+                      "LinkURL" : ""
+                    }
+                 ]                                   
+              }         
+             
+             
+           ] 
+      },
+      {
+         "MenuName" : "Courses",
+          "MenuDesc" : "",
+          "Display"  : "multiColoumnMenu",
+          "SubMenu": [         
+           {
+                    "SubMenuHeading" : "Courses",
+                    "Description" : "This is Computer course",
+                    "Links": [
+                          {
+                              "LinkName" : "Computer",
+                              "LinkURL" : "http://infotrophic.com/moodle/course/index.php?categoryid=2"
+                          }
+                     ]
+                 }   
+          ]
+      
+      },
+      {
+          "MenuName" : "Technology",
+          "MenuDesc" : "Catagories",
+          "Display"  : "multiColoumnMenu",
+          "SubMenu": [            
+                {
+                    "SubMenuHeading" : "Computer",
+                    "Description" : "This is Computer:",
+                    "Links": [
+                          {
+                              "LinkName" : "",
+                              "LinkURL" : ""
+                          }
+                     ]
+                 },
+                 {
+                    "SubMenuHeading" : "Utilities",
+                    "Description" : "Useful Utilities",
+                    "Links": [
+                          {
+                              "LinkName" : "",
+                              "LinkURL" : ""
+                          }
+                     ]
+                  }             
+            ]     
+        },	
+        {
+          "MenuName" : "Mathematics",
+          "MenuDesc" : "Catagories",
+          "Display"  : "multiColoumnMenu",
+          "SubMenu": [            
+                {
+                    "SubMenuHeading" : "Linear Algebra",
+                    "Description" : "Linear Algebra",
+                    "Links": [
+                          {
+                              "LinkName" : "",
+                              "LinkURL" : ""
+                          }
+                     ]
+                 },
+                 {
+                    "SubMenuHeading" : "Calculus",
+                    "Description" : "Calculus",
+                    "Links": [
+                          {
+                              "LinkName" : "",
+                              "LinkURL" : ""
+                          }
+                     ]
+                 }                          
+            ]     
+        }
+       
+    ]    
+}
+  

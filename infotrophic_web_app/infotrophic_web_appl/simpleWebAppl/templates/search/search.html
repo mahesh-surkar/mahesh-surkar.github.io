@@ -1,0 +1,35 @@
+{% block content %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+     {% load staticfiles %}
+     <link rel="stylesheet" type="text/css" media="screen" href="{% static as %}simpleWeb/css/SimpleWebContent.css"> </link>
+     <script type="text/javascript" src="{% static as %}simpleWeb/js/SimpleWebHeader.js"></script>     
+ <head>
+ <body>
+    <h2>Search Result...</h2>    
+        {% if query %}                  
+            {% for result in page.object_list %}              
+                <p>
+                    <a href="/SWHome?page={{ result.object.PageId }}", id="SearchRusult_{{ result.object.PageId }}", onclick=' return adjustLinkForSameTabOrWindow(event, "SearchRusult_{{ result.object.PageId }}", "SWHome?page={{ result.object.PageId }}"); '>{{ result.object.Title }}</a>
+                    <br>{{ result.object.Summary }} 
+                </p>
+            {% empty %}
+                <p>No results found.</p>
+            {% endfor %}
+        
+            {% if page.has_previous or page.has_next %}
+                <div>
+                    {% if page.has_previous %}<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo; Previous{% if page.has_previous %}</a>{% endif %}
+                    |
+                    {% if page.has_next %}<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}Next &raquo;{% if page.has_next %}</a>{% endif %}
+                </div>
+            {% endif %}
+        {% else %}
+            {# Show some example queries to run, maybe query syntax, something else? #}
+        {% endif %}
+    </form>
+    
+  </body>
+</html>
+{% endblock %}

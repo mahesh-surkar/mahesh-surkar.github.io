@@ -1,0 +1,39 @@
+{
+  "name": "onlineorder",
+  "version": "0.0.1",
+  "description": "Online Order Apps",
+  "main": "main.js",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "^3.3.7",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-autosuggest": "^9.3.2",
+    "react-autowhatever": "^10.1.0",
+    "react-bootstrap": "^0.30.0",
+    "react-bootstrap-autosuggest": "^0.5.0",
+    "react-dom": "^15.6.1",
+    "react-select": "^1.0.0-rc.10",
+    "shallow-equal": "^1.0.0",
+    "webpack": "^3.5.6"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack -d --watch",
+    "build": "webpack -p"
+  },
+  "author": "Mahesh Surkar",
+  "license": "ISC"
+}

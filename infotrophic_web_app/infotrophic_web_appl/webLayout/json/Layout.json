@@ -1,0 +1,45 @@
+{
+     "InfoTrophicHome" : "InfoTrophic home",
+     "page": [
+            {      
+              "showPage": "false",       
+              "pageName" : "SWTopAdvt",
+              "description" : "This is top advertisement page",     
+              "source": "InfoTrophicTopAdvt",         
+              "pageHeight": "60px",
+              "pageWidth": "100%",
+              "scrolling": "no"
+            },
+            {
+              "showPage": "true",
+              "pageName" : "SWLeftAdvt",
+              "description" : "This is left advertisement page",              
+              "source": "InfoTrophicLeftAdvt",
+              "pageHeight": "100%",
+              "pageWidth": "10%",
+              "scrolling": "no",
+              "position": "fixed"
+            },
+            {
+              "showPage": "true",
+              "pageName" : "SWContent",
+              "description" : "This is content page",              
+              "source": "InfoTrophicContent",
+              "addPageIdentifier" : "true",
+              "pageHeight": "freeScale",
+              "pageWidth": "79%",
+              "scrolling": "no"
+            },
+            {
+              "showPage": true,
+              "pageName" : "SWRightAdvt",
+              "description" : "This is right advertisement page",              
+              "source": "InfoTrophicRightAdvt",
+              "pageHeight": "100%",
+              "pageWidth": "10%",
+              "scrolling": "no",
+              "position": "fixed"
+            }         
+        ]
+}
+

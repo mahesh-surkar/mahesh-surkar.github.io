@@ -1,0 +1,20 @@
+{% extends "SimpleWebCMS.html" %}
+
+{% block META_TAG %}      
+     <meta name="title" content="InfoTrophic Tools">
+     <meta name="keywords" content="Tools utilities utilitiy programs">
+     <meta name="author" content="InfoTrophic.com">
+     <meta name="displaySection" content="Technology:Utilities">
+     <meta name="description" content="InfoTrophic Tools/Utilities">           
+{% endblock %} 
+  
+{% block title %}InfoTrophic Tools {% endblock %}
+
+{% block CONTENT_ID %}
+   myContentId = '"InfoTrophicTools"'
+{% endblock %}   
+
+{% block JSON_FILE_DUMP %}
+      {% load SWTags %}
+      myJasonDump = '{% generateCMSJsonToSend "InfoTrophicTools.json"  %}' 
+{% endblock %}   

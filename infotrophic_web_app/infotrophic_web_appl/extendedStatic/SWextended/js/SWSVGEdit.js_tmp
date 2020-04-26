@@ -1,0 +1,805 @@
+var SVG_CANVAS_IN_USE = null;
+
+var SVG_NONE=0
+var SVG_ELLIPSE=1;
+var SVG_RECTANGLE=2;
+var SVG_TEXT=3;
+
+//Chrome adding SVGElement method getTransformToElement
+SVGElement.prototype.getTransformToElement = SVGElement.prototype.getTransformToElement || function(toElement) {
+    return toElement.getScreenCTM().inverse().multiply(this.getScreenCTM());
+};
+
+Snap.plugin(function (Snap, Element, Paper, glob) 
+{
+    Paper.prototype.multitext = function (x, y, txt) 
+    {
+        txt = txt.split("\n");
+        var t = this.text(x, y, txt);
+        t.selectAll("tspan:nth-child(n+2)").attr({
+            dy: "1.2em",
+            x: x
+        });
+        return t;
+    };
+});
+
+
+function loadSVGEdit()
+{
+	alert("Starting SVG Editor Here.");
+	
+	//mySVGToolBar = new SVGToolBar();
+	
+	svgObject = createSVGCanvas(document.body);
+	mySVGCanvas = new SW_SVGCanvas(svgObject);
+	mySVGCanvas.drawCircle();
+	
+	mySVGCanvas.drawCircle();
+}
+
+function createSVGForeignObject()
+{
+	var fobjectSVG = '<foreignObject width="80" height="20"><p>Text Here...</p></foreignObject>';	
+	var p = Snap.parse(fobjectSVG);
+	var g = s.group().append(p);
+	return g;
+	
+	/*var textPara = document.createElement('p');
+	/*fo.appendChild(textPara);
+	textPara.contentEditable = true;
+	textPara.style.width = "100%";
+	textPara.style.height = "100%";
+	textPara.placeHolder = "Text here....";
+	fo.setAttribute('width', '80');
+	fo.setAttribute('height', '100');
+	
+	
+	$(textPara).click(function () {
+		if ($(textPara).css("border-style") == "solid" )
+		{ 
+			textPara.style.border = 'none';
+		}
+		else
+		{
+			textPara.style.border = '0.1em solid #E6CCCC';
+		}
+		
+		textPara.style.resize = 'both';
+		textPara.style.display = 'inline-filex';
+		textPara.contentEditable = true;
+		//alert("Text clicked");
+	});
+	
+	$(textPara).change(function ()
+	{		
+		console.log("Text changed.");
+	});*/
+	
+}
+
+function createSVGCanvas(elemToAppend)
+{
+    console.log("SW SVG: creating new svg Canvas");
+    var d = new Date();  
+    svgCanvasId = "svgCanvas_" + d.getTime();
+    
+    var e = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    e.setAttribute('width', '100%');
+    e.setAttribute('height', '100%');
+    e.id=svgCanvasId;
+    
+    if (typeof elemToAppend !== typeof undefined)
+    {
+    	e.setAttribute('style', 'border: 1px solid black');
+    	elemToAppend.appendChild(e);
+    }
+
+    return e.outerHTML;
+}
+
+function getAllocatedSVGCanvasToDaraw()
+{
+	return SVG_CANVAS_IN_USE;
+}
+
+function allocSVGCanvasToDaraw(svgCanvasToUse)
+{
+	console.log("Allocating canvas to draw");
+	SVG_CANVAS_IN_USE = svgCanvasToUse;
+}
+
+function isSVGCanvasAllocated()
+{
+	if (SVG_CANVAS_IN_USE)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}	
+}
+
+function freeSVGCanvasToDaraw()
+{
+	SVG_CANVAS_IN_USE = null;
+}
+
+var SVGToolBar = function ()
+{
+	this.toobarName;
+	alert("Created SVG Toolbar");
+}
+
+
+var SW_SVGCanvas = function(domSVG)
+{
+	this.SVGAsDom=domSVG;
+	this.svgCanvas = Snap(domSVG);
+	this.isTextMouseDown = false;	
+	this.mouseClickCorditates = new Array();
+	this.mouseClickCorditates.x = 20;
+	this.mouseClickCorditates.y = 20;
+
+	console.log("Adding Canvas click event listener");
+	var onClick = this.onSvgCanvasClick.bind(this);
+	this.svgCanvas.click(onClick);	
+}
+
+SW_SVGCanvas.prototype.getSvgOuterHTML = function() 
+{
+	return this.SVGAsDom.outerHTML;
+}
+
+SW_SVGCanvas.prototype.getSvgAsDom = function() 
+{
+	return this.SVGDom;
+}
+
+SW_SVGCanvas.prototype.setTextMouseDown = function(textDiv) 
+{
+    this.isTextMouseDown  = true;
+    //textdiv.setAttribute("contentEditable", "true");
+    //console.log("Svg Canvas Text mouse down set to :" + mousedownonelement);
+}
+
+SW_SVGCanvas.prototype.createtext = function () {
+	
+    console.log("trying to create object text");
+    var myforeign = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject')
+    var textdiv = document.createElement("p");
+    var textnode = document.createTextNode("Click to edit Text");
+    textdiv.appendChild(textnode);
+    //textdiv.setAttribute("contentEditable", "true");
+    textdiv.setAttribute("width", "auto");
+    myforeign.setAttribute("width", "150");
+    myforeign.setAttribute("height", "50");
+    myforeign.classList.add("foreign"); //to make div fit text
+    textdiv.classList.add("insideforeign"); //to make div fit text
+    
+    var elementMousedown = this.setTextMouseDown.bind(this, textdiv);
+    textdiv.addEventListener("mousedown", elementMousedown, false);
+    myforeign.setAttributeNS(null, "transform", "translate(" + this.mouseClickCorditates.x + " " + this.mouseClickCorditates.y + ")"); 
+    myforeign.appendChild(textdiv);
+
+    //this.SVGAsDom.appendChild(myforeign);
+    //var p = Snap.parse( "<svg>" + myforeign.outerHTML + "/svg" );
+    var p = Snap.parse(myforeign.outerHTML);
+    var g = this.svgCanvas.group().append(p);
+    g.addClass("SWSVGForeignObj");
+    var myText = new SVGShape(g, SVG_TEXT, this.svgCanvas); 
+};
+
+SW_SVGCanvas.prototype.onSvgCanvasClick = function(evt) 
+{
+	console.log("svg canvas clicked");
+	allocSVGCanvasToDaraw(this);
+
+	var pt = this.SVGAsDom.createSVGPoint();
+    	pt.x = evt.clientX;
+        pt.y = evt.clientY;
+        this.mouseClickCorditates = pt.matrixTransform(this.SVGAsDom.getScreenCTM().inverse());
+        this.mouseClickCorditates.x = Math.round(this.mouseClickCorditates.x);
+        this.mouseClickCorditates.y = Math.round(this.mouseClickCorditates.y);
+}
+
+SW_SVGCanvas.prototype.getMouseClickCoordinates = function(evt)
+{
+   return this.mouseClickCorditates;
+}
+
+SW_SVGCanvas.prototype.processShapes = function() {
+	 var shapeList = this.svgCanvas.selectAll('*');
+	 
+    //console.log(list);
+    for(var i=0 ; i < shapeList.length; i++)
+     {
+    	 try 
+    	 {    	 
+    	    myShape = new SVGShape(shapeList[i], SVG_NONE,this.svgCanvas);	
+    	 }
+    	 catch (evt)
+    	 {
+    		 console.log(evt + shapeList[i] );
+    	 }
+     }
+	 
+	/* var element =  this.svgCanvas.select('circle');
+	 element.attr({
+			fill: "grey",
+		stroke: "#000",
+		strokeWidth: 5
+	});	 
+	 
+	 element.drag();	*/
+}
+
+SW_SVGCanvas.prototype.drawCircle = function() {
+	 // console.log("I am Drawing Circle");
+	  var c = this.svgCanvas.ellipse(this.mouseClickCorditates.x, this.mouseClickCorditates.y, 20, 20).attr({ stroke: '#123456', 'strokeWidth': 2,  fill: "gray",});
+	  var myCircle = new SVGShape(c, SVG_ELLIPSE, this.svgCanvas); 
+}
+
+
+SW_SVGCanvas.prototype.drawRectangle = function() {
+	 // console.log("I am Drawing Circle");
+	  var r = this.svgCanvas.rect(this.mouseClickCorditates.x, this.mouseClickCorditates.y,50,30,0,0).attr({ stroke: '#123456', 'strokeWidth': 2, fill: 'gray' });
+	  var myrect = new SVGShape(r, SVG_RECTANGLE, this.svgCanvas); 
+}
+
+SW_SVGCanvas.prototype.drawText = function() {
+
+	//console.log("isTextMouseDown : " +this.isTextMouseDown);
+	if (!this.isTextMouseDown) 
+	{
+             this.createtext();
+    	}
+	else
+	{
+      	     this.isTextMouseDown = false;
+   	}
+	
+/*	var fo = createSVGForeignObject();
+	
+	this.svgCanvas.append(fo);
+	
+	var myFO = new SVGShape(fo, this.svgCanvas); 
+	
+	//var text1 = this.svgCanvas.text(50, 50, 'Hello');
+	//var myText = new SVGShape(text1, this.svgCanvas); 
+	/*this.svgCanvas.inlineTextEditing(text1);
+	text1.click(function(){
+	    // Retrieve created <input type=text> field
+	    var input = this.inlineTextEditing.startEditing();
+
+	    input.addEventListener("blur", function(e){
+	        // Stop inline editing after blur on the text field
+	        text1.inlineTextEditing.stopEditing();
+	    }, true);*/
+	//});
+	//var myText = new SVGShape(text1, this.svgCanvas); */
+}
+
+var SVGShape = function(myShape, type,svgCanvas) 
+{
+	console.log("SW SVG: log shape construction callled.");
+	//this.myDrawCanvas = svgCanvas;
+	this.shape = myShape;	
+	this.myStrokeWidth = 2;
+	this.actionToPerforrm = "DRAG"; //"RESIZE"
+	this.actionHandleGroup = null;
+	//this.shapeRotator = null;
+	this.shapeResizer = null;
+        this.shapeContainerBox = null;
+	this.type = type;
+	
+	//this.shape.drag(this.moveMe, this.start, this.stop);
+	//this.shape.drag(move,start,stop);	
+	var onMouseUp = this.shapeOnMouseUp.bind(this);	
+	var onMouseDown = this.shapeOnMouseDown.bind(this);	
+	var onMouseMove = this.shapeOnMouseMove.bind(this);	
+	
+	var onClick = this.shapeOnClick.bind(this);	
+	var onDblClick = this.shapeOnDblClick.bind(this);	
+	var actionPertform = this.shapeActionPertform.bind(this);	
+	var actionStop = this.shapeActionStop.bind(this);	
+	var actionStart = this.shapeActionStart.bind(this);	
+	
+	try
+	{
+		this.shape.drag(actionPertform, actionStart, actionStop);	
+		this.shape.dblclick(onDblClick);
+		this.shape.click(onClick);
+		this.shape.mousedown(onMouseDown);
+		this.shape.mouseup(onMouseUp);
+		this.shape.mousemove(onMouseMove);
+	}
+	catch (evt)
+	{
+		console.log("Failed to add drag event : " + evt);
+	}
+}
+
+
+SVGShape.prototype.rectObjFromBB = function(bb) 
+{
+        return { x: bb.x, y: bb.y, width: bb.width, height: bb.height } 
+}
+
+SVGShape.prototype.calcDistance = function(x1,y1,x2,y2) 
+{
+	return Math.sqrt(Math.pow( (x1 - x2), 2)  + Math.pow( (y1 - y2), 2));
+}
+
+SVGShape.prototype.dragHandleRotateStart = function() 
+{
+	console.log("Rotation started");
+	//ftStoreStartCenter;
+	this.shapeRotator.data('ocx', this.shapeRotator.attr('cx') );
+	this.shapeRotator.data('ocy', this.shapeRotator.attr('cy') );
+	this.shape.data('initialTransformMatrix', this.shape.transform().localMatrix);
+}
+
+SVGShape.prototype.dragHandleRotateEnd = function()
+{
+
+}
+
+SVGShape.prototype.dragHandleRotateMove = function(dx, dy, x, y, event)
+{
+		console.log("Rotation moved");
+		var mainBB = this.shape.getBBox();
+
+		this.shapeRotator.attr({ cx: + this.shapeRotator.data('ocx') + dx, cy: + this.shapeRotator.data('ocy') + dy });
+		this.shape.data("angle", Snap.angle( mainBB.cx, mainBB.cy, this.shapeRotator.attr('cx'), this.shapeRotator.attr('cy'))-90);
+
+		console.log("Rotation move with angle : " + this.shape.data("angle") );
+
+		var tstring = "t" + this.shape.data("tx") + "," + this.shape.data("ty") + this.shape.data('initialTransformMatrix').toTransformString() 
+		                                                     + "r" + this.shape.data("angle") + 'S' + this.shape.data("scale" );		
+		this.shape.attr({ transform: tstring });
+
+		this.removeActionDecorator();
+                this.removeShpaeContainer();
+    	        this.addActionDecorator();
+                this.addShpaeContainer();
+
+	   /* var handle = this.shapeRotator;
+		var mainBB = this.shape.getBBox();
+		handle.attr({ cx: + handle.data('ocx') + dx, cy: + handle.data('ocy') + dy });
+		this.shape.data("angle", Snap.angle( mainBB.cx, mainBB.cy, handle.attr('cx'), handle.attr('cy') ));
+		//this.shape.data("angle", this.shape.data("angle")+5);
+
+		//commented to stop scaling while rotation
+		//var distance = this.calcDistance( mainBB.cx, mainBB.cy, handle.attr('cx'), handle.attr('cy'));	
+		//this.shape.data("scale", distance / this.shape.data("scaleFactor") );
+		
+		var tstring = "t" + this.shape.data("tx") + "," + this.shape.data("ty") + this.shape.data('initialTransformMatrix').toTransformString() 
+		                                                     + "r" + this.shape.data("angle") + 'S' + this.shape.data("scale" );		
+		this.shape.attr({ transform: tstring });
+		
+		this.removeActionDecorator();
+    	        this.addActionDecorator();
+		this.shapeContainerBox.remove();
+		this.shapeContainerBox.null;
+
+                var bBox = this.shape.getBBox(1);
+                this.shapeContainerBox = this.shape.parent().rect(this.rectObjFromBB(bBox)).attr({ fill: "none", stroke: "red", strokeDasharray: "5,5" });
+		this.shapeContainerBox.attr({ transform: this.shape.transform().localMatrix.toTransformString() });
+
+
+          //      this.removeShpaeContainer();
+           //     this.addShpaeContainer();
+		//this.shape.ftDrawJoinLine(handle);	*/
+}
+
+SVGShape.prototype.addShpaeContainer = function()
+{
+	try{
+		/*var bBox = this.shape.getBBox();
+		this.shapeRotator = this.shape.parent().circle(bBox.x + bBox.width / 2, bBox.y - 20, 6).attr({ class: 'rotate', fill: "red", stroke: "#000", name: "selectionBox" });;	
+		this.shapeRotator.attr({ transform: this.shape.transform().localMatrix.toTransformString() });
+
+		this.shape.data( "scaleFactor", this.calcDistance( bBox.cx, bBox.cy, this.shapeRotator.attr('cx'), this.shapeRotator.attr('cy')));
+
+		var rotateMove = this.dragHandleRotateMove.bind(this);
+		var rotateStart = this.dragHandleRotateStart.bind(this);
+		var rotateStop = this.dragHandleRotateEnd.bind(this)
+
+		this.shapeRotator.drag(rotateMove, rotateStart, rotateStop);
+		this.shape.data('initialTransformMatrix', this.shape.transform().localMatrix);*/
+
+                var bBox = this.shape.getBBox(1);
+		this.shapeContainerBox = this.shape.parent().rect(this.rectObjFromBB(bBox)).attr({ fill: "none", stroke: "red", strokeDasharray: "5,5" });
+                this.shapeContainerBox.attr({ transform: this.shape.transform().localMatrix.toTransformString() });
+
+		this.shape.data("angle", 0);
+		this.shape.data("scale", 1);
+		this.shape.data("tx", 0);
+		this.shape.data("ty", 0);
+	}
+	catch(evt)
+	{
+		console.log("add SVG rotator failed : "+evt);
+	}
+}
+
+SVGShape.prototype.removeShpaeContainer = function()
+{
+	if (this.shapeContainerBox)
+	{
+		
+		this.shapeContainerBox.remove();
+		
+		this.shapeContainerBox = null;
+	}
+}
+
+SVGShape.prototype.addShapeRotator = function()
+{
+     var bBox = this.shape.getBBox(1);
+     this.shapeRotator = this.shape.parent().circle(bBox.x + bBox.width / 2, bBox.y - 20, 6).attr({ class: 'rotate', fill: "red", stroke: "#000", name: "selectionBox" });;	
+     var myMatrix = this.shape.transform().localMatrix.rotate(0);
+     this.shapeRotator.attr({ transform: myMatrix.toTransformString() });
+	var rotateMove = this.dragHandleRotateMove.bind(this);
+	var rotateStart = this.dragHandleRotateStart.bind(this);
+	var rotateStop = this.dragHandleRotateEnd.bind(this)
+
+	this.shapeRotator.drag(rotateMove, rotateStart, rotateStop);	
+	
+}
+
+SVGShape.prototype.removeShapeRotator = function()
+{
+      if(this.shapeRotator)
+      {
+         this.shapeRotator.remove();
+         this.shapeRotator = null;
+      }
+}
+
+SVGShape.prototype.addActionDecorator = function()
+{
+	var bBox = this.shape.getBBox(1);
+	/*var bBox = new Array();
+	bBox.x = parseInt(this.shape.attr('x'));
+	bBox.y = parseInt(this.shape.attr('y'));
+	bBox.height = parseInt(this.shape.attr('height'));
+	bBox.width = parseInt(this.shape.attr('width'));
+	
+	bBox.cx = parseInt(this.shape.attr('x')) +  parseInt(this.shape.attr('width'))/2;
+	bBox.cy	= parseInt(this.shape.attr('y')) + parseInt(this.shape.attr('height'))/2;
+	
+	if (isNaN(bBox.cx))
+	{
+		bBox.cx = parseInt(this.shape.attr('cx'));
+		bBox.cy	= parseInt(this.shape.attr('cy'));
+	}*/
+	
+	var handle = new Array();
+	var distAdjt = 0;
+	handle[0] = this.shape.parent().circle(bBox.x-distAdjt,bBox.y-distAdjt, 3).attr({class: 'resize', fill: "yellow", stroke: "#000", name: "selectionBox"});
+	handle[1] = this.shape.parent().circle(bBox.x+bBox.width+distAdjt, bBox.y-distAdjt, 3).attr({class: 'resize', fill: "yellow", stroke: "#000", name: "selectionBox"});
+	handle[2] = this.shape.parent().circle(bBox.x + bBox.width / 2, bBox.y-distAdjt, 3).attr({ class: 'resize', fill: "yellow", stroke: "#000", name: "selectionBox" });
+	handle[3] = this.shape.parent().circle(bBox.x-distAdjt, bBox.y + bBox.height+distAdjt, 3).attr({ class: 'resize', fill: "yellow", stroke: "#000", name: "selectionBox" });
+	handle[4] = this.shape.parent().circle(bBox.x + bBox.width / 2, bBox.y + bBox.height+distAdjt, 3).attr({ class: 'resize', fill: "yellow", stroke: "#000", name: "selectionBox" });
+	this.shapeResizer = this.shape.parent().circle(bBox.x + bBox.width +distAdjt, bBox.y + bBox.height+distAdjt, 6).attr({ class: 'resize', fill: "green", stroke: "#000", name: "selectionBox" });; 
+	handle[6] = this.shape.parent().circle(bBox.x + bBox.width +distAdjt, bBox.y + bBox.height/2, 3).attr({ class: 'resize', fill: "yellow", stroke: "#000", name: "selectionBox" });
+	handle[7] = this.shape.parent().circle(bBox.x-distAdjt, bBox.y + bBox.height / 2, 3).attr({ class: 'resize', fill: "yellow", stroke: "#000", name: "selectionBox" }); 
+	
+
+	// handle[8] = this.shape.parent().line( bBox.cx, bBox.cy, this.shapeRotator.attr('cx'), this.shapeRotator.attr('cy') ).attr({ class: 'resize', fill: "blue", stroke: "red", name: "selectionBox" });;	
+	
+
+	this.actionHandleGroup = this.shape.parent().group(handle[0], handle[1], handle[2], handle[3],handle[4],
+		               	this.shapeResizer,  handle[6], handle[7]);
+	
+	
+	console.log("shape transformation :" + this.shape.transform().localMatrix.toTransformString());
+	this.actionHandleGroup.attr({ transform: this.shape.transform().localMatrix.toTransformString() });	
+
+
+	var resizeStart = this.shapeResizeStart.bind(this);
+	var resizeMove = this.shapeResizeMove.bind(this);
+	var resizeStop = this.shapeResizeStop.bind(this);
+	this.shapeResizer.drag(resizeMove, resizeStart, resizeStop);
+	this.shapeResizer.mouseover(function(){
+		    this.attr('cursor', 'move');
+		});
+	
+	if (this.shapeContainerBox)
+	{ 
+	  this.shapeRotator.parent().append(this.shapeRotator);
+          this.shapeContainerBox.parent().append(this.shapeContainerBox);
+	  this.actionHandleGroup.parent().append(this.actionHandleGroup);
+        }
+
+
+	this.shape.data("angle", 0);
+	this.shape.data("scale", 1);
+	this.shape.data("tx", 0);
+	this.shape.data("ty", 0);
+	/*this.shapeResizer.mousemove(function(evt){
+		var pt = new Array();
+		 pt.x = evt.clientX;
+		 pt.y = evt.clientY;
+		// return pt.matrixTransform(this.parent().node.getScreenCTM().inverse());
+	});*/
+}
+
+SVGShape.prototype.removeActionDecorator = function()
+{
+	if (this.actionHandleGroup)
+	{
+	 	this.actionHandleGroup.selectAll('resize').remove();
+		this.actionHandleGroup.remove();
+		this.actionHandleGroup = null;
+		this.shape.parent().append(this.shape);
+	}
+	
+}
+
+SVGShape.prototype.shapeOnMouseDown = function()
+{
+	console.log("Shape MouseDown action");	
+/*	var actionPertform = this.shapeActionPertform.bind(this);	
+	var actionStop = this.shapeActionStop.bind(this);	
+	var actionStart = this.shapeActionStart.bind(this);
+	this.shape.drag(actionPertform, actionStart, actionStop);*/
+}
+
+SVGShape.prototype.shapeOnMouseUp = function()
+{
+	/*this.removeActionDecorator();
+	this.removeShpaeContainer();       
+	this.shape.undrag();*/
+}
+
+SVGShape.prototype.shapeOnMouseMove = function(e, mouseX, mouseY)
+{
+	//this.changeCursor(e, mouseX, mouseY);
+}
+
+SVGShape.prototype.shapeOnClick = function()
+{
+	console.log("Shape clicked once");	
+	
+}
+
+SVGShape.prototype.shapeOnDblClick = function()
+{
+	if(this.actionToPerforrm == "DRAG") 
+	{
+		this.actionToPerforrm = "RESIZE";	
+		this.addShpaeContainer();
+		this.addShapeRotator();
+		this.addActionDecorator();			
+		var tstr;
+		//this.shape.type(tstr);
+		//alert(this.shape);
+		console.log("shape type" + typeof this.shape.node);
+		if (this.shape.type  == "g" && this.shape.hasClass("SWSVGForeignObj")) 
+		{
+		  this.shape.undrag();
+		}
+	}
+	else
+	{
+		this.actionToPerforrm = "DRAG";
+		this.removeActionDecorator();
+		this.removeShpaeContainer();
+		this.removeShapeRotator();
+		var actionPertform = this.shapeActionPertform.bind(this);	
+		var actionStop = this.shapeActionStop.bind(this);	
+		var actionStart = this.shapeActionStart.bind(this);
+		if (this.shape.type  == "g" && this.shape.hasClass("SWSVGForeignObj")) 
+		{
+			this.shape.drag(actionPertform, actionStart, actionStop);	
+		}
+		
+		
+	}
+	
+	console.log("Shape double clicked actionToPerforrm to perform set to: " + this.actionToPerforrm);
+}
+
+SVGShape.prototype.shapeActionStart = function() 
+{
+        this.shape.data('origTransform', this.shape.transform().local);
+        this.shape.ox = parseInt(this.shape.attr('x'));
+    	this.shape.oy = parseInt(this.shape.attr('y'));
+    	this.shape.ow = parseInt(this.shape.attr('width'));
+    	this.shape.oh = parseInt(this.shape.attr('height'));
+    //	this.actionToPerforrm = "DRAG";
+}
+
+SVGShape.prototype.shapeActionPertform = function(dx,dy) 
+{
+		console.log("SW shape action to perform : "  + this.actionToPerforrm);
+	
+		if (this.actionToPerforrm == "DRAG")
+		{
+			this.shape.attr({
+                    transform: this.shape.data('origTransform') + (this.shape.data('origTransform') ? "T" : "t") + [dx, dy]
+                });
+			//this.shape.attr({ x: this.shape.ox + dx, y: this.shape.oy + dy});
+				                  //  width: this.shape.ow - dx, height: this.shape.oh - dy}); 
+			
+			console.log("SW shape draging");
+		}
+		else
+		{
+			var scale = 1 + dx / 50;
+        	this.shape.attr({
+                transform: this.shape.data('origTransform') + (this.shape.data('origTransform') ? "S" : "s") + scale,
+                strokeWidth: this.myStrokeWidth,
+        	});
+        	
+		  	this.removeActionDecorator();
+    	    this.removeShpaeContainer();      	
+    	   this.addShpaeContainer();
+    	   this.addActionDecorator();
+	   }
+    	/*
+			// Inspect cursor to determine which resize/move process to use
+			switch (this.shape.attr('cursor')) {
+
+				case 'nw-resize' :
+					this.shape.attr({
+						x: this.shape.ox + dx, 
+						y: this.shape.oy + dy, 
+						width: this.shape.ow - dx, 
+						height: this.shape.oh - dy
+					});
+					break;
+
+				case 'ne-resize' :
+					this.shape.attr({ 
+						y: this.shape.oy + dy , 
+						width: this.shape.ow + dx, 
+						height: this.shape.oh - dy
+					});
+					break;
+
+				case 'se-resize' :
+					this.shape.attr({
+						width: this.shape.ow + dx, 
+						height: this.shape.oh + dy
+					});
+					break;
+
+				case 'sw-resize' :
+					this.shape.attr({ 
+						x: this.shape.ox + dx, 
+						width: this.shape.ow - dx, 
+						height: this.shape.oh + dy
+					});
+					break;
+
+				default :
+					this.shape.attr({
+						x: this.shape.ox + dx, 
+						y: this.shape.oy + dy
+					});
+					break;
+
+			}
+		
+        	
+      */
+        	
+        	
+}
+
+SVGShape.prototype.shapeActionStop = function() 
+{
+	console.log("SW shape action to perform stop" );
+//	this.actionToPerforrm = "NONE";
+}
+
+SVGShape.prototype.changeCursor = function(e, mouseX, mouseY) 
+{
+	// Don't change cursor during a drag operation
+	if (this.actionToPerforrm == "DRAG")
+	{
+		return;
+	}
+
+	// X,Y Coordinates relative to shape's orgin
+	var relativeX = mouseX - $(this.shape.parent().node).offset().left - parseInt(this.shape.attr('x'));
+	var relativeY = mouseY - $(this.shape.parent().node).offset().top - parseInt(this.shape.attr('y'));
+
+	var shapeWidth = parseInt(this.shape.attr('width'));
+	var shapeHeight = parseInt(this.shape.attr('height'));
+
+	var resizeBorder = 10;
+
+	// Change cursor
+	if (relativeX < resizeBorder && relativeY < resizeBorder) { 
+		this.shape.attr('cursor', 'nw-resize');
+	} else if (relativeX > shapeWidth-resizeBorder && relativeY < resizeBorder) { 
+		this.shape.attr('cursor', 'ne-resize');
+	} else if (relativeX > shapeWidth-resizeBorder && relativeY > shapeHeight-resizeBorder) { 
+		this.shape.attr('cursor', 'se-resize');
+	} else if (relativeX < resizeBorder && relativeY > shapeHeight-resizeBorder) { 
+		this.shape.attr('cursor', 'sw-resize');
+	} else { 
+		this.shape.attr('cursor', 'move');
+	}
+};
+
+
+SVGShape.prototype.shapeResizeStart = function()
+{
+	console.log("SW shape rezie start" );
+	//this.shapeResizer.data('origTransform', this.shapeResizer.transform().local);
+	
+	/*this.shapeContainerBox.ox = parseInt(this.shapeContainerBox.attr('x'));
+	this.shapeContainerBox.oy = parseInt(this.shapeContainerBox.attr('y'));
+	this.shapeContainerBox.ow = parseInt(this.shapeContainerBox.attr('width'));
+	this.shapeContainerBox.oh = parseInt(this.shapeContainerBox.attr('height'));*/
+}
+
+SVGShape.prototype.shapeResizeMove = function(dx, dy, x, y, evt)
+{
+	var myBox = this.actionHandleGroup.getBBox();
+	var myRotationAngle = this.shape.transform().localMatrix.split().rotate;
+      
+
+	console.log("SW shape resize move, angle : " + myRotationAngle);
+	this.shapeResizer.attr({
+                    transform: this.shapeResizer.data('origTransform') + (this.shapeResizer.data('origTransform') ? "T" : "t") + [dx, dy]
+        });
+
+	var pt1 = this.shapeContainerBox.parent().node.createSVGPoint();
+	pt1.x = x;//evt.clientX;
+	pt1.y = y;//evt.clientY;
+	var pt2= pt1.matrixTransform(this.shapeContainerBox.parent().node.getScreenCTM().inverse());
+	
+	var rectXY = pt2.matrixTransform(this.shapeContainerBox.node.getTransformToElement(this.shapeContainerBox.parent().node).inverse());
+
+	
+     var w = Math.max( rectXY.x - this.shapeContainerBox.node.x.animVal.value, 1 );
+     var h = Math.max( rectXY.y - this.shapeContainerBox.node.y.animVal.value, 1 );
+
+     //var w = Math.max( rectXY.x, 1 );
+     //var h = Math.max( rectXY.y, 1 );
+	
+     console.log("my w: " + w + " h:" + h);
+    // this.shape.node.setAttribute('width', w);
+     //this.shape.node.setAttribute('height',h);
+     
+	console.log("SW shape rezie mov height: " + this.shapeContainerBox.oh);
+	
+	this.shapeContainerBox.attr({
+	    width: w,
+	    height: h
+	});
+
+       if (this.shape.type == "ellipse")
+       {	
+         this.shape.attr({
+	     cx: w/2,
+	     cy: h/2,
+	     rx: w/2,
+	     ry: h/2		 
+	  });
+        }
+        else
+	{	
+	   this.shape.attr({
+	    width: w,
+	    height: h
+	   });
+         }
+
+	this.removeActionDecorator();
+	this.addActionDecorator();
+}
+
+SVGShape.prototype.shapeResizeStop = function()
+{
+	console.log("SW shape resize stop");
+}
+

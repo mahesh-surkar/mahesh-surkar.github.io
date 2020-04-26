@@ -1,0 +1,31 @@
+{% load staticfiles cms_tags sekizai_tags %}
+<!doctype html><html lang="{{ LANGUAGE_CODE }}">
+<head>
+	<meta charset="utf-8" />
+	<title>Welcome to django CMS</title>
+
+	<style type="text/css">
+		
+		
+	div.box { height: 500px; width: 100%; }
+        div.div1{ background: #999; float: left; height: 100%; width: 20%; }
+        div.bookContent{ background: #666; height: 100%; }
+       
+	</style>
+	{% render_block "css" %}
+</head>
+<body>
+ {% load menu_tags %}
+   <div class="box">
+     <div class="div1">
+      <ul>
+       {% show_menu 0 100 100 100 %}
+      </ul>
+     </div>
+   <div class="div2"></div>
+  </div>
+<script type="text/javascript">
+</script>
+
+</body>
+</html>

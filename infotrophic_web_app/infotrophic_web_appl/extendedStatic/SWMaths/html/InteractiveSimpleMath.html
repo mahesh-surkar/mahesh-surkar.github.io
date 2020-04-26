@@ -1,0 +1,26 @@
+<! DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="title" content="Interactive Math Problem Solver" />
+<meta name="keywords" content="Interactive Math Problem Solver learn addition add substraction subtract multiplication multiply division divide" />
+<meta name="author" content="InfoTrophic.com" />
+<meta name="displaySection" content="None" />
+<meta name="description" content="Interactive Math Problem Solver. Interactiv way to learn addition, substraction, multiplication, division" />
+
+{% load	staticfiles %}
+    <link rel="stylesheet" href="static/jquery/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static as %}{{ contentCSS }}"> </link>	
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>	  
+    <script type="text/javascript" src="static/jquery/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="static/SWextended/js/SWCommon.js"></script>
+    <script type="text/javascript" src="static/SWMaths/js/InteractiveSimpleMath.js"></script>	
+	
+    <title>Interactive Math Problem Solver</title>
+
+</head>
+<body onload='loadInteractiveSimpleMath();'>	
+	
+</body>
+</html>
