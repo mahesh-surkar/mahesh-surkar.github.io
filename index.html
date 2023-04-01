@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <!--
+    WARNING! Make sure that you match all Quasar related
+    tags to the same version! (Below it's "@2.0.3")
+  -->
+
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/quasar@2.0.3/dist/quasar.prod.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <!-- example of injection point where you write your app template -->
+    <div id="q-app">
+      <q-layout view="hHh lpR fFf">
+
+        <q-header elevated class="bg-primary text-white">
+          <q-toolbar>
+            <q-toolbar-title>
+              <!--<q-avatar>
+                <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
+              </q-avatar>-->
+              
+            </q-toolbar-title>
+          </q-toolbar>
+        </q-header>
+    
+        <q-page-container>
+          <div>
+            <a href="https://s3.ap-south-1.amazonaws.com/infotrophic.com/index.html">SVG Editor</a>
+            </div>
+          <router-view />
+        </q-page-container>
+    
+      </q-layout>
+    </div>
+
+    <!-- Add the following at the end of your body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@2.0.3/dist/quasar.umd.prod.js"></script>
+    
+    <script>
+      const { ref } = Vue
+      /*
+        Example kicking off the UI. Obviously, adapt this to your specific needs.
+        Assumes you have a <div id="q-app"></div> in your <body> above
+       */
+      const app = Vue.createApp({
+        setup () {
+          return {}
+        },
+
+        data() {
+          let Title = ref ("MyTitle")
+
+          return {
+            Title
+          }
+        },
+
+        methods: {  
+          onClick()
+          { 
+          
+          }
+        }
+
+      })
+
+
+      app.use(Quasar)
+      app.mount('#q-app')
+    </script>
+  </body>
+</html>
